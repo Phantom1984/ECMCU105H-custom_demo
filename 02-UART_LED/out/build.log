@@ -1,0 +1,70 @@
+ninja: Entering directory `out'
+[1/2] cross compiler obj/user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.o
+[2/2] LINK ./bin/target.elf
+blocking_rx/src/sample_uart_blocking_rx.o 
+riscv32-linux-musl-gcc -MMD -MF obj/user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.o.d -DFLOAT_SUPPORT -I../chip/3065h -I../chip/3065h/chipinit -I../chip/3065h/chipinit/adc_tsensor -I../chip/3065h/chipinit/adcinit -I../chip/3065h/chipinit/crginit -I../chip/3065h/chipinit/flashinit -I../chip/3065h/chipinit/nosinit -I../chip/3065h/chipinit/pgainit -I../chip/3065h/chipinit/pmcinit -I../chip/3065h/chipinit/systickinit -I../chip/3065h/fotp -I../chip/3065h/iomap/3065hrpicz -I../chip/3065h/iomap/3065hrpirz -I../chip/3065h/ip_crg -I../drivers/acmp/common/inc -I../drivers/acmp/inc -I../drivers/adc/common/inc -I../drivers/adc/inc -I../drivers/apt/common/inc -I../drivers/apt/inc -I../drivers/base/common/inc -I../drivers/base/inc -I../drivers/can/common/inc -I../drivers/can/inc -I../drivers/capm/common/inc -I../drivers/capm/inc -I../drivers/cfd/common/inc -I../drivers/cfd/inc -I../drivers/cmm/common/inc -I../drivers/cmm/inc -I../drivers/crc/common/inc -I../drivers/crc/inc -I../drivers/crg/common/inc -I../drivers/crg/inc -I../drivers/dac/common/inc -I../drivers/dac/inc -I../drivers/debug/inc -I../drivers/dma/common/inc -I../drivers/dma/inc -I../drivers/flash/common/inc -I../drivers/flash/inc -I../drivers/gpio/common/inc -I../drivers/gpio/inc -I../drivers/gpt/common/inc -I../drivers/gpt/inc -I../drivers/i2c/common/inc -I../drivers/i2c/inc -I../drivers/iocmg/common -I../drivers/iocmg/inc -I../drivers/pga/common/inc -I../drivers/pga/inc -I../drivers/pmc/common/inc -I../drivers/pmc/inc -I../drivers/qdm/common/inc -I../drivers/qdm/inc -I../drivers/spi/common/inc -I../drivers/spi/inc -I../drivers/timer/common/inc -I../drivers/timer/inc -I../drivers/tsensor/common/inc -I../drivers/tsensor/inc -I../drivers/uart/common/inc -I../drivers/uart/inc -I../drivers/wdg/common/inc -I../drivers/wdg/inc -I../middleware/control_library -I../user/generatecode -I../user/sample_uart_blocking_rx/inc -Os -pipe -Wall -Wextra -Wmissing-declarations -Winit-self -Wmissing-include-dirs -Wtrampolines -Wundef -Wpointer-arith -Wlogical-op -Wstrict-prototypes -Wmissing-prototypes -Wjump-misses-init -Wformat=2 -Wfloat-equal -Wdate-time -Wswitch-default -Wimplicit-fallthrough=2 -Wno-missing-declarations -std=gnu99 -fsigned-char -fno-builtin -ffreestanding -nostdlib -fno-exceptions -fno-unwind-tables -fno-short-enums -fno-common -freg-struct-return -mabi=ilp32f -march=rv32imfc -fno-strict-aliasing -fdata-sections -ffunction-sections -falign-functions=2 -fno-schedule-insns -fno-optimize-strlen -fno-aggressive-loop-optimizations -Wa,-enable-c-lbu-sb -Wa,-enable-c-lhu-sh -msmall-data-limit=0 -fimm-compare -femit-muliadd -fmerge-immshf -femit-uxtb-uxth -femit-lli -fldm-stm-optimize -fno-inline-small-functions -mtune=size -mpush-pop -femit-clz -madjust-regorder -madjust-const-cost -freorder-commu-args -fimm-compare-expand -frmv-str-zero -mfp-const-opt -mswitch-jump-table -frtl-sequence-abstract -frtl-hoist-sink -fsafe-alias-multipointer -finline-optimize-size -fmuliadd-expand -mlli-expand -Wa,-mcjal-expand -foptimize-reg-alloc -fsplit-multi-zero-assignments -floop-optimize-size -mpattern-abstract -foptimize-pro-and-epilogue -fstrict-volatile-bitfields -g -c ../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c -o obj/user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.o
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c: In function 'UART_BlcokingRX':
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:80:17: error: too many arguments to function 'LED_State'
+                 LED_State(RxDataPkg);
+                 ^~~~~~~~~
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:36:6: note: declared here
+ void LED_State()
+      ^~~~~~~~~
+ninja: build stopped: subcommand failed.
+king_rx/src/sample_uart_blocking_rx.c:29:
+c:\users\xiexw\.deveco-device-tool\compiler_tool_chain\windows\cc_riscv32_musl_fp_win\sysroot\usr\include\strings.h:19:7: note: previous declaration of 'index' was here
+ char *index (const char *, int);
+       ^~~~~
+[2/3] cross compiler obj/user/main.o
+ninja: build stopped: subcommand failed.
+State':
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:39:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     if(strcmp(RxDataPkg,"LED_ON")==0)
+               ^~~~~~~~~
+In file included from ../user/sample_uart_blocking_rx/inc/sample_uart_blocking_rx.h:33:0,
+                 from ../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:29:
+c:\users\xiexw\.deveco-device-tool\compiler_tool_chain\windows\cc_riscv32_musl_fp_win\sysroot\usr\include\string.h:37:5: note: expected 'const char *' but argument is of type 'unsigned char *'
+ int strcmp (const char *, const char *);
+     ^~~~~~
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:44:20: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     else if(strcmp(RxDataPkg, "LED_OFF")==0)
+                    ^~~~~~~~~
+In file included from ../user/sample_uart_blocking_rx/inc/sample_uart_blocking_rx.h:33:0,
+                 from ../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:29:
+c:\users\xiexw\.deveco-device-tool\compiler_tool_chain\windows\cc_riscv32_musl_fp_win\sysroot\usr\include\string.h:37:5: note: expected 'const char *' but argument is of type 'unsigned char *'
+ int strcmp (const char *, const char *);
+     ^~~~~~
+[2/3] cross compiler obj/user/main.o
+ninja: build stopped: subcommand failed.
+anding -nostdlib -fno-exceptions -fno-unwind-tables -fno-short-enums -fno-common -freg-struct-return -mabi=ilp32f -march=rv32imfc -fno-strict-aliasing -fdata-sections -ffunction-sections -falign-functions=2 -fno-schedule-insns -fno-optimize-strlen -fno-aggressive-loop-optimizations -Wa,-enable-c-lbu-sb -Wa,-enable-c-lhu-sh -msmall-data-limit=0 -fimm-compare -femit-muliadd -fmerge-immshf -femit-uxtb-uxth -femit-lli -fldm-stm-optimize -fno-inline-small-functions -mtune=size -mpush-pop -femit-clz -madjust-regorder -madjust-const-cost -freorder-commu-args -fimm-compare-expand -frmv-str-zero -mfp-const-opt -mswitch-jump-table -frtl-sequence-abstract -frtl-hoist-sink -fsafe-alias-multipointer -finline-optimize-size -fmuliadd-expand -mlli-expand -Wa,-mcjal-expand -foptimize-reg-alloc -fsplit-multi-zero-assignments -floop-optimize-size -mpattern-abstract -foptimize-pro-and-epilogue -fstrict-volatile-bitfields -g -c ../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c -o obj/user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.o
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:32:14: error: 'index' redeclared as different kind of symbol
+ unsigned int index = 0;
+              ^~~~~
+In file included from c:\users\xiexw\.deveco-device-tool\compiler_tool_chain\windows\cc_riscv32_musl_fp_win\sysroot\usr\include\string.h:57:0,
+                 from ../user/sample_uart_blocking_rx/inc/sample_uart_blocking_rx.h:33,
+                 from ../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:29:
+c:\users\xiexw\.deveco-device-tool\compiler_tool_chain\windows\cc_riscv32_musl_fp_win\sysroot\usr\include\strings.h:19:7: note: previous declaration of 'index' was here
+ char *index (const char *, int);
+       ^~~~~
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c: In function 'LED_State':
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:39:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     if(strcmp(RxDataPkg,"LED_ON")==0)
+               ^~~~~~~~~
+In file included from ../user/sample_uart_blocking_rx/inc/sample_uart_blocking_rx.h:33:0,
+                 from ../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:29:
+c:\users\xiexw\.deveco-device-tool\compiler_tool_chain\windows\cc_riscv32_musl_fp_win\sysroot\usr\include\string.h:37:5: note: expected 'const char *' but argument is of type 'unsigned char *'
+ int strcmp (const char *, const char *);
+     ^~~~~~
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:44:20: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     else if(strcmp(RxDataPkg, "LED_OFF")==0)
+                    ^~~~~~~~~
+In file included from ../user/sample_uart_blocking_rx/inc/sample_uart_blocking_rx.h:33:0,
+                 from ../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:29:
+c:\users\xiexw\.deveco-device-tool\compiler_tool_chain\windows\cc_riscv32_musl_fp_win\sysroot\usr\include\string.h:37:5: note: expected 'const char *' but argument is of type 'unsigned char *'
+ int strcmp (const char *, const char *);
+     ^~~~~~
+../user/sample_uart_blocking_rx/src/sample_uart_blocking_rx.c:36:31: warning: unused parameter 'rx' [-Wunused-parameter]
+ void LED_State(unsigned char* rx)
+                               ^~
+[58/59] cross compiler obj/user/main.o
+ninja: build stopped: subcommand failed.

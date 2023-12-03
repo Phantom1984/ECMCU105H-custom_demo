@@ -1,0 +1,4065 @@
+
+D:\XieXW\Desktop\Button\out\bin\target.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text.entry:
+
+03000004 <_start>:
+
+    .section      .text.entry
+    .global _start
+    .option norvc
+_start:
+    j handle_reset
+ 3000004:	50c0006f          	j	3000510 <handle_reset>
+
+03000008 <TrapHandler>:
+.endm
+
+/* The interrupt vector table must be aligned with 4 bytes */
+.align 2
+TrapHandler:
+    j     TrapVector        /* trap and INT 0 */
+ 3000008:	4780006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 1 */
+ 300000c:	4740006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 2 */
+ 3000010:	4700006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 3 */
+ 3000014:	46c0006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 4 */
+ 3000018:	4680006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 5 */
+ 300001c:	4640006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 6 */
+ 3000020:	4600006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 7 */
+ 3000024:	45c0006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 8 */
+ 3000028:	4580006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 9 */
+ 300002c:	4540006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 10 */
+ 3000030:	4500006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 11 */
+ 3000034:	44c0006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 12 */
+ 3000038:	4480006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 13 */
+ 300003c:	4440006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 14 */
+ 3000040:	4400006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 15 */
+ 3000044:	43c0006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 16 */
+ 3000048:	4380006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 17 */
+ 300004c:	4340006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 18 */
+ 3000050:	4300006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 19 */
+ 3000054:	42c0006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 20 */
+ 3000058:	4280006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 21 */
+ 300005c:	4240006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 22 */
+ 3000060:	4200006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 23 */
+ 3000064:	41c0006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 24 */
+ 3000068:	4180006f          	j	3000480 <TrapVector>
+    j     TrapVector        /* INT 25 */
+ 300006c:	4140006f          	j	3000480 <TrapVector>
+
+    j     IntHandler        /* INT 26 */
+ 3000070:	2640006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 27 */
+ 3000074:	2600006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 28 */
+ 3000078:	25c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 29 */
+ 300007c:	2580006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 30 */
+ 3000080:	2540006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 31 */
+ 3000084:	2500006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 32 */
+ 3000088:	24c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 33 */
+ 300008c:	2480006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 34 */
+ 3000090:	2440006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 35 */
+ 3000094:	2400006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 36 */
+ 3000098:	23c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 37 */
+ 300009c:	2380006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 38 */
+ 30000a0:	2340006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 39 */
+ 30000a4:	2300006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 40 */
+ 30000a8:	22c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 41 */
+ 30000ac:	2280006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 42 */
+ 30000b0:	2240006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 43 */
+ 30000b4:	2200006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 44 */
+ 30000b8:	21c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 45 */
+ 30000bc:	2180006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 46 */
+ 30000c0:	2140006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 47 */
+ 30000c4:	2100006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 48 */
+ 30000c8:	20c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 49 */
+ 30000cc:	2080006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 50 */
+ 30000d0:	2040006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 51 */
+ 30000d4:	2000006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 52 */
+ 30000d8:	1fc0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 53 */
+ 30000dc:	1f80006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 54 */
+ 30000e0:	1f40006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 55 */
+ 30000e4:	1f00006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 56 */
+ 30000e8:	1ec0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 57 */
+ 30000ec:	1e80006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 58 */
+ 30000f0:	1e40006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 59 */
+ 30000f4:	1e00006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 60 */
+ 30000f8:	1dc0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 61 */
+ 30000fc:	1d80006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 62 */
+ 3000100:	1d40006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 63 */
+ 3000104:	1d00006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 64 */
+ 3000108:	1cc0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 65 */
+ 300010c:	1c80006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 66 */
+ 3000110:	1c40006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 67 */
+ 3000114:	1c00006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 68 */
+ 3000118:	1bc0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 69 */
+ 300011c:	1b80006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 70 */
+ 3000120:	1b40006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 71 */
+ 3000124:	1b00006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 72 */
+ 3000128:	1ac0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 73 */
+ 300012c:	1a80006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 74 */
+ 3000130:	1a40006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 75 */
+ 3000134:	1a00006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 76 */
+ 3000138:	19c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 77 */
+ 300013c:	1980006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 78 */
+ 3000140:	1940006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 79 */
+ 3000144:	1900006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 80 */
+ 3000148:	18c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 81 */
+ 300014c:	1880006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 82 */
+ 3000150:	1840006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 83 */
+ 3000154:	1800006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 84 */
+ 3000158:	17c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 85 */
+ 300015c:	1780006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 86 */
+ 3000160:	1740006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 87 */
+ 3000164:	1700006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 88 */
+ 3000168:	16c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 89 */
+ 300016c:	1680006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 90 */
+ 3000170:	1640006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 91 */
+ 3000174:	1600006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 92 */
+ 3000178:	15c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 93 */
+ 300017c:	1580006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 94 */
+ 3000180:	1540006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 95 */
+ 3000184:	1500006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 96 */
+ 3000188:	14c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 97 */
+ 300018c:	1480006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 98 */
+ 3000190:	1440006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 99 */
+ 3000194:	1400006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 100 */
+ 3000198:	13c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 101 */
+ 300019c:	1380006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 102 */
+ 30001a0:	1340006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 103 */
+ 30001a4:	1300006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 104 */
+ 30001a8:	12c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 105 */
+ 30001ac:	1280006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 106 */
+ 30001b0:	1240006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 107 */
+ 30001b4:	1200006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 108 */
+ 30001b8:	11c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 109 */
+ 30001bc:	1180006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 110 */
+ 30001c0:	1140006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 111 */
+ 30001c4:	1100006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 112 */
+ 30001c8:	10c0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 113 */
+ 30001cc:	1080006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 114 */
+ 30001d0:	1040006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 115 */
+ 30001d4:	1000006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 116 */
+ 30001d8:	0fc0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 117 */
+ 30001dc:	0f80006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 118 */
+ 30001e0:	0f40006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 119 */
+ 30001e4:	0f00006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 120 */
+ 30001e8:	0ec0006f          	j	30002d4 <IntHandler>
+    j     IntHandler        /* INT 121 */
+ 30001ec:	0e80006f          	j	30002d4 <IntHandler>
+
+030001f0 <NmiEntry>:
+
+.align 2
+NmiEntry:
+    SAVE_SYSERR_REGS
+ 30001f0:	f9010113          	addi	sp,sp,-112
+ 30001f4:	04812023          	sw	s0,64(sp)
+ 30001f8:	04912223          	sw	s1,68(sp)
+ 30001fc:	05212423          	sw	s2,72(sp)
+ 3000200:	05312623          	sw	s3,76(sp)
+ 3000204:	05412823          	sw	s4,80(sp)
+ 3000208:	05512a23          	sw	s5,84(sp)
+ 300020c:	05612c23          	sw	s6,88(sp)
+ 3000210:	05712e23          	sw	s7,92(sp)
+ 3000214:	07812023          	sw	s8,96(sp)
+ 3000218:	07912223          	sw	s9,100(sp)
+ 300021c:	07a12423          	sw	s10,104(sp)
+ 3000220:	07b12623          	sw	s11,108(sp)
+ 3000224:	11010593          	addi	a1,sp,272
+ 3000228:	06b12823          	sw	a1,112(sp)
+ 300022c:	06312a23          	sw	gp,116(sp)
+ 3000230:	06412c23          	sw	tp,120(sp)
+ 3000234:	34102573          	csrr	a0,mepc
+ 3000238:	300025f3          	csrr	a1,mstatus
+ 300023c:	34302673          	csrr	a2,mtval
+ 3000240:	342026f3          	csrr	a3,mcause
+ 3000244:	06a12e23          	sw	a0,124(sp)
+ 3000248:	08b12023          	sw	a1,128(sp)
+ 300024c:	08c12223          	sw	a2,132(sp)
+ 3000250:	08d12423          	sw	a3,136(sp)
+ 3000254:	00010513          	mv	a0,sp
+    call SysErrNmiEntry
+ 3000258:	2d7000ef          	jal	ra,3000d2e <SysErrNmiEntry>
+
+0300025c <deadLoop1>:
+deadLoop1:
+    tail deadLoop1
+ 300025c:	a001                	j	300025c <deadLoop1>
+    nop
+ 300025e:	00000013          	nop
+
+03000262 <TrapEntry>:
+
+.align 2
+TrapEntry:
+    SAVE_SYSERR_REGS
+ 3000262:	f9010113          	addi	sp,sp,-112
+ 3000266:	04812023          	sw	s0,64(sp)
+ 300026a:	04912223          	sw	s1,68(sp)
+ 300026e:	05212423          	sw	s2,72(sp)
+ 3000272:	05312623          	sw	s3,76(sp)
+ 3000276:	05412823          	sw	s4,80(sp)
+ 300027a:	05512a23          	sw	s5,84(sp)
+ 300027e:	05612c23          	sw	s6,88(sp)
+ 3000282:	05712e23          	sw	s7,92(sp)
+ 3000286:	07812023          	sw	s8,96(sp)
+ 300028a:	07912223          	sw	s9,100(sp)
+ 300028e:	07a12423          	sw	s10,104(sp)
+ 3000292:	07b12623          	sw	s11,108(sp)
+ 3000296:	11010593          	addi	a1,sp,272
+ 300029a:	06b12823          	sw	a1,112(sp)
+ 300029e:	06312a23          	sw	gp,116(sp)
+ 30002a2:	06412c23          	sw	tp,120(sp)
+ 30002a6:	34102573          	csrr	a0,mepc
+ 30002aa:	300025f3          	csrr	a1,mstatus
+ 30002ae:	34302673          	csrr	a2,mtval
+ 30002b2:	342026f3          	csrr	a3,mcause
+ 30002b6:	06a12e23          	sw	a0,124(sp)
+ 30002ba:	08b12023          	sw	a1,128(sp)
+ 30002be:	08c12223          	sw	a2,132(sp)
+ 30002c2:	08d12423          	sw	a3,136(sp)
+ 30002c6:	00010513          	mv	a0,sp
+    /* Exception run with interrupts masked */
+    csrc mstatus, MSTATUS_MIE
+ 30002ca:	30047073          	csrci	mstatus,8
+    call SysErrExcEntry
+ 30002ce:	25f000ef          	jal	ra,3000d2c <SysErrExcEntry>
+
+030002d2 <deadLoop2>:
+deadLoop2:
+    tail deadLoop2
+ 30002d2:	a001                	j	30002d2 <deadLoop2>
+
+030002d4 <IntHandler>:
+
+.align 2
+IntHandler:
+    addi  sp, sp, -(TOTAL_INT_SIZE_ON_STACK)
+ 30002d4:	f6010113          	addi	sp,sp,-160
+
+    SREG  a0, 3 * REGBYTES(sp)
+ 30002d8:	00a12623          	sw	a0,12(sp)
+    SREG  a1, 4 * REGBYTES(sp)
+ 30002dc:	00b12823          	sw	a1,16(sp)
+    lw    a1, (a0)
+    addi  a1, a1, 1
+    sw    a1, (a0)
+#endif
+
+    csrr  a0, cipri
+ 30002e0:	7ed02573          	csrr	a0,0x7ed
+    csrr  a1, prithd
+ 30002e4:	bfe025f3          	csrr	a1,0xbfe
+    csrw  prithd, a0                /* read prithd */
+ 30002e8:	bfe51073          	csrw	0xbfe,a0
+    SREG  a1, 6 * REGBYTES(sp)      /* save prithd */
+ 30002ec:	00b12c23          	sw	a1,24(sp)
+    csrr  a1, mstatus               /* read mstatus */
+ 30002f0:	300025f3          	csrr	a1,mstatus
+    SREG  a1, 7 * REGBYTES(sp)      /* save mstatus */
+ 30002f4:	00b12e23          	sw	a1,28(sp)
+    csrr  a1, mepc                  /* read mepc */
+ 30002f8:	341025f3          	csrr	a1,mepc
+    SREG  a1, 8 * REGBYTES(sp)      /* save mepc */
+ 30002fc:	02b12023          	sw	a1,32(sp)
+
+    csrr  a0, mcause
+ 3000300:	34202573          	csrr	a0,mcause
+
+    li  a1, (3<<11)
+ 3000304:	000025b7          	lui	a1,0x2
+ 3000308:	80058593          	addi	a1,a1,-2048 # 1800 <STACK_SIZE+0x400>
+    csrs  mstatus, a1
+ 300030c:	3005a073          	csrs	mstatus,a1
+    la    a1, custom_nested_irq_main_handler_entry
+ 3000310:	00000597          	auipc	a1,0x0
+ 3000314:	01058593          	addi	a1,a1,16 # 3000320 <custom_nested_irq_main_handler_entry>
+    csrw  mepc, a1
+ 3000318:	34159073          	csrw	mepc,a1
+    mret
+ 300031c:	30200073          	mret
+
+03000320 <custom_nested_irq_main_handler_entry>:
+
+.align 2
+custom_nested_irq_main_handler_entry:
+    SREG  t0, 0 * REGBYTES(sp)
+ 3000320:	00512023          	sw	t0,0(sp)
+    SREG  t1, 1 * REGBYTES(sp)
+ 3000324:	00612223          	sw	t1,4(sp)
+    SREG  t2, 2 * REGBYTES(sp)
+ 3000328:	00712423          	sw	t2,8(sp)
+    SREG  a2, 5 * REGBYTES(sp)
+ 300032c:	00c12a23          	sw	a2,20(sp)
+    SREG  ra, 9 * REGBYTES(sp)
+ 3000330:	02112223          	sw	ra,36(sp)
+    SREG  a3, 10 * REGBYTES(sp)
+ 3000334:	02d12423          	sw	a3,40(sp)
+    SREG  a4, 11 * REGBYTES(sp)
+ 3000338:	02e12623          	sw	a4,44(sp)
+    SREG  a5, 12 * REGBYTES(sp)
+ 300033c:	02f12823          	sw	a5,48(sp)
+    SREG  a6, 13 * REGBYTES(sp)
+ 3000340:	03012a23          	sw	a6,52(sp)
+    SREG  a7, 14 * REGBYTES(sp)
+ 3000344:	03112c23          	sw	a7,56(sp)
+    SREG  t3, 15 * REGBYTES(sp)
+ 3000348:	03c12e23          	sw	t3,60(sp)
+    SREG  t4, 16 * REGBYTES(sp)
+ 300034c:	05d12023          	sw	t4,64(sp)
+    SREG  t5, 17 * REGBYTES(sp)
+ 3000350:	05e12223          	sw	t5,68(sp)
+    SREG  t6, 18 * REGBYTES(sp)
+ 3000354:	05f12423          	sw	t6,72(sp)
+    FSREG  f30, 41 * REGBYTES(sp)
+    FSREG  f31, 42 * REGBYTES(sp)
+    frcsr  t0
+    SREG   t0, 43 * REGBYTES(sp)
+#else
+    FSREG  f0, 19 * REGBYTES(sp)
+ 3000358:	04012627          	fsw	ft0,76(sp)
+    FSREG  f1, 20 * REGBYTES(sp)
+ 300035c:	04112827          	fsw	ft1,80(sp)
+    FSREG  f2, 21 * REGBYTES(sp)
+ 3000360:	04212a27          	fsw	ft2,84(sp)
+    FSREG  f3, 22 * REGBYTES(sp)
+ 3000364:	04312c27          	fsw	ft3,88(sp)
+    FSREG  f4, 23 * REGBYTES(sp)
+ 3000368:	04412e27          	fsw	ft4,92(sp)
+    FSREG  f5, 24 * REGBYTES(sp)
+ 300036c:	06512027          	fsw	ft5,96(sp)
+    FSREG  f6, 25 * REGBYTES(sp)
+ 3000370:	06612227          	fsw	ft6,100(sp)
+    FSREG  f7, 26 * REGBYTES(sp)
+ 3000374:	06712427          	fsw	ft7,104(sp)
+    FSREG  f10, 27 * REGBYTES(sp)
+ 3000378:	06a12627          	fsw	fa0,108(sp)
+    FSREG  f11, 28 * REGBYTES(sp)
+ 300037c:	06b12827          	fsw	fa1,112(sp)
+    FSREG  f12, 29 * REGBYTES(sp)
+ 3000380:	06c12a27          	fsw	fa2,116(sp)
+    FSREG  f13, 30 * REGBYTES(sp)
+ 3000384:	06d12c27          	fsw	fa3,120(sp)
+    FSREG  f14, 31 * REGBYTES(sp)
+ 3000388:	06e12e27          	fsw	fa4,124(sp)
+    FSREG  f15, 32 * REGBYTES(sp)
+ 300038c:	08f12027          	fsw	fa5,128(sp)
+    FSREG  f16, 33 * REGBYTES(sp)
+ 3000390:	09012227          	fsw	fa6,132(sp)
+    FSREG  f17, 34 * REGBYTES(sp)
+ 3000394:	09112427          	fsw	fa7,136(sp)
+    FSREG  f28, 35 * REGBYTES(sp)
+ 3000398:	09c12627          	fsw	ft8,140(sp)
+    FSREG  f29, 36 * REGBYTES(sp)
+ 300039c:	09d12827          	fsw	ft9,144(sp)
+    FSREG  f30, 37 * REGBYTES(sp)
+ 30003a0:	09e12a27          	fsw	ft10,148(sp)
+    FSREG  f31, 38 * REGBYTES(sp)
+ 30003a4:	09f12c27          	fsw	ft11,152(sp)
+    frcsr  t0
+ 30003a8:	003022f3          	frcsr	t0
+    SREG   t0, 39 * REGBYTES(sp) /* save fcsr */
+ 30003ac:	08512e23          	sw	t0,156(sp)
+
+    bnez  a2, BacktoIrq
+    csrr  sp, mscratch
+    tail  NOS_HwiPostDispatch /* Should determine whether need to reschedule */
+#else
+    andi  a0, a0, MCAUSE_MASK_INT_NUM
+ 30003b0:	0ff57513          	andi	a0,a0,255
+    call  InterruptEntry
+ 30003b4:	14d000ef          	jal	ra,3000d00 <InterruptEntry>
+
+030003b8 <BacktoIrq>:
+#endif
+
+BacktoIrq:
+    LREG  t1, 1 * REGBYTES(sp)
+ 30003b8:	00412303          	lw	t1,4(sp)
+    LREG  t2, 2 * REGBYTES(sp)
+ 30003bc:	00812383          	lw	t2,8(sp)
+    LREG  a2, 5 * REGBYTES(sp)
+ 30003c0:	01412603          	lw	a2,20(sp)
+    LREG  ra, 9 * REGBYTES(sp)
+ 30003c4:	02412083          	lw	ra,36(sp)
+    LREG  a3, 10 * REGBYTES(sp)
+ 30003c8:	02812683          	lw	a3,40(sp)
+    LREG  a4, 11 * REGBYTES(sp)
+ 30003cc:	02c12703          	lw	a4,44(sp)
+    LREG  a5, 12 * REGBYTES(sp)
+ 30003d0:	03012783          	lw	a5,48(sp)
+    LREG  a6, 13 * REGBYTES(sp)
+ 30003d4:	03412803          	lw	a6,52(sp)
+    LREG  a7, 14 * REGBYTES(sp)
+ 30003d8:	03812883          	lw	a7,56(sp)
+    LREG  t3, 15 * REGBYTES(sp)
+ 30003dc:	03c12e03          	lw	t3,60(sp)
+    LREG  t4, 16 * REGBYTES(sp)
+ 30003e0:	04012e83          	lw	t4,64(sp)
+    LREG  t5, 17 * REGBYTES(sp)
+ 30003e4:	04412f03          	lw	t5,68(sp)
+    LREG  t6, 18 * REGBYTES(sp)
+ 30003e8:	04812f83          	lw	t6,72(sp)
+    FLREG  f30, 41 * REGBYTES(sp)
+    FLREG  f31, 42 * REGBYTES(sp)
+    LREG   t0,  43 * REGBYTES(sp)
+    fscsr  t0
+#else
+    FLREG  f0, 19 * REGBYTES(sp)
+ 30003ec:	04c12007          	flw	ft0,76(sp)
+    FLREG  f1, 20 * REGBYTES(sp)
+ 30003f0:	05012087          	flw	ft1,80(sp)
+    FLREG  f2, 21 * REGBYTES(sp)
+ 30003f4:	05412107          	flw	ft2,84(sp)
+    FLREG  f3, 22 * REGBYTES(sp)
+ 30003f8:	05812187          	flw	ft3,88(sp)
+    FLREG  f4, 23 * REGBYTES(sp)
+ 30003fc:	05c12207          	flw	ft4,92(sp)
+    FLREG  f5, 24 * REGBYTES(sp)
+ 3000400:	06012287          	flw	ft5,96(sp)
+    FLREG  f6, 25 * REGBYTES(sp)
+ 3000404:	06412307          	flw	ft6,100(sp)
+    FLREG  f7, 26 * REGBYTES(sp)
+ 3000408:	06812387          	flw	ft7,104(sp)
+    FLREG  f10, 27 * REGBYTES(sp)
+ 300040c:	06c12507          	flw	fa0,108(sp)
+    FLREG  f11, 28 * REGBYTES(sp)
+ 3000410:	07012587          	flw	fa1,112(sp)
+    FLREG  f12, 29 * REGBYTES(sp)
+ 3000414:	07412607          	flw	fa2,116(sp)
+    FLREG  f13, 30 * REGBYTES(sp)
+ 3000418:	07812687          	flw	fa3,120(sp)
+    FLREG  f14, 31 * REGBYTES(sp)
+ 300041c:	07c12707          	flw	fa4,124(sp)
+    FLREG  f15, 32 * REGBYTES(sp)
+ 3000420:	08012787          	flw	fa5,128(sp)
+    FLREG  f16, 33 * REGBYTES(sp)
+ 3000424:	08412807          	flw	fa6,132(sp)
+    FLREG  f17, 34 * REGBYTES(sp)
+ 3000428:	08812887          	flw	fa7,136(sp)
+    FLREG  f28, 35 * REGBYTES(sp)
+ 300042c:	08c12e07          	flw	ft8,140(sp)
+    FLREG  f29, 36 * REGBYTES(sp)
+ 3000430:	09012e87          	flw	ft9,144(sp)
+    FLREG  f30, 37 * REGBYTES(sp)
+ 3000434:	09412f07          	flw	ft10,148(sp)
+    FLREG  f31, 38 * REGBYTES(sp)
+ 3000438:	09812f87          	flw	ft11,152(sp)
+    LREG   t0,  39 * REGBYTES(sp) /* restore fcsr */
+ 300043c:	09c12283          	lw	t0,156(sp)
+    fscsr  t0
+ 3000440:	00329073          	fscsr	t0
+
+03000444 <quit_int>:
+    /*
+     *  Since the interrupt is already turned off when loading mstatus (after entering the interrupt,
+     *  the hardware will turn off the interrupt, so when saving mstatus, the interrupt is already turned off),
+     *  so there is no need to turn off the interrupt separately.
+     */
+    LREG  a0, 7 * REGBYTES(sp)  /* load mstatus */
+ 3000444:	01c12503          	lw	a0,28(sp)
+    csrr  t0, mstatus
+ 3000448:	300022f3          	csrr	t0,mstatus
+    LREG  a1, 8 * REGBYTES(sp)  /* load mepc */
+ 300044c:	02012583          	lw	a1,32(sp)
+    andi  t0, t0, MSTATUS_MIE
+ 3000450:	0082f293          	andi	t0,t0,8
+    bnei  t0, 0, restore_mstatus
+ 3000454:	0002923b          	bnei	t0,0,300045c <restore_mstatus>
+    andi  a0, a0, ~(MSTATUS_MIE | MSTATUS_MPIE)
+ 3000458:	f7757513          	andi	a0,a0,-137
+
+0300045c <restore_mstatus>:
+restore_mstatus:
+    csrw  mstatus, a0
+ 300045c:	30051073          	csrw	mstatus,a0
+
+    LREG  t0, 0 * REGBYTES(sp)
+ 3000460:	00012283          	lw	t0,0(sp)
+    csrw  mepc, a1
+ 3000464:	34159073          	csrw	mepc,a1
+    LREG  a0, 6 * REGBYTES(sp)  /* load prithd */
+ 3000468:	01812503          	lw	a0,24(sp)
+    csrw  prithd, a0
+ 300046c:	bfe51073          	csrw	0xbfe,a0
+    lw    a1, (a0)
+    addi  a1, a1, -1
+    sw    a1, (a0)
+#endif
+
+    LREG  a1, 4 * REGBYTES(sp)   /* 2 consecutive csrw instructions will have a bubble */
+ 3000470:	01012583          	lw	a1,16(sp)
+
+    LREG  a0, 3 * REGBYTES(sp)
+ 3000474:	00c12503          	lw	a0,12(sp)
+
+    addi  sp, sp, TOTAL_INT_SIZE_ON_STACK
+ 3000478:	0a010113          	addi	sp,sp,160
+
+    mret
+ 300047c:	30200073          	mret
+
+03000480 <TrapVector>:
+    LREG  a2, 4(sp)
+    LREG  a1, 0(sp)
+    addi  sp, sp, 8
+#endif
+
+    push_reg
+ 3000480:	f6010113          	addi	sp,sp,-160
+ 3000484:	fff11f8b          	stmia	{ra,t0-t6,a0-a7},(sp)
+ 3000488:	f6010113          	addi	sp,sp,-160
+    csrr  a0, mcause
+ 300048c:	34202573          	csrr	a0,mcause
+    li    t1, MCAUSE_ECALL_FROM_MMODE
+ 3000490:	00b00313          	li	t1,11
+#if defined(USER_MODE_ENABLE) && (USER_MODE_ENABLE == 1)
+    beq   a0, t1, switch_to_umode
+#else
+    beq   a0, t1, switch_to_mmode
+ 3000494:	02650c63          	beq	a0,t1,30004cc <switch_to_mmode>
+#endif
+    li    t1, MCAUSE_ECALL_FROM_UMODE
+ 3000498:	00800313          	li	t1,8
+    beq   a0, t1, switch_to_mmode
+ 300049c:	02650863          	beq	a0,t1,30004cc <switch_to_mmode>
+
+    li    a1, MCAUSE_MASK_INT_BIT
+ 30004a0:	800005b7          	lui	a1,0x80000
+    li    a2, MCAUSE_MASK_INT_NUM
+ 30004a4:	0ff00613          	li	a2,255
+    and   a1, a0, a1
+ 30004a8:	00b575b3          	and	a1,a0,a1
+    and   a0, a0, a2
+ 30004ac:	00c57533          	and	a0,a0,a2
+
+    li    a2, 0xc
+ 30004b0:	00c00613          	li	a2,12
+    beq   a0, a2, NmiEntry
+ 30004b4:	d2c50ee3          	beq	a0,a2,30001f0 <NmiEntry>
+    beqz  a1, TrapEntry
+ 30004b8:	da0585e3          	beqz	a1,3000262 <TrapEntry>
+    pop_reg
+ 30004bc:	0a010113          	addi	sp,sp,160
+ 30004c0:	fff10f8b          	ldmia	{ra,t0-t6,a0-a7},(sp)
+ 30004c4:	0a010113          	addi	sp,sp,160
+    mret
+ 30004c8:	30200073          	mret
+
+030004cc <switch_to_mmode>:
+    mret
+#endif
+
+.align 2
+switch_to_mmode:
+    li    t2,  MSTATUS_MPP_MACHINE
+ 30004cc:	000023b7          	lui	t2,0x2
+ 30004d0:	80038393          	addi	t2,t2,-2048 # 1800 <STACK_SIZE+0x400>
+    csrs  mstatus, t2
+ 30004d4:	3003a073          	csrs	mstatus,t2
+    csrr  t0,  mepc
+ 30004d8:	341022f3          	csrr	t0,mepc
+    addi  t0,  t0,  4
+ 30004dc:	00428293          	addi	t0,t0,4
+    csrw  mepc, t0
+ 30004e0:	34129073          	csrw	mepc,t0
+    pop_reg
+ 30004e4:	0a010113          	addi	sp,sp,160
+ 30004e8:	fff10f8b          	ldmia	{ra,t0-t6,a0-a7},(sp)
+ 30004ec:	0a010113          	addi	sp,sp,160
+    mret
+ 30004f0:	30200073          	mret
+
+030004f4 <mem_cpy>:
+
+.align 2
+mem_cpy:
+    bge t0, t2, cpy_done
+ 30004f4:	0072dc63          	bge	t0,t2,300050c <cpy_done>
+    lw  t3, (t1)
+ 30004f8:	00032e03          	lw	t3,0(t1)
+    sw  t3, (t0)
+ 30004fc:	01c2a023          	sw	t3,0(t0)
+    addi t0, t0, 4
+ 3000500:	00428293          	addi	t0,t0,4
+    addi t1, t1, 4
+ 3000504:	00430313          	addi	t1,t1,4
+    j mem_cpy
+ 3000508:	fedff06f          	j	30004f4 <mem_cpy>
+
+0300050c <cpy_done>:
+cpy_done:
+    ret
+ 300050c:	00008067          	ret
+
+03000510 <handle_reset>:
+
+.align 2
+handle_reset:
+    csrwi mstatus, 0
+ 3000510:	30005073          	csrwi	mstatus,0
+    csrwi mie,  0
+ 3000514:	30405073          	csrwi	mie,0
+    csrci mstatus, 0x08
+ 3000518:	30047073          	csrci	mstatus,8
+    la    t0,  TrapHandler
+ 300051c:	00000297          	auipc	t0,0x0
+ 3000520:	aec28293          	addi	t0,t0,-1300 # 3000008 <TrapHandler>
+    addi  t0,  t0, 1
+ 3000524:	00128293          	addi	t0,t0,1
+    csrw  mtvec, t0
+ 3000528:	30529073          	csrw	mtvec,t0
+    csrwi 0x7EF, 0x1               /* lock mtvec */
+ 300052c:	7ef0d073          	csrwi	0x7ef,1
+
+03000530 <flash_init>:
+
+flash_init:
+/* eflash prefetch enable */
+    li  t0, EFC_BASE_ADDR
+ 3000530:	147102b7          	lui	t0,0x14710
+    lw  t1, 0x120(t0)
+ 3000534:	1202a303          	lw	t1,288(t0) # 14710120 <RAM_END+0x1070c120>
+    ori t1, t1, 1
+ 3000538:	00136313          	ori	t1,t1,1
+    sw  t1, 0x120(t0)
+ 300053c:	1262a023          	sw	t1,288(t0)
+
+/* eflash cache enable */
+    lw  t1, 0x124(t0)
+ 3000540:	1242a303          	lw	t1,292(t0)
+    ori t1, t1, 1
+ 3000544:	00136313          	ori	t1,t1,1
+    sw  t1, 0x124(t0)
+ 3000548:	1262a223          	sw	t1,292(t0)
+
+/* enable flash cmd */
+    li t0, EFC_MAGIC_NUMBER
+ 300054c:	fedcc2b7          	lui	t0,0xfedcc
+ 3000550:	a9828293          	addi	t0,t0,-1384 # fedcba98 <RAM_END+0xfadc7a98>
+    li t1, EFC_MAGIC_LOCK_RW
+ 3000554:	14710337          	lui	t1,0x14710
+ 3000558:	20030313          	addi	t1,t1,512 # 14710200 <RAM_END+0x1070c200>
+    sw t0, (t1)
+ 300055c:	00532023          	sw	t0,0(t1)
+
+/* initialize global pointer */
+    .option push
+    .option norelax
+    la gp, __global_pointer$
+ 3000560:	01000197          	auipc	gp,0x1000
+ 3000564:	d6618193          	addi	gp,gp,-666 # 40002c6 <__global_pointer$>
+
+/* initialize stack pointer */
+#ifdef NOS_TASK_SUPPORT /* Support Multi-task needs to use irq stack */
+    la sp, __init_stack_top
+#else
+    la sp, __stack_top
+ 3000568:	01003117          	auipc	sp,0x1003
+ 300056c:	69810113          	addi	sp,sp,1688 # 4003c00 <__INTERRUPT_STACK_BEGIN__>
+#endif
+
+/* timer0 interrupt enable */
+    li t0, TIMER0_CONTROL
+ 3000570:	143002b7          	lui	t0,0x14300
+ 3000574:	00828293          	addi	t0,t0,8 # 14300008 <RAM_END+0x102fc008>
+    lw t1, (t0)
+ 3000578:	0002a303          	lw	t1,0(t0)
+    andi t1, t1, TIMER0_INTENABLE
+ 300057c:	02037313          	andi	t1,t1,32
+    sw t1, (t0)
+ 3000580:	0062a023          	sw	t1,0(t0)
+
+/* uart0 deinit */
+    li t0, 0x14000000
+ 3000584:	140002b7          	lui	t0,0x14000
+    li t1, 0
+ 3000588:	00000313          	li	t1,0
+    sw t1, IBRD_OFFSET(t0)
+ 300058c:	0262a223          	sw	t1,36(t0) # 14000024 <RAM_END+0xfffc024>
+    sw t1, FBRD_OFFSET(t0)
+ 3000590:	0262a423          	sw	t1,40(t0)
+    sw t1, LCR_H_OFFSET(t0)
+ 3000594:	0262a623          	sw	t1,44(t0)
+    sw t1, CR_OFFSET(t0)
+ 3000598:	0262a823          	sw	t1,48(t0)
+    sw t1, DMACR_OFFSET(t0)
+ 300059c:	0462a423          	sw	t1,72(t0)
+
+030005a0 <clear_sram>:
+
+/* perform the rest of initialization in C */
+clear_sram:
+    /* clear sysram parity error */
+    li  t0, SYSRAM_ERROR
+ 30005a0:	101082b7          	lui	t0,0x10108
+ 30005a4:	30028293          	addi	t0,t0,768 # 10108300 <RAM_END+0xc104300>
+    lw  t1, (t0)
+ 30005a8:	0002a303          	lw	t1,0(t0)
+    ori t1, t1, 1
+ 30005ac:	00136313          	ori	t1,t1,1
+    sw  t1, (t0)
+ 30005b0:	0062a023          	sw	t1,0(t0)
+
+    la t0, SRAM_START
+ 30005b4:	d3a18293          	addi	t0,gp,-710 # 4000000 <g_hosc_ctrim>
+    la t1, SRAM_END
+ 30005b8:	01004317          	auipc	t1,0x1004
+ 30005bc:	a4830313          	addi	t1,t1,-1464 # 4004000 <RAM_END>
+    li t2, 0
+ 30005c0:	00000393          	li	t2,0
+
+030005c4 <clear_sram_loop>:
+
+clear_sram_loop:
+    sw      t2, (t0)            /* clear all sram */
+ 30005c4:	0072a023          	sw	t2,0(t0)
+    addi    t0, t0, 4           /* increment clear index pointer */
+ 30005c8:	00428293          	addi	t0,t0,4
+    blt     t0, t1, clear_sram_loop /* are we at the end yet, if not , continue till the end */
+ 30005cc:	fe62cce3          	blt	t0,t1,30005c4 <clear_sram_loop>
+
+030005d0 <ramdcode_copy>:
+
+ramdcode_copy:
+    la t0, __sram_code_start         /* SRAM addr */
+ 30005d0:	ff000297          	auipc	t0,0xff000
+ 30005d4:	a3028293          	addi	t0,t0,-1488 # 2000000 <RAM_CODE_START>
+    la t1, __sram_code_load          /* ROM addr  */
+ 30005d8:	00000317          	auipc	t1,0x0
+ 30005dc:	0b830313          	addi	t1,t1,184 # 3000690 <Chip_Init>
+    la t2, __sram_code_end
+ 30005e0:	ff000397          	auipc	t2,0xff000
+ 30005e4:	a2038393          	addi	t2,t2,-1504 # 2000000 <RAM_CODE_START>
+    jal mem_cpy
+ 30005e8:	f0dff0ef          	jal	ra,30004f4 <mem_cpy>
+
+030005ec <reserved_data_copy>:
+
+reserved_data_copy:
+    la t0, __reserved_code_start_addr  /* SRAM addr */
+ 30005ec:	d3a18293          	addi	t0,gp,-710 # 4000000 <g_hosc_ctrim>
+    la t1, __reserved_code_load_addr   /* ROM addr  */
+ 30005f0:	00000317          	auipc	t1,0x0
+ 30005f4:	0a030313          	addi	t1,t1,160 # 3000690 <Chip_Init>
+    la t2, __reserved_code_end_addr
+ 30005f8:	d3a18393          	addi	t2,gp,-710 # 4000000 <g_hosc_ctrim>
+    jal mem_cpy
+ 30005fc:	ef9ff0ef          	jal	ra,30004f4 <mem_cpy>
+
+03000600 <coderom_data_copy>:
+
+coderom_data_copy:
+    la t0, __data_start              /* SRAM addr */
+ 3000600:	d3a18293          	addi	t0,gp,-710 # 4000000 <g_hosc_ctrim>
+    la t1, __data_load               /* ROM addr  */
+ 3000604:	00001317          	auipc	t1,0x1
+ 3000608:	47c30313          	addi	t1,t1,1148 # 3001a80 <__data_load>
+    la t2, __data_end
+ 300060c:	d4218393          	addi	t2,gp,-702 # 4000008 <g_tsensor>
+    jal mem_cpy
+ 3000610:	ee5ff0ef          	jal	ra,30004f4 <mem_cpy>
+
+03000614 <pmp_init>:
+    li t0,0x0b0b0d08
+    csrw pmpcfg1,t0
+#endif
+
+/* disable Icache */
+    csrwi  0x7C0, 0x0 /* disable ICACHE */
+ 3000614:	7c005073          	csrwi	0x7c0,0
+    fence
+ 3000618:	0ff0000f          	fence
+
+/* disable Dcache */
+    csrwi  0x7C1, 0x0 /* disable DCACHE */
+ 300061c:	7c105073          	csrwi	0x7c1,0
+    fence
+ 3000620:	0ff0000f          	fence
+
+/* support float and mie */
+    li t0,0x2008
+ 3000624:	000022b7          	lui	t0,0x2
+ 3000628:	00828293          	addi	t0,t0,8 # 2008 <STACK_SIZE+0xc08>
+    csrs mstatus,t0
+ 300062c:	3002a073          	csrs	mstatus,t0
+    li t0,0x20
+ 3000630:	02000293          	li	t0,32
+    csrs misa,t0
+ 3000634:	3012a073          	csrs	misa,t0
+
+/* Interrupt set default priority = 1*/
+    li t0, 0x11111111
+ 3000638:	111112b7          	lui	t0,0x11111
+ 300063c:	11128293          	addi	t0,t0,273 # 11111111 <RAM_END+0xd10d111>
+    csrw locipri0, t0
+ 3000640:	bc029073          	csrw	0xbc0,t0
+    csrw locipri1, t0
+ 3000644:	bc129073          	csrw	0xbc1,t0
+    csrw locipri2, t0
+ 3000648:	bc229073          	csrw	0xbc2,t0
+    csrw locipri3, t0
+ 300064c:	bc329073          	csrw	0xbc3,t0
+    csrw locipri4, t0
+ 3000650:	bc429073          	csrw	0xbc4,t0
+    csrw locipri5, t0
+ 3000654:	bc529073          	csrw	0xbc5,t0
+    csrw locipri6, t0
+ 3000658:	bc629073          	csrw	0xbc6,t0
+    csrw locipri7, t0
+ 300065c:	bc729073          	csrw	0xbc7,t0
+    csrw locipri8, t0
+ 3000660:	bc829073          	csrw	0xbc8,t0
+    csrw locipri9, t0
+ 3000664:	bc929073          	csrw	0xbc9,t0
+    csrw locipri10, t0
+ 3000668:	bca29073          	csrw	0xbca,t0
+    csrw locipri11, t0
+ 300066c:	bcb29073          	csrw	0xbcb,t0
+    csrw locipri12, t0
+ 3000670:	bcc29073          	csrw	0xbcc,t0
+    csrw locipri13, t0
+ 3000674:	bcd29073          	csrw	0xbcd,t0
+    csrw locipri14, t0
+ 3000678:	bce29073          	csrw	0xbce,t0
+    csrw locipri15, t0
+ 300067c:	bcf29073          	csrw	0xbcf,t0
+
+    ecall
+ 3000680:	00000073          	ecall
+
+#ifdef NOS_TASK_SUPPORT
+    jal Chip_Init
+#else
+    jal Chip_Init
+ 3000684:	00c000ef          	jal	ra,3000690 <Chip_Init>
+
+/* jump to C func. */
+    jal main
+ 3000688:	747000ef          	jal	ra,30015ce <main>
+
+0300068c <dead_loop>:
+#endif
+
+dead_loop:
+    j dead_loop
+ 300068c:	0000006f          	j	300068c <dead_loop>
+
+Disassembly of section .text:
+
+03000690 <Chip_Init>:
+ * @brief Chip Init
+ * @param None
+ * @retval None
+ */
+void Chip_Init(void)
+{
+ 3000690:	8118                	push	{ra},-32
+    CRG_CoreClkSelect coreClkSelect;
+    /* Config CRG */
+    if (CRG_Config(&coreClkSelect) != BASE_STATUS_OK) {
+ 3000692:	0068                	addi	a0,sp,12
+ 3000694:	795000ef          	jal	ra,3001628 <CRG_Config>
+ 3000698:	c111                	beqz	a0,300069c <Chip_Init+0xc>
+ 300069a:	a001                	j	300069a <Chip_Init+0xa>
+        Chip_InitFail();
+    }
+
+    /* Config FLASH Clock */
+    FLASH_ClockConfig(coreClkSelect);
+ 300069c:	4532                	lw	a0,12(sp)
+ 300069e:	2619                	jal	ra,30009a4 <FLASH_ClockConfig>
+
+    /* Set CoreClock Select after FLASH Config Done */
+    CRG_SetCoreClockSelect(coreClkSelect);
+ 30006a0:	4532                	lw	a0,12(sp)
+ 30006a2:	2cc5                	jal	ra,3000992 <CRG_SetCoreClockSelect>
+
+    /* Waiting CRG Config Done */
+    if (HAL_CRG_GetCoreClkFreq() != HOSC_FREQ) {
+ 30006a4:	443000ef          	jal	ra,30012e6 <HAL_CRG_GetCoreClkFreq>
+ 30006a8:	017d 7840 079f      	l.li	a5,0x17d7840
+ 30006ae:	00f50363          	beq	a0,a5,30006b4 <Chip_Init+0x24>
+        FLASH_WaitClockConfigDone();
+ 30006b2:	26d9                	jal	ra,3000a78 <FLASH_WaitClockConfigDone>
+    }
+
+    IRQ_Init();
+ 30006b4:	2da9                	jal	ra,3000d0e <IRQ_Init>
+    SYSTICK_Init();
+ 30006b6:	2195                	jal	ra,3000b1a <SYSTICK_Init>
+    ADC_InitVref();
+ 30006b8:	2871                	jal	ra,3000754 <ADC_InitVref>
+    TSENSOR_InitVrefList();
+ 30006ba:	2021                	jal	ra,30006c2 <TSENSOR_InitVrefList>
+    PGA_InitVref();
+ 30006bc:	26f9                	jal	ra,3000a8a <PGA_InitVref>
+    PMC_InitVref();
+ 30006be:	2919                	jal	ra,3000ad4 <PMC_InitVref>
+    /* User Add Code Here */
+
+#ifdef NOS_TASK_SUPPORT
+    NOS_Init();
+#endif
+ 30006c0:	8114                	popret	{ra},32
+
+030006c2 <TSENSOR_InitVrefList>:
+ * @brief ADC initialize vref power.
+ * @param None.
+ * @retval None.
+ */
+void TSENSOR_InitVrefList(void)
+{
+ 30006c2:	8218                	push	{ra},-48
+    FOTP_INFO_RGN0_NUMBER_1 tsensorRef;
+    FOTP_InfoGet(FOTP_INFO_RNG0, 1, &tsensorRef.comData);   /* 1 is the index of tsensorRef in otp */
+ 30006c4:	860a                	mv	a2,sp
+ 30006c6:	2891                	jal	ra,300071a <TSENSOR_InitVrefList+0x58>
+    unsigned int t = tsensorRef.REG.data3.ts_ref_t0_ft_rt - 57;  /* offset temperature is -57 */
+ 30006c8:	47b2                	lw	a5,12(sp)
+    float slope = (v) / (float)(t + 273);  /* reference temperature is -273 */
+    g_tsensor->vrefTemp = t;
+    g_tsensor->vrefVoltage = v;
+    g_tsensor->slope = slope;
+    FOTP_INFO_RGN0_NUMBER_1 trimDate;
+    FOTP_InfoGet(FOTP_INFO_RNG0, 1, &trimDate.comData);   /* 1 is the number of adc_vref in otp */
+ 30006ca:	0810                	addi	a2,sp,16
+    unsigned int t = tsensorRef.REG.data3.ts_ref_t0_ft_rt - 57;  /* offset temperature is -57 */
+ 30006cc:	7ff7f693          	andi	a3,a5,2047
+    float v = tsensorRef.REG.data3.ts_ref_v0_ft_rt * 0.0031f + 0.65f;  /* offset Voltage is 0.65, degree is 0.0031 */
+ 30006d0:	83ad                	srli	a5,a5,0xb
+ 30006d2:	7ff7f793          	andi	a5,a5,2047
+ 30006d6:	d007f7d3          	fcvt.s.w	fa5,a5
+ 30006da:	030017b7          	lui	a5,0x3001
+ 30006de:	70c7a707          	flw	fa4,1804(a5) # 300170c <__rodata_start>
+ 30006e2:	030017b7          	lui	a5,0x3001
+ 30006e6:	7107a687          	flw	fa3,1808(a5) # 3001710 <__rodata_start+0x4>
+    unsigned int t = tsensorRef.REG.data3.ts_ref_t0_ft_rt - 57;  /* offset temperature is -57 */
+ 30006ea:	fc768713          	addi	a4,a3,-57
+    float slope = (v) / (float)(t + 273);  /* reference temperature is -273 */
+ 30006ee:	0d868693          	addi	a3,a3,216
+    float v = tsensorRef.REG.data3.ts_ref_v0_ft_rt * 0.0031f + 0.65f;  /* offset Voltage is 0.65, degree is 0.0031 */
+ 30006f2:	68e7f7c3          	fmadd.s	fa5,fa5,fa4,fa3
+    float slope = (v) / (float)(t + 273);  /* reference temperature is -273 */
+ 30006f6:	d006f753          	fcvt.s.w	fa4,a3
+    g_tsensor->vrefTemp = t;
+ 30006fa:	d4218793          	addi	a5,gp,-702 # 4000008 <g_tsensor>
+ 30006fe:	a79a                	sh	a4,8(a5)
+    g_tsensor->vrefVoltage = v;
+ 3000700:	e39c                	fsw	fa5,0(a5)
+    float slope = (v) / (float)(t + 273);  /* reference temperature is -273 */
+ 3000702:	18e7f7d3          	fdiv.s	fa5,fa5,fa4
+    g_tsensor->slope = slope;
+ 3000706:	e3dc                	fsw	fa5,4(a5)
+    FOTP_InfoGet(FOTP_INFO_RNG0, 1, &trimDate.comData);   /* 1 is the number of adc_vref in otp */
+ 3000708:	2809                	jal	ra,300071a <TSENSOR_InitVrefList+0x58>
+    g_hosc_ctrim = trimDate.REG.data2.hosc_ctrim_ft_rt;
+ 300070a:	47e2                	lw	a5,24(sp)
+ 300070c:	d3a18713          	addi	a4,gp,-710 # 4000000 <g_hosc_ctrim>
+ 3000710:	83c9                	srli	a5,a5,0x12
+ 3000712:	1ff7f793          	andi	a5,a5,511
+ 3000716:	c31c                	sw	a5,0(a4)
+    return;
+ 3000718:	8214                	popret	{ra},48
+    FOTP_InfoGet(FOTP_INFO_RNG0, 1, &trimDate.comData);   /* 1 is the number of adc_vref in otp */
+ 300071a:	4585                	li	a1,1
+ 300071c:	4501                	li	a0,0
+ 300071e:	a12d                	j	3000b48 <FOTP_InfoGet>
+
+03000720 <ADC_GetOffsetTrim>:
+ * @param None.
+ * @retval offset value.
+ */
+float ADC_GetOffsetTrim(unsigned int index)
+{
+    unsigned temp = g_adcTrimList[index].offset;
+ 3000720:	e0e18793          	addi	a5,gp,-498 # 40000d4 <g_adcTrimList>
+ 3000724:	04a7851b          	addshf	a0,a5,a0,sll,2
+ 3000728:	213e                	lhu	a5,2(a0)
+ 300072a:	030016b7          	lui	a3,0x3001
+    float ret;
+    if ((temp & 0x2000) == 0x2000) {      /* determine the sign bit[13] */
+ 300072e:	01279713          	slli	a4,a5,0x12
+ 3000732:	00075b63          	bgez	a4,3000748 <ADC_GetOffsetTrim+0x28>
+        temp |= 0xFFFFC000;
+ 3000736:	7771                	lui	a4,0xffffc
+ 3000738:	8fd9                	or	a5,a5,a4
+        unsigned int tmp = ~(temp - 1);
+        ret = (0 - (int)tmp) / (float)2;  /* 2 for decimal conversion */
+ 300073a:	d007f553          	fcvt.s.w	fa0,a5
+    } else {
+        temp &= 0x1FFF;
+        ret = (float)temp / (float)2;  /* 2 for decimal conversion */
+ 300073e:	7186a787          	flw	fa5,1816(a3) # 3001718 <__rodata_start+0xc>
+ 3000742:	10f57553          	fmul.s	fa0,fa0,fa5
+    }
+    return ret;
+}
+ 3000746:	8082                	ret
+        ret = (float)temp / (float)2;  /* 2 for decimal conversion */
+ 3000748:	6709                	lui	a4,0x2
+ 300074a:	177d                	addi	a4,a4,-1
+ 300074c:	8ff9                	and	a5,a5,a4
+ 300074e:	d017f553          	fcvt.s.wu	fa0,a5
+ 3000752:	b7f5                	j	300073e <ADC_GetOffsetTrim+0x1e>
+
+03000754 <ADC_InitVref>:
+{
+ 3000754:	7131                	addi	sp,sp,-192
+ 3000756:	0a810293          	addi	t0,sp,168
+ 300075a:	00e2968b          	stmia	{ra,s0-s4},(t0)
+ 300075e:	ef22                	fsw	fs0,156(sp)
+    FOTP_InfoGet(FOTP_INFO_RNG0, 4, &trimDate.comData);   /* 4 is the number of fotp_empty_flag in otp */
+ 3000760:	860a                	mv	a2,sp
+ 3000762:	4591                	li	a1,4
+ 3000764:	2c39                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    if (trimDate.REG.fotp_empty_flag == 0x5AA59669) {     /* fotp_empty_flag is 0x5AA59669 */
+ 3000766:	4782                	lw	a5,0(sp)
+ 3000768:	5aa5 9669 071f      	l.li	a4,0x5aa59669
+ 300076e:	e3e18493          	addi	s1,gp,-450 # 4000104 <g_trimEnable>
+ 3000772:	00e79463          	bne	a5,a4,300077a <ADC_InitVref+0x26>
+        g_trimEnable = true;
+ 3000776:	4785                	li	a5,1
+ 3000778:	a09c                	sb	a5,0(s1)
+    FOTP_InfoGet(FOTP_INFO_RNG0, 2, &idInfo.comData);   /* 2 is the number of in otp */
+ 300077a:	0810                	addi	a2,sp,16
+ 300077c:	4589                	li	a1,2
+ 300077e:	2411                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    g_versionId = idInfo.REG.data2.version_id;
+ 3000780:	01814783          	lbu	a5,24(sp)
+ 3000784:	d3e18713          	addi	a4,gp,-706 # 4000004 <g_versionId>
+ 3000788:	c31c                	sw	a5,0(a4)
+    if (g_trimEnable == true) {
+ 300078a:	209c                	lbu	a5,0(s1)
+ 300078c:	1a078a63          	beqz	a5,3000940 <ADC_InitVref+0x1ec>
+        FOTP_InfoGet(FOTP_INFO_RNG0, 21, &adcVrefTrim.comData);   /* 21 is the number of adc_vref in otp */
+ 3000790:	1010                	addi	a2,sp,32
+ 3000792:	45d5                	li	a1,21
+ 3000794:	22fd                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    SYSCTRL1->ADCVREF_CTRL0.BIT.adcvref_bg_trim = adcVrefTrim.REG.data1.adcvref_bg_trim;
+ 3000796:	1010b437          	lui	s0,0x1010b
+ 300079a:	5692                	lw	a3,36(sp)
+ 300079c:	401c                	lw	a5,0(s0)
+ 300079e:	ffe0 ffff 071f      	l.li	a4,0xffe0ffff
+ 30007a4:	8afd                	andi	a3,a3,31
+ 30007a6:	2ad1                	jal	ra,300097a <ADC_InitVref+0x226>
+ 30007a8:	c01c                	sw	a5,0(s0)
+    SYSCTRL1->ADCVREF_CTRL0.BIT.adcvref_bg_en = BASE_CFG_ENABLE;
+ 30007aa:	401c                	lw	a5,0(s0)
+ 30007ac:	0017e793          	ori	a5,a5,1
+ 30007b0:	c01c                	sw	a5,0(s0)
+    SYSCTRL1->ADCVREF_CTRL1.BIT.adcvref_adcldo_trim = adcVrefTrim.REG.data1.adcvref_adcldo_trim;
+ 30007b2:	5692                	lw	a3,36(sp)
+ 30007b4:	405c                	lw	a5,4(s0)
+ 30007b6:	8295                	srli	a3,a3,0x5
+ 30007b8:	22c1                	jal	ra,3000978 <ADC_InitVref+0x224>
+ 30007ba:	c05c                	sw	a5,4(s0)
+    SYSCTRL1->ADCVREF_CTRL1.BIT.adcvref_adcldo_en = BASE_CFG_ENABLE;
+ 30007bc:	405c                	lw	a5,4(s0)
+ 30007be:	0017e793          	ori	a5,a5,1
+ 30007c2:	c05c                	sw	a5,4(s0)
+ 30007c4:	441c                	lw	a5,8(s0)
+    SYSCTRL1->ADC0_VREF_CTRL.BIT.adcvref_refbuf_trim0_2p0v = adcVrefTrim.REG.data2.adcvref_refbuf0_trim_2p0v;
+ 30007c6:	56a2                	lw	a3,40(sp)
+ 30007c8:	2a45                	jal	ra,3000978 <ADC_InitVref+0x224>
+ 30007ca:	c41c                	sw	a5,8(s0)
+ 30007cc:	441c                	lw	a5,8(s0)
+    SYSCTRL1->ADC0_VREF_CTRL.BIT.adcvref_refbuf_trim0_2p5v = adcVrefTrim.REG.data3.adcvref_refbuf0_trim_2p5v;
+ 30007ce:	56b2                	lw	a3,44(sp)
+ 30007d0:	e0ff ffff 061f      	l.li	a2,0xe0ffffff
+ 30007d6:	8ff1                	and	a5,a5,a2
+ 30007d8:	8afd                	andi	a3,a3,31
+ 30007da:	30d7a79b          	orshf	a5,a5,a3,sll,24
+ 30007de:	c41c                	sw	a5,8(s0)
+    SYSCTRL1->ADC1_VREF_CTRL.BIT.adcvref_refbuf_trim1_2p0v = adcVrefTrim.REG.data2.adcvref_refbuf1_trim_2p0v;
+ 30007e0:	56a2                	lw	a3,40(sp)
+ 30007e2:	445c                	lw	a5,12(s0)
+ 30007e4:	8295                	srli	a3,a3,0x5
+ 30007e6:	2a49                	jal	ra,3000978 <ADC_InitVref+0x224>
+ 30007e8:	c45c                	sw	a5,12(s0)
+    SYSCTRL1->ADC1_VREF_CTRL.BIT.adcvref_refbuf_trim1_2p5v = adcVrefTrim.REG.data3.adcvref_refbuf1_trim_2p5v;
+ 30007ea:	56b2                	lw	a3,44(sp)
+ 30007ec:	445c                	lw	a5,12(s0)
+ 30007ee:	8295                	srli	a3,a3,0x5
+ 30007f0:	8afd                	andi	a3,a3,31
+ 30007f2:	8ff1                	and	a5,a5,a2
+ 30007f4:	30d7a79b          	orshf	a5,a5,a3,sll,24
+ 30007f8:	c45c                	sw	a5,12(s0)
+    SYSCTRL1->ADC2_VREF_CTRL.BIT.adcvref_refbuf_trim2_2p0v = adcVrefTrim.REG.data2.adcvref_refbuf2_trim_2p0v;
+ 30007fa:	56a2                	lw	a3,40(sp)
+ 30007fc:	481c                	lw	a5,16(s0)
+ 30007fe:	82a9                	srli	a3,a3,0xa
+ 3000800:	2aa5                	jal	ra,3000978 <ADC_InitVref+0x224>
+ 3000802:	c81c                	sw	a5,16(s0)
+    SYSCTRL1->ADC2_VREF_CTRL.BIT.adcvref_refbuf_trim2_2p5v = adcVrefTrim.REG.data3.adcvref_refbuf2_trim_2p5v;
+ 3000804:	5732                	lw	a4,44(sp)
+ 3000806:	481c                	lw	a5,16(s0)
+    BASE_FUNC_DELAY_MS(10);     /* Wait for 10 ms until the LDO becomes stable */
+ 3000808:	3e800593          	li	a1,1000
+    SYSCTRL1->ADC2_VREF_CTRL.BIT.adcvref_refbuf_trim2_2p5v = adcVrefTrim.REG.data3.adcvref_refbuf2_trim_2p5v;
+ 300080c:	8329                	srli	a4,a4,0xa
+ 300080e:	8b7d                	andi	a4,a4,31
+ 3000810:	8ff1                	and	a5,a5,a2
+ 3000812:	30e7a79b          	orshf	a5,a5,a4,sll,24
+ 3000816:	c81c                	sw	a5,16(s0)
+    BASE_FUNC_DELAY_MS(10);     /* Wait for 10 ms until the LDO becomes stable */
+ 3000818:	4529                	li	a0,10
+ 300081a:	21d9                	jal	ra,3000ce0 <BASE_FUNC_Delay>
+    unsigned int ldoStatu = SYSCTRL1->ADCVREF_CTRL1.BIT.adcvref_adcldo_ok;
+ 300081c:	405c                	lw	a5,4(s0)
+    if (ldoStatu == BASE_CFG_ENABLE) {
+ 300081e:	0007d3bb          	bgei	a5,0,300082c <ADC_InitVref+0xd8>
+        SYSCTRL1->ADCVREF_CTRL6.reg |= 0x800000;
+ 3000822:	4c1c                	lw	a5,24(s0)
+ 3000824:	00800737          	lui	a4,0x800
+ 3000828:	8fd9                	or	a5,a5,a4
+ 300082a:	cc1c                	sw	a5,24(s0)
+    if (g_trimEnable == true) {
+ 300082c:	209c                	lbu	a5,0(s1)
+ 300082e:	10078663          	beqz	a5,300093a <ADC_InitVref+0x1e6>
+    FOTP_InfoGet(FOTP_INFO_RNG0, 22, &adc0Sh0.comData);   /* 22 is the number of adc calibration trim in otp */
+ 3000832:	1810                	addi	a2,sp,48
+ 3000834:	45d9                	li	a1,22
+ 3000836:	22b1                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    FOTP_InfoGet(FOTP_INFO_RNG0, 23, &adc0Sh1.comData);   /* 23 is the number of adc calibration trim in otp */
+ 3000838:	0090                	addi	a2,sp,64
+ 300083a:	45dd                	li	a1,23
+ 300083c:	2299                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    g_adcTrimList[index].gain = adc0Sh0.REG.data0.adc0_sh0_g0p6_ge_trim;
+ 300083e:	6489                	lui	s1,0x2
+ 3000840:	e0e18413          	addi	s0,gp,-498 # 40000d4 <g_adcTrimList>
+ 3000844:	57c2                	lw	a5,48(sp)
+ 3000846:	14fd                	addi	s1,s1,-1
+ 3000848:	2a3d                	jal	ra,3000986 <ADC_InitVref+0x232>
+    g_adcTrimList[index++].offset = adc0Sh0.REG.data0.adc0_sh0_g0p6_oe_trim;
+ 300084a:	6911                	lui	s2,0x4
+    g_adcTrimList[index].gain = adc0Sh0.REG.data0.adc0_sh0_g0p6_ge_trim;
+ 300084c:	a01a                	sh	a4,0(s0)
+    g_adcTrimList[index++].offset = adc0Sh0.REG.data0.adc0_sh0_g0p6_oe_trim;
+ 300084e:	197d                	addi	s2,s2,-1
+ 3000850:	2a35                	jal	ra,300098c <ADC_InitVref+0x238>
+ 3000852:	a03e                	sh	a5,2(s0)
+    g_adcTrimList[index].gain = adc0Sh1.REG.data0.adc0_sh1_g0p6_ge_trim;
+ 3000854:	4786                	lw	a5,64(sp)
+ 3000856:	2a05                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 3000858:	a05a                	sh	a4,4(s0)
+ 300085a:	2a0d                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc0Sh1.REG.data0.adc0_sh1_g0p6_oe_trim;
+ 300085c:	a07e                	sh	a5,6(s0)
+    g_adcTrimList[index].gain = adc0Sh0.REG.data2.adc0_sh0_g0p75_ge_trim;
+ 300085e:	57e2                	lw	a5,56(sp)
+ 3000860:	221d                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 3000862:	a41a                	sh	a4,8(s0)
+ 3000864:	2225                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc0Sh0.REG.data2.adc0_sh0_g0p75_oe_trim;
+ 3000866:	a43e                	sh	a5,10(s0)
+    g_adcTrimList[index].gain = adc0Sh1.REG.data2.adc0_sh1_g0p75_ge_trim ;
+ 3000868:	47a6                	lw	a5,72(sp)
+ 300086a:	2a31                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 300086c:	a45a                	sh	a4,12(s0)
+ 300086e:	2a39                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc0Sh1.REG.data2.adc0_sh1_g0p75_oe_trim;
+ 3000870:	a47e                	sh	a5,14(s0)
+    FOTP_InfoGet(FOTP_INFO_RNG0, 24, &adc1Sh0.comData);   /* 24 is the number of adc calibration trim in otp */
+ 3000872:	0890                	addi	a2,sp,80
+ 3000874:	45e1                	li	a1,24
+ 3000876:	2231                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    FOTP_InfoGet(FOTP_INFO_RNG0, 25, &adc1Sh1.comData);   /* 25 is the number of adc calibration trim in otp */
+ 3000878:	1090                	addi	a2,sp,96
+ 300087a:	45e5                	li	a1,25
+ 300087c:	2219                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    g_adcTrimList[index].gain = adc1Sh0.REG.data0.adc1_sh0_g0p6_ge_trim;
+ 300087e:	47c6                	lw	a5,80(sp)
+ 3000880:	2219                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 3000882:	a81a                	sh	a4,16(s0)
+ 3000884:	2221                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc1Sh0.REG.data0.adc1_sh0_g0p6_oe_trim;
+ 3000886:	a83e                	sh	a5,18(s0)
+    g_adcTrimList[index].gain = adc1Sh1.REG.data0.adc1_sh1_g0p6_ge_trim;
+ 3000888:	5786                	lw	a5,96(sp)
+ 300088a:	28f5                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 300088c:	a85a                	sh	a4,20(s0)
+ 300088e:	28fd                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc1Sh1.REG.data0.adc1_sh1_g0p6_oe_trim;
+ 3000890:	a87e                	sh	a5,22(s0)
+    g_adcTrimList[index].gain = adc1Sh0.REG.data2.adc1_sh0_g0p75_ge_trim ;
+ 3000892:	47e6                	lw	a5,88(sp)
+ 3000894:	28cd                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 3000896:	ac1a                	sh	a4,24(s0)
+ 3000898:	28d5                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc1Sh0.REG.data2.adc1_sh0_g0p75_oe_trim;
+ 300089a:	ac3e                	sh	a5,26(s0)
+    g_adcTrimList[index].gain = adc1Sh1.REG.data2.adc1_sh1_g0p75_ge_trim ;
+ 300089c:	57a6                	lw	a5,104(sp)
+ 300089e:	20e5                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 30008a0:	ac5a                	sh	a4,28(s0)
+ 30008a2:	20ed                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc1Sh1.REG.data2.adc1_sh1_g0p75_oe_trim;
+ 30008a4:	ac7e                	sh	a5,30(s0)
+    FOTP_InfoGet(FOTP_INFO_RNG0, 26, &adc2Sh0.comData);   /* 26 is the number of adc calibration trim in otp */
+ 30008a6:	1890                	addi	a2,sp,112
+ 30008a8:	45e9                	li	a1,26
+ 30008aa:	28e1                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    FOTP_InfoGet(FOTP_INFO_RNG0, 27, &adc2Sh1.comData);   /* 27 is the number of adc calibration trim in otp */
+ 30008ac:	0110                	addi	a2,sp,128
+ 30008ae:	45ed                	li	a1,27
+ 30008b0:	28c9                	jal	ra,3000982 <ADC_InitVref+0x22e>
+    g_adcTrimList[index].gain = adc2Sh0.REG.data0.adc2_sh0_g0p6_ge_trim;
+ 30008b2:	57c6                	lw	a5,112(sp)
+ 30008b4:	28c9                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 30008b6:	b01a                	sh	a4,32(s0)
+ 30008b8:	28d1                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc2Sh0.REG.data0.adc2_sh0_g0p6_oe_trim;
+ 30008ba:	b03e                	sh	a5,34(s0)
+    g_adcTrimList[index].gain = adc2Sh1.REG.data0.adc2_sh1_g0p6_ge_trim;
+ 30008bc:	478a                	lw	a5,128(sp)
+ 30008be:	20e1                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 30008c0:	b05a                	sh	a4,36(s0)
+ 30008c2:	20e9                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc2Sh1.REG.data0.adc2_sh1_g0p6_oe_trim;
+ 30008c4:	b07e                	sh	a5,38(s0)
+    g_adcTrimList[index].gain = adc2Sh0.REG.data2.adc2_sh0_g0p75_ge_trim ;
+ 30008c6:	57e6                	lw	a5,120(sp)
+ 30008c8:	287d                	jal	ra,3000986 <ADC_InitVref+0x232>
+ 30008ca:	b41a                	sh	a4,40(s0)
+ 30008cc:	20c1                	jal	ra,300098c <ADC_InitVref+0x238>
+    g_adcTrimList[index++].offset = adc2Sh0.REG.data2.adc2_sh0_g0p75_oe_trim;
+ 30008ce:	b43e                	sh	a5,42(s0)
+    g_adcTrimList[index].gain = adc2Sh1.REG.data2.adc2_sh1_g0p75_ge_trim ;
+ 30008d0:	47aa                	lw	a5,136(sp)
+ 30008d2:	8cfd                	and	s1,s1,a5
+    g_adcTrimList[index++].offset = adc2Sh1.REG.data2.adc2_sh1_g0p75_oe_trim;
+ 30008d4:	5af9491b          	andshf	s2,s2,a5,srl,13
+    g_adcTrimList[index].gain = adc2Sh1.REG.data2.adc2_sh1_g0p75_ge_trim ;
+ 30008d8:	b446                	sh	s1,44(s0)
+    g_adcTrimList[index++].offset = adc2Sh1.REG.data2.adc2_sh1_g0p75_oe_trim;
+ 30008da:	03241723          	sh	s2,46(s0) # 1010b02e <RAM_END+0xc10702e>
+ */
+static void ADC_CreateParmList(void)
+{
+    float gain, offset, tmpk2;
+    unsigned int addrIndex, vrefIndex, shIndex, tmpIndex;
+    for (unsigned int index = 0; index < LIST_NUM; ++index) {
+ 30008de:	4481                	li	s1,0
+        addrIndex = index / 4;   /* 4 used to create list */
+        tmpIndex = index % 4;    /* 4 used to create list */
+ 30008e0:	0034f793          	andi	a5,s1,3
+        vrefIndex = ((tmpIndex / 2) == 1) ? 1 : 2;  /* index of vref2.0 is 2, index of vref2.0 is 1 */
+ 30008e4:	17f9                	addi	a5,a5,-2
+        addrIndex = index / 4;   /* 4 used to create list */
+ 30008e6:	0024d913          	srli	s2,s1,0x2
+        vrefIndex = ((tmpIndex / 2) == 1) ? 1 : 2;  /* index of vref2.0 is 2, index of vref2.0 is 1 */
+ 30008ea:	4a05                	li	s4,1
+ 30008ec:	0207e1bb          	bltui	a5,2,30008f2 <ADC_InitVref+0x19e>
+ 30008f0:	4a09                	li	s4,2
+    unsigned int temp = g_adcTrimList[index].gain;
+ 30008f2:	0494079b          	addshf	a5,s0,s1,sll,2
+    float ret = (float)temp / (float)4096;  /* 4096 for decimal conversion */
+ 30008f6:	239e                	lhu	a5,0(a5)
+        shIndex = index % 2;     /* 2 used to create list */
+        gain = ADC_GetGainTrim(index);
+        offset = ADC_GetOffsetTrim(index);
+ 30008f8:	8526                	mv	a0,s1
+        shIndex = index % 2;     /* 2 used to create list */
+ 30008fa:	0014f993          	andi	s3,s1,1
+    float ret = (float)temp / (float)4096;  /* 4096 for decimal conversion */
+ 30008fe:	d017f453          	fcvt.s.wu	fs0,a5
+ 3000902:	030017b7          	lui	a5,0x3001
+ 3000906:	7147a787          	flw	fa5,1812(a5) # 3001714 <__rodata_start+0x8>
+        tmpk2 = (float)(2048 - (2048 - offset) * gain);     /* 2048 is formula parameters */
+        g_adcParmList[addrIndex][vrefIndex][shIndex].k1 = gain;
+ 300090a:	032a595b          	muliadd	s2,s4,s2,3
+ 300090e:	0329891b          	addshf	s2,s3,s2,sll,1
+    float ret = (float)temp / (float)4096;  /* 4096 for decimal conversion */
+ 3000912:	10f47453          	fmul.s	fs0,fs0,fa5
+        offset = ADC_GetOffsetTrim(index);
+ 3000916:	3529                	jal	ra,3000720 <ADC_GetOffsetTrim>
+        tmpk2 = (float)(2048 - (2048 - offset) * gain);     /* 2048 is formula parameters */
+ 3000918:	03001737          	lui	a4,0x3001
+ 300091c:	71c72707          	flw	fa4,1820(a4) # 300171c <__rodata_start+0x10>
+        g_adcParmList[addrIndex][vrefIndex][shIndex].k1 = gain;
+ 3000920:	d4e18793          	addi	a5,gp,-690 # 4000014 <g_adcParmList>
+ 3000924:	0727879b          	addshf	a5,a5,s2,sll,3
+        tmpk2 = (float)(2048 - (2048 - offset) * gain);     /* 2048 is formula parameters */
+ 3000928:	08a777d3          	fsub.s	fa5,fa4,fa0
+        g_adcParmList[addrIndex][vrefIndex][shIndex].k1 = gain;
+ 300092c:	e380                	fsw	fs0,0(a5)
+    for (unsigned int index = 0; index < LIST_NUM; ++index) {
+ 300092e:	0485                	addi	s1,s1,1
+        tmpk2 = (float)(2048 - (2048 - offset) * gain);     /* 2048 is formula parameters */
+ 3000930:	7087f44b          	fnmsub.s	fs0,fa5,fs0,fa4
+        g_adcParmList[addrIndex][vrefIndex][shIndex].k2 = tmpk2;
+ 3000934:	e3c0                	fsw	fs0,4(a5)
+    for (unsigned int index = 0; index < LIST_NUM; ++index) {
+ 3000936:	0ce49abb          	bnei	s1,12,30008e0 <ADC_InitVref+0x18c>
+}
+ 300093a:	647a                	flw	fs0,156(sp)
+ 300093c:	610d                	addi	sp,sp,160
+ 300093e:	8064                	popret	{ra,s0-s4},32
+        adcVrefTrim.REG.data1.adcvref_bg_trim = 0x10;             /* Use the default value 0x10 */
+ 3000940:	5792                	lw	a5,36(sp)
+        adcVrefTrim.REG.data3.adcvref_refbuf0_trim_2p5v = 0x10;
+ 3000942:	5732                	lw	a4,44(sp)
+        adcVrefTrim.REG.data2.adcvref_refbuf2_trim_2p0v = 0x10;
+ 3000944:	ffff 83ff 069f      	l.li	a3,0xffff83ff
+        adcVrefTrim.REG.data1.adcvref_bg_trim = 0x10;             /* Use the default value 0x10 */
+ 300094a:	c007f793          	andi	a5,a5,-1024
+        adcVrefTrim.REG.data1.adcvref_adcldo_trim = 0x10;
+ 300094e:	2107e793          	ori	a5,a5,528
+ 3000952:	d23e                	sw	a5,36(sp)
+        adcVrefTrim.REG.data2.adcvref_refbuf0_trim_2p0v = 0x10;
+ 3000954:	57a2                	lw	a5,40(sp)
+        adcVrefTrim.REG.data2.adcvref_refbuf2_trim_2p0v = 0x10;
+ 3000956:	6611                	lui	a2,0x4
+        adcVrefTrim.REG.data3.adcvref_refbuf0_trim_2p5v = 0x10;
+ 3000958:	c0077713          	andi	a4,a4,-1024
+        adcVrefTrim.REG.data2.adcvref_refbuf0_trim_2p0v = 0x10;
+ 300095c:	c007f793          	andi	a5,a5,-1024
+        adcVrefTrim.REG.data2.adcvref_refbuf1_trim_2p0v = 0x10;
+ 3000960:	2107e793          	ori	a5,a5,528
+        adcVrefTrim.REG.data2.adcvref_refbuf2_trim_2p0v = 0x10;
+ 3000964:	8ff5                	and	a5,a5,a3
+ 3000966:	8fd1                	or	a5,a5,a2
+        adcVrefTrim.REG.data3.adcvref_refbuf1_trim_2p5v = 0x10;
+ 3000968:	21076713          	ori	a4,a4,528
+        adcVrefTrim.REG.data2.adcvref_refbuf2_trim_2p0v = 0x10;
+ 300096c:	d43e                	sw	a5,40(sp)
+        adcVrefTrim.REG.data3.adcvref_refbuf2_trim_2p5v = 0x10;
+ 300096e:	00d777b3          	and	a5,a4,a3
+ 3000972:	8fd1                	or	a5,a5,a2
+ 3000974:	d63e                	sw	a5,44(sp)
+ 3000976:	b505                	j	3000796 <ADC_InitVref+0x42>
+    SYSCTRL1->ADC2_VREF_CTRL.BIT.adcvref_refbuf_trim2_2p0v = adcVrefTrim.REG.data2.adcvref_refbuf2_trim_2p0v;
+ 3000978:	8afd                	andi	a3,a3,31
+ 300097a:	8ff9                	and	a5,a5,a4
+ 300097c:	20d7a79b          	orshf	a5,a5,a3,sll,16
+ 3000980:	8082                	ret
+    FOTP_InfoGet(FOTP_INFO_RNG0, 27, &adc2Sh1.comData);   /* 27 is the number of adc calibration trim in otp */
+ 3000982:	4501                	li	a0,0
+ 3000984:	a2d1                	j	3000b48 <FOTP_InfoGet>
+    g_adcTrimList[index].gain = adc2Sh0.REG.data2.adc2_sh0_g0p75_ge_trim ;
+ 3000986:	0097f733          	and	a4,a5,s1
+ 300098a:	8082                	ret
+    g_adcTrimList[index++].offset = adc2Sh0.REG.data2.adc2_sh0_g0p75_oe_trim;
+ 300098c:	5af9479b          	andshf	a5,s2,a5,srl,13
+ 3000990:	8082                	ret
+
+03000992 <CRG_SetCoreClockSelect>:
+ * @brief Set Crg Core clock select
+ * @param coreClkSelect Input core clock select value
+ * @retval None
+ */
+void CRG_SetCoreClockSelect(CRG_CoreClkSelect coreClkSelect)
+{
+ 3000992:	8218                	push	{ra},-48
+    CRG_Handle crg;
+    crg.baseAddress = CRG;
+ 3000994:	100007b7          	lui	a5,0x10000
+    crg.coreClkSelect = coreClkSelect;
+ 3000998:	ce2a                	sw	a0,28(sp)
+    HAL_CRG_SetCoreClockSelect(&crg);
+ 300099a:	0048                	addi	a0,sp,4
+    crg.baseAddress = CRG;
+ 300099c:	c23e                	sw	a5,4(sp)
+    HAL_CRG_SetCoreClockSelect(&crg);
+ 300099e:	10b000ef          	jal	ra,30012a8 <HAL_CRG_SetCoreClockSelect>
+ 30009a2:	8214                	popret	{ra},48
+
+030009a4 <FLASH_ClockConfig>:
+ * @brief Set flash clock frequence base on hclk
+ * @param coreClkSelect core clock select
+ * @retval None
+ */
+void FLASH_ClockConfig(CRG_CoreClkSelect coreClkSelect)
+{
+ 30009a4:	8018                	push	{ra},-16
+    switch (coreClkSelect) {
+ 30009a6:	010504bb          	beqi	a0,1,30009b8 <FLASH_ClockConfig+0x14>
+ 30009aa:	c161                	beqz	a0,3000a6a <FLASH_ClockConfig+0xc6>
+ 30009ac:	02250e3b          	beqi	a0,2,3000a64 <FLASH_ClockConfig+0xc0>
+            hclk = LOSC_FREQ;
+ 30009b0:	0000 7d00 051f      	l.li	a0,0x7d00
+ 30009b6:	a021                	j	30009be <FLASH_ClockConfig+0x1a>
+            hclk = XTRAIL_FREQ;
+ 30009b8:	01c9 c380 051f      	l.li	a0,0x1c9c380
+    unsigned int smwTimerOptVal;
+
+    hclk = GetFlashFreq(coreClkSelect);
+    pclk = hclk >> 1;
+
+    cfg.reg = efc->EFLASH_CLK_CFG.reg;
+ 30009be:	147117b7          	lui	a5,0x14711
+ 30009c2:	9407a783          	lw	a5,-1728(a5) # 14710940 <RAM_END+0x1070c940>
+    cfg.BIT.busclk_switch_protect_enable = BASE_CFG_SET;
+    cfg.BIT.busclk_sw_req = BASE_CFG_SET;
+ 30009c6:	00300737          	lui	a4,0x300
+    return (val + modulo - 1) / modulo;
+ 30009ca:	000f46b7          	lui	a3,0xf4
+    cfg.BIT.busclk_sw_req = BASE_CFG_SET;
+ 30009ce:	8fd9                	or	a5,a5,a4
+    pclk = hclk >> 1;
+ 30009d0:	00155613          	srli	a2,a0,0x1
+    return (val + modulo - 1) / modulo;
+ 30009d4:	23f68713          	addi	a4,a3,575 # f423f <FLASH_SIZE+0xcc243>
+ 30009d8:	9732                	add	a4,a4,a2
+ 30009da:	24068693          	addi	a3,a3,576
+ 30009de:	02d75733          	divu	a4,a4,a3
+
+    cfg.BIT.ef_timer_option_unit = RoundingUp(pclk, FREQ_1MHz);
+ 30009e2:	f0000693          	li	a3,-256
+ 30009e6:	e8d7c79b          	andshf	a5,a5,a3,ror,20
+    freq = hclk;
+    sreadDiv = 0;
+    while (freq > SREAD_DIV_STEP) {
+ 30009ea:	004c 4b40 059f      	l.li	a1,0x4c4b40
+    freq = hclk;
+ 30009f0:	86aa                	mv	a3,a0
+    cfg.BIT.ef_timer_option_unit = RoundingUp(pclk, FREQ_1MHz);
+ 30009f2:	9f01                	uxtb	a4
+ 30009f4:	18e7a79b          	orshf	a5,a5,a4,sll,12
+    sreadDiv = 0;
+ 30009f8:	4701                	li	a4,0
+    while (freq > SREAD_DIV_STEP) {
+ 30009fa:	06d5ec63          	bltu	a1,a3,3000a72 <FLASH_ClockConfig+0xce>
+        sreadDiv++;
+        freq >>= 1;
+    }
+    cfg.BIT.sread_div = sreadDiv;
+ 30009fe:	8b1d                	andi	a4,a4,7
+    return (val + modulo - 1) / modulo;
+ 3000a00:	02faf6b7          	lui	a3,0x2faf
+    cfg.BIT.sread_div = sreadDiv;
+ 3000a04:	8ff7f793          	andi	a5,a5,-1793
+ 3000a08:	10e7a79b          	orshf	a5,a5,a4,sll,8
+    return (val + modulo - 1) / modulo;
+ 3000a0c:	07f68713          	addi	a4,a3,127 # 2faf07f <RAM_CODE_START+0xfaf07f>
+ 3000a10:	972a                	add	a4,a4,a0
+ 3000a12:	08068693          	addi	a3,a3,128
+ 3000a16:	02d75733          	divu	a4,a4,a3
+    cfg.BIT.nread_div = RoundingUp(hclk, NREAD_DIV_STEP) - 1;
+ 3000a1a:	f0f7f793          	andi	a5,a5,-241
+    cfg.BIT.m20ns_div = cfg.BIT.nread_div;
+    efc->EFLASH_CLK_CFG.reg = cfg.reg;
+ 3000a1e:	147116b7          	lui	a3,0x14711
+    cfg.BIT.nread_div = RoundingUp(hclk, NREAD_DIV_STEP) - 1;
+ 3000a22:	177d                	addi	a4,a4,-1
+ 3000a24:	8b3d                	andi	a4,a4,15
+ 3000a26:	08e7a79b          	orshf	a5,a5,a4,sll,4
+    cfg.BIT.m20ns_div = cfg.BIT.nread_div;
+ 3000a2a:	9bc1                	andi	a5,a5,-16
+ 3000a2c:	8fd9                	or	a5,a5,a4
+    efc->EFLASH_CLK_CFG.reg = cfg.reg;
+ 3000a2e:	94f6a023          	sw	a5,-1728(a3) # 14710940 <RAM_END+0x1070c940>
+    return (val + modulo - 1) / modulo;
+ 3000a32:	009897b7          	lui	a5,0x989
+ 3000a36:	67f78713          	addi	a4,a5,1663 # 98967f <FLASH_SIZE+0x961683>
+ 3000a3a:	963a                	add	a2,a2,a4
+ 3000a3c:	68078793          	addi	a5,a5,1664
+ 3000a40:	02f65733          	divu	a4,a2,a5
+ 3000a44:	8636                	mv	a2,a3
+    smwTimerOptVal = RoundingUp(pclk, SWMTIMER_OPTVAL_STEP);
+    if (smwTimerOptVal < SMWTIMER_OPTVAL_MIN_VAL) {
+        smwTimerOptVal = SMWTIMER_OPTVAL_MIN_VAL;
+    }
+    efc->SMW_TIMER_OPTION.BIT.smw_timer_option_value = smwTimerOptVal;
+ 3000a46:	020771bb          	bgeui	a4,2,3000a4c <FLASH_ClockConfig+0xa8>
+ 3000a4a:	4709                	li	a4,2
+ 3000a4c:	e1062783          	lw	a5,-496(a2) # 3e10 <RAM_SIZE+0x1610>
+ 3000a50:	01f77693          	andi	a3,a4,31
+ 3000a54:	5701                	li	a4,-32
+ 3000a56:	f0e7c79b          	andshf	a5,a5,a4,ror,24
+ 3000a5a:	10d7a79b          	orshf	a5,a5,a3,sll,8
+ 3000a5e:	e0f62823          	sw	a5,-496(a2)
+}
+ 3000a62:	8014                	popret	{ra},16
+            hclk = HAL_CRG_GetPllFreq();
+ 3000a64:	063000ef          	jal	ra,30012c6 <HAL_CRG_GetPllFreq>
+ 3000a68:	bf99                	j	30009be <FLASH_ClockConfig+0x1a>
+            hclk = HOSC_FREQ;
+ 3000a6a:	017d 7840 051f      	l.li	a0,0x17d7840
+ 3000a70:	b7b9                	j	30009be <FLASH_ClockConfig+0x1a>
+        sreadDiv++;
+ 3000a72:	0705                	addi	a4,a4,1
+        freq >>= 1;
+ 3000a74:	8285                	srli	a3,a3,0x1
+ 3000a76:	b751                	j	30009fa <FLASH_ClockConfig+0x56>
+
+03000a78 <FLASH_WaitClockConfigDone>:
+ * @retval None
+ */
+void FLASH_WaitClockConfigDone(void)
+{
+    EFC_RegStruct *efc = EFC;
+    while (efc->EFLASH_CLK_CFG.BIT.busclk_sw_req == BASE_CFG_SET) {
+ 3000a78:	147117b7          	lui	a5,0x14711
+ 3000a7c:	9407a783          	lw	a5,-1728(a5) # 14710940 <RAM_END+0x1070c940>
+ 3000a80:	00b79713          	slli	a4,a5,0xb
+ 3000a84:	fe074ae3          	bltz	a4,3000a78 <FLASH_WaitClockConfigDone>
+        ; /* Wait Eflash frequency switching completes configuration query */
+    }
+ 3000a88:	8082                	ret
+
+03000a8a <PGA_InitVref>:
+#include "fotp_info_read.h"
+#include "pga_ip.h"
+#include "pgainit.h"
+
+void PGA_InitVref(void)
+{
+ 3000a8a:	8118                	push	{ra},-32
+    FOTP_INFO_RGN0_NUMBER_31 trimPga;
+    
+    FOTP_InfoGet(FOTP_INFO_RNG0, 31, &trimPga.comData);  /* 31 is the number of pga_vref in otp */
+ 3000a8c:	860a                	mv	a2,sp
+ 3000a8e:	45fd                	li	a1,31
+ 3000a90:	4501                	li	a0,0
+ 3000a92:	285d                	jal	ra,3000b48 <FOTP_InfoGet>
+    if (g_trimEnable == true) { /* if trim enable */
+ 3000a94:	e3e1c783          	lbu	a5,-450(gp) # 4000104 <g_trimEnable>
+ 3000a98:	c78d                	beqz	a5,3000ac2 <PGA_InitVref+0x38>
+        PGA0->PGA_CTRL1.BIT.pga_trim_ofstp = trimPga.REG.data0.pga0_poffset_trim;
+ 3000a9a:	182006b7          	lui	a3,0x18200
+ 3000a9e:	4782                	lw	a5,0(sp)
+ 3000aa0:	42d8                	lw	a4,4(a3)
+ 3000aa2:	01f7f613          	andi	a2,a5,31
+ 3000aa6:	fe077793          	andi	a5,a4,-32
+ 3000aaa:	8fd1                	or	a5,a5,a2
+ 3000aac:	c2dc                	sw	a5,4(a3)
+        PGA1->PGA_CTRL1.BIT.pga_trim_ofstp = trimPga.REG.data0.pga1_poffset_trim;
+ 3000aae:	4782                	lw	a5,0(sp)
+ 3000ab0:	18201637          	lui	a2,0x18201
+ 3000ab4:	83a9                	srli	a5,a5,0xa
+ 3000ab6:	2039                	jal	ra,3000ac4 <PGA_InitVref+0x3a>
+        PGA2->PGA_CTRL1.BIT.pga_trim_ofstp = trimPga.REG.data0.pga2_poffset_trim;
+ 3000ab8:	4782                	lw	a5,0(sp)
+ 3000aba:	18202637          	lui	a2,0x18202
+ 3000abe:	83d1                	srli	a5,a5,0x14
+ 3000ac0:	2011                	jal	ra,3000ac4 <PGA_InitVref+0x3a>
+    }
+ 3000ac2:	8114                	popret	{ra},32
+        PGA2->PGA_CTRL1.BIT.pga_trim_ofstp = trimPga.REG.data0.pga2_poffset_trim;
+ 3000ac4:	4258                	lw	a4,4(a2)
+ 3000ac6:	01f7f693          	andi	a3,a5,31
+ 3000aca:	fe077793          	andi	a5,a4,-32
+ 3000ace:	8fd5                	or	a5,a5,a3
+ 3000ad0:	c25c                	sw	a5,4(a2)
+ 3000ad2:	8082                	ret
+
+03000ad4 <PMC_InitVref>:
+#include "fotp_info_read.h"
+#include "pmc_ip.h"
+#include "pmcinit.h"
+
+void PMC_InitVref(void)
+{
+ 3000ad4:	8118                	push	{ra},-32
+    FOTP_INFO_RGN0_NUMBER_21 trimPmc;
+
+    if (g_trimEnable == true) { /* if trim enable */
+ 3000ad6:	e3e1c783          	lbu	a5,-450(gp) # 4000104 <g_trimEnable>
+ 3000ada:	c39d                	beqz	a5,3000b00 <PMC_InitVref+0x2c>
+        FOTP_InfoGet(FOTP_INFO_RNG0, 21, &trimPmc.comData);  /* 21 is the number of pmc_vref in otp */
+ 3000adc:	860a                	mv	a2,sp
+ 3000ade:	45d5                	li	a1,21
+ 3000ae0:	4501                	li	a0,0
+ 3000ae2:	209d                	jal	ra,3000b48 <FOTP_InfoGet>
+        PMC->PMU_CLDO.BIT.pmu_cldo_trim = trimPmc.REG.data0.pmu_cldo_trim;
+ 3000ae4:	4782                	lw	a5,0(sp)
+ 3000ae6:	147e1637          	lui	a2,0x147e1
+ 3000aea:	a0c62703          	lw	a4,-1524(a2) # 147e0a0c <RAM_END+0x107dca0c>
+ 3000aee:	83a9                	srli	a5,a5,0xa
+ 3000af0:	5685                	li	a3,-31
+ 3000af2:	8bbd                	andi	a5,a5,15
+ 3000af4:	e2d7471b          	andshf	a4,a4,a3,ror,17
+ 3000af8:	20f7279b          	orshf	a5,a4,a5,sll,16
+ 3000afc:	a0f62623          	sw	a5,-1524(a2)
+    }
+ 3000b00:	8114                	popret	{ra},32
+
+03000b02 <SYSTICK_GetCRGHZ>:
+{
+    /* Get the Systick IP */
+#ifdef NOS_TASK_SUPPORT
+    return HAL_CRG_GetCoreClkFreq();
+#else
+    return HAL_CRG_GetIpFreq(SYSTICK_BASE);
+ 3000b02:	1430 1020 051f      	l.li	a0,0x14301020
+ 3000b08:	00d0006f          	j	3001314 <HAL_CRG_GetIpFreq>
+
+03000b0c <DCL_SYSTICK_GetTick>:
+#ifdef NOS_TASK_SUPPORT
+    /* Return the load value(period) and the counter value, make the returned counter in count up mode */
+    return DCL_GetCpuCycle();
+#else
+    /* Invert the counter value, make the returned counter in count up mode */
+    return ~SYSTICK->timer_value;
+ 3000b0c:	1430 1020 079f      	l.li	a5,0x14301020
+ 3000b12:	43c8                	lw	a0,4(a5)
+#endif
+}
+ 3000b14:	fff54513          	not	a0,a0
+ 3000b18:	8082                	ret
+
+03000b1a <SYSTICK_Init>:
+  * @brief   Init the systick
+  * @param   None
+  * @retval  None
+  */
+void SYSTICK_Init()
+{
+ 3000b1a:	8028                	push	{ra,s0},-16
+    /* Choose the config to support GetTick and Delay */
+    g_systickHandle.baseAddress = SYSTICK;
+ 3000b1c:	e4218413          	addi	s0,gp,-446 # 4000108 <g_systickHandle>
+ 3000b20:	1430 1020 079f      	l.li	a5,0x14301020
+ 3000b26:	c01c                	sw	a5,0(s0)
+#ifdef NOS_TASK_SUPPORT
+    /* Change the period load to the user defined usecond */
+    g_systickHandle.load        = (HAL_CRG_GetIpFreq(SYSTICK_BASE) / CRG_FREQ_1MHz) * CFG_SYSTICK_TICKINTERVAL_US;
+    g_systickHandle.bgLoad      = (HAL_CRG_GetIpFreq(SYSTICK_BASE) / CRG_FREQ_1MHz) * CFG_SYSTICK_TICKINTERVAL_US;
+#else
+    g_systickHandle.load        = SYSTICK_MAX_VALUE;
+ 3000b28:	57fd                	li	a5,-1
+    g_systickHandle.bgLoad      = SYSTICK_MAX_VALUE;
+#endif
+    g_systickHandle.mode        = TIMER_MODE_RUN_PERIODIC;
+    g_systickHandle.prescaler   = TIMERPRESCALER_NO_DIV;
+ 3000b2a:	4701                	li	a4,0
+    g_systickHandle.load        = SYSTICK_MAX_VALUE;
+ 3000b2c:	c05c                	sw	a5,4(s0)
+    g_systickHandle.bgLoad      = SYSTICK_MAX_VALUE;
+ 3000b2e:	cc1c                	sw	a5,24(s0)
+    g_systickHandle.size        = TIMER_SIZE_32BIT;
+    /* Don't Support IRQ because only needs to read the value of systick */
+    g_systickHandle.interruptEn = BASE_CFG_DISABLE;
+    HAL_TIMER_Init(&g_systickHandle);
+ 3000b30:	8522                	mv	a0,s0
+    g_systickHandle.mode        = TIMER_MODE_RUN_PERIODIC;
+ 3000b32:	4785                	li	a5,1
+ 3000b34:	c41c                	sw	a5,8(s0)
+    g_systickHandle.prescaler   = TIMERPRESCALER_NO_DIV;
+ 3000b36:	c818                	sw	a4,16(s0)
+    g_systickHandle.size        = TIMER_SIZE_32BIT;
+ 3000b38:	c85c                	sw	a5,20(s0)
+    g_systickHandle.interruptEn = BASE_CFG_DISABLE;
+ 3000b3a:	c458                	sw	a4,12(s0)
+    HAL_TIMER_Init(&g_systickHandle);
+ 3000b3c:	1f3000ef          	jal	ra,300152e <HAL_TIMER_Init>
+#ifdef NOS_TASK_SUPPORT
+    /* Support IRQ to upload the totalCycle and detect the timeout lists */
+    SYSTICK_IRQ_Enable();
+#endif
+    HAL_TIMER_Start(&g_systickHandle);
+ 3000b40:	8522                	mv	a0,s0
+ 3000b42:	8020                	pop	{ra,s0},16
+    HAL_TIMER_Start(&g_systickHandle);
+ 3000b44:	27f0006f          	j	30015c2 <HAL_TIMER_Start>
+
+03000b48 <FOTP_InfoGet>:
+  * @param buf   Buffer of read data
+  * @retval BASE_STATUS_ERROR fail.
+  * @retval BASE_STATUS_OK success.
+  */
+unsigned int FOTP_InfoGet(FOTP_InfoRngType type, unsigned int index, FOTP_CommonData *buf)
+{
+ 3000b48:	86aa                	mv	a3,a0
+    EFC_RegStruct *p = EFC;
+    unsigned int addr;
+
+    if (buf == NULL) {
+        return BASE_STATUS_ERROR;
+ 3000b4a:	4505                	li	a0,1
+    if (buf == NULL) {
+ 3000b4c:	10060763          	beqz	a2,3000c5a <FOTP_InfoGet+0x112>
+    }
+    
+    if ((type >= FOTP_INFO_MAXTYPE) || (index > FOTP_INFO_REG_MAX_ID)) {
+ 3000b50:	0246f2bb          	bgeui	a3,2,3000c5a <FOTP_InfoGet+0x112>
+ 3000b54:	1ff00793          	li	a5,511
+ 3000b58:	10b7e163          	bltu	a5,a1,3000c5a <FOTP_InfoGet+0x112>
+        return BASE_STATUS_ERROR;
+    }
+
+    /* If there is a read command, return */
+    if (p->EFLASH_CMD.BIT.cmd_start) {
+ 3000b5c:	14710837          	lui	a6,0x14710
+ 3000b60:	00082703          	lw	a4,0(a6) # 14710000 <RAM_END+0x1070c000>
+ 3000b64:	8f69                	and	a4,a4,a0
+ 3000b66:	eb75                	bnez	a4,3000c5a <FOTP_InfoGet+0x112>
+        return BASE_STATUS_ERROR;
+    }
+
+    p->MAGIC_LOCK = FLASH_KEY_REGISTER_UNLOCK_VALUE;
+ 3000b68:	fedc ba98 079f      	l.li	a5,0xfedcba98
+ 3000b6e:	20f82023          	sw	a5,512(a6)
+
+    /* Configure the read command parameters and start the read command */
+    addr = (type == FOTP_INFO_RNG0) ? FOTP_INFO_RNG0_BASEADDR : FOTP_INFO_RNG1_BASEADDR;
+ 3000b72:	008007b7          	lui	a5,0x800
+ 3000b76:	c299                	beqz	a3,3000b7c <FOTP_InfoGet+0x34>
+ 3000b78:	008027b7          	lui	a5,0x802
+    addr += index * REG_WORDS_NUM;
+    p->EFLASH_ADDR.BIT.cmd_addr = addr >> 2; /* Right shift 2 bit change to word */
+ 3000b7c:	14710737          	lui	a4,0x14710
+    addr += index * REG_WORDS_NUM;
+ 3000b80:	08b7859b          	addshf	a1,a5,a1,sll,4
+    p->EFLASH_ADDR.BIT.cmd_addr = addr >> 2; /* Right shift 2 bit change to word */
+ 3000b84:	56fd                	li	a3,-1
+ 3000b86:	435c                	lw	a5,4(a4)
+ 3000b88:	82a9                	srli	a3,a3,0xa
+ 3000b8a:	44b6c59b          	andshf	a1,a3,a1,srl,2
+ 3000b8e:	3ff00693          	li	a3,1023
+ 3000b92:	d0d7c79b          	andshf	a5,a5,a3,ror,8
+ 3000b96:	04b7a79b          	orshf	a5,a5,a1,sll,2
+ 3000b9a:	c35c                	sw	a5,4(a4)
+    p->EFLASH_CMD.BIT.cmd_code = FLASH_OPERATION_READ;
+ 3000b9c:	431c                	lw	a5,0(a4)
+    p->EFLASH_CMD.BIT.cmd_read_size = FLASH_READ_128BIT;
+ 3000b9e:	569d                	li	a3,-25
+    p->EFLASH_CMD.BIT.cmd_code = FLASH_OPERATION_READ;
+ 3000ba0:	8ff7f793          	andi	a5,a5,-1793
+ 3000ba4:	1007e793          	ori	a5,a5,256
+ 3000ba8:	c31c                	sw	a5,0(a4)
+    p->EFLASH_CMD.BIT.cmd_read_size = FLASH_READ_128BIT;
+ 3000baa:	431c                	lw	a5,0(a4)
+ 3000bac:	ced7c79b          	andshf	a5,a5,a3,ror,7
+ 3000bb0:	100006b7          	lui	a3,0x10000
+ 3000bb4:	8fd5                	or	a5,a5,a3
+ 3000bb6:	c31c                	sw	a5,0(a4)
+    p->EFLASH_CMD.BIT.cmd_start = BASE_CFG_SET;
+ 3000bb8:	431c                	lw	a5,0(a4)
+ 3000bba:	0017e793          	ori	a5,a5,1
+ 3000bbe:	c31c                	sw	a5,0(a4)
+
+    while (p->EFLASH_CMD.BIT.cmd_start) {
+ 3000bc0:	147107b7          	lui	a5,0x14710
+ 3000bc4:	439c                	lw	a5,0(a5)
+ 3000bc6:	8b85                	andi	a5,a5,1
+ 3000bc8:	ffe5                	bnez	a5,3000bc0 <FOTP_InfoGet+0x78>
+        ;
+    }
+    while (p->EFLASH_CMD.BIT.exec_state) {
+ 3000bca:	14710737          	lui	a4,0x14710
+ 3000bce:	431c                	lw	a5,0(a4)
+ 3000bd0:	8399                	srli	a5,a5,0x6
+ 3000bd2:	8b8d                	andi	a5,a5,3
+ 3000bd4:	fbfd                	bnez	a5,3000bca <FOTP_InfoGet+0x82>
+    if (efc->INT_RAW_STATUS.BIT.int_raw_err_illegal ||
+ 3000bd6:	10072783          	lw	a5,256(a4) # 14710100 <RAM_END+0x1070c100>
+ 3000bda:	00f79693          	slli	a3,a5,0xf
+ 3000bde:	0406c463          	bltz	a3,3000c26 <FOTP_InfoGet+0xde>
+        efc->INT_RAW_STATUS.BIT.int_raw_err_ecc_corr ||
+ 3000be2:	10072783          	lw	a5,256(a4)
+    if (efc->INT_RAW_STATUS.BIT.int_raw_err_illegal ||
+ 3000be6:	00c79693          	slli	a3,a5,0xc
+ 3000bea:	0206ce63          	bltz	a3,3000c26 <FOTP_InfoGet+0xde>
+        efc->INT_RAW_STATUS.BIT.int_raw_err_ecc_chk) {
+ 3000bee:	10072783          	lw	a5,256(a4)
+        efc->INT_RAW_STATUS.BIT.int_raw_err_ecc_corr ||
+ 3000bf2:	00b79693          	slli	a3,a5,0xb
+ 3000bf6:	0206c863          	bltz	a3,3000c26 <FOTP_InfoGet+0xde>
+    if (FOTP_CheckReadStatus(p) != BASE_STATUS_OK) {
+        return BASE_STATUS_ERROR;
+    }
+    /* Read data from FIFO to buffer */
+    for (unsigned int i = 0; i < sizeof(buf->data) / sizeof(buf->data[0]); ++i) {
+        buf->data[i] = p->FLASH_RDATA;
+ 3000bfa:	60072783          	lw	a5,1536(a4)
+    }
+    p->INT_CLEAR.BIT.int_clr_finish = BASE_CFG_SET;
+    p->MAGIC_LOCK = FLASH_KEY_REGISTER_LOCK_VALUE;
+    return BASE_STATUS_OK;
+ 3000bfe:	4501                	li	a0,0
+        buf->data[i] = p->FLASH_RDATA;
+ 3000c00:	c21c                	sw	a5,0(a2)
+ 3000c02:	60072783          	lw	a5,1536(a4)
+ 3000c06:	c25c                	sw	a5,4(a2)
+ 3000c08:	60072783          	lw	a5,1536(a4)
+ 3000c0c:	c61c                	sw	a5,8(a2)
+ 3000c0e:	60072783          	lw	a5,1536(a4)
+ 3000c12:	c65c                	sw	a5,12(a2)
+    p->INT_CLEAR.BIT.int_clr_finish = BASE_CFG_SET;
+ 3000c14:	10c72783          	lw	a5,268(a4)
+ 3000c18:	0107e793          	ori	a5,a5,16
+ 3000c1c:	10f72623          	sw	a5,268(a4)
+    p->MAGIC_LOCK = FLASH_KEY_REGISTER_LOCK_VALUE;
+ 3000c20:	20072023          	sw	zero,512(a4)
+    return BASE_STATUS_OK;
+ 3000c24:	8082                	ret
+        efc->INT_CLEAR.BIT.int_clr_err_ecc_corr = BASE_CFG_SET;
+ 3000c26:	147106b7          	lui	a3,0x14710
+ 3000c2a:	10c6a783          	lw	a5,268(a3) # 1471010c <RAM_END+0x1070c10c>
+ 3000c2e:	00080737          	lui	a4,0x80
+        return BASE_STATUS_ERROR;
+ 3000c32:	4505                	li	a0,1
+        efc->INT_CLEAR.BIT.int_clr_err_ecc_corr = BASE_CFG_SET;
+ 3000c34:	8fd9                	or	a5,a5,a4
+ 3000c36:	10f6a623          	sw	a5,268(a3)
+ 3000c3a:	10c6a783          	lw	a5,268(a3)
+        efc->INT_CLEAR.BIT.int_clr_err_illegal = BASE_CFG_SET;
+ 3000c3e:	6741                	lui	a4,0x10
+ 3000c40:	8fd9                	or	a5,a5,a4
+ 3000c42:	10f6a623          	sw	a5,268(a3)
+ 3000c46:	10c6a783          	lw	a5,268(a3)
+        efc->INT_CLEAR.BIT.int_clr_err_ecc_chk = BASE_CFG_SET;
+ 3000c4a:	00100737          	lui	a4,0x100
+ 3000c4e:	8fd9                	or	a5,a5,a4
+ 3000c50:	10f6a623          	sw	a5,268(a3)
+        efc->MAGIC_LOCK = FLASH_KEY_REGISTER_LOCK_VALUE;
+ 3000c54:	2006a023          	sw	zero,512(a3)
+ 3000c58:	8082                	ret
+ 3000c5a:	8082                	ret
+
+03000c5c <GetCrgIpMatchInfo>:
+  * @param baseAddr The ip base address
+  * @retval The Address(offset) in g_crgIpMatch if match success
+  * @retval 0 if match fail
+  */
+CHIP_CrgIpMatchInfo *GetCrgIpMatchInfo(const void *baseAddr)
+{
+ 3000c5c:	0300 1720 071f      	l.li	a4,0x3001720
+    unsigned int i;
+    for (i = 0; i < sizeof(g_crgIpMatch) / sizeof(g_crgIpMatch[0]); ++i) {
+ 3000c62:	4681                	li	a3,0
+ 3000c64:	863a                	mv	a2,a4
+        if (baseAddr == g_crgIpMatch[i].ipBaseAddr) {
+ 3000c66:	431c                	lw	a5,0(a4)
+ 3000c68:	00a79563          	bne	a5,a0,3000c72 <GetCrgIpMatchInfo+0x16>
+            return (CHIP_CrgIpMatchInfo *)&g_crgIpMatch[i];
+ 3000c6c:	0cd6155b          	muliadd	a0,a2,a3,12
+ 3000c70:	8082                	ret
+    for (i = 0; i < sizeof(g_crgIpMatch) / sizeof(g_crgIpMatch[0]); ++i) {
+ 3000c72:	0685                	addi	a3,a3,1
+ 3000c74:	0731                	addi	a4,a4,12
+ 3000c76:	33f69c3b          	bnei	a3,51,3000c66 <GetCrgIpMatchInfo+0xa>
+        }
+    }
+    return (CHIP_CrgIpMatchInfo *)0;
+ 3000c7a:	4501                	li	a0,0
+}
+ 3000c7c:	8082                	ret
+
+03000c7e <__riscv_case_uqi>:
+ 3000c7e:	1141                	addi	sp,sp,-16
+ 3000c80:	c02e                	sw	a1,0(sp)
+ 3000c82:	8586                	mv	a1,ra
+ 3000c84:	95aa                	add	a1,a1,a0
+ 3000c86:	218c                	lbu	a1,0(a1)
+ 3000c88:	90ae                	add	ra,ra,a1
+ 3000c8a:	4582                	lw	a1,0(sp)
+ 3000c8c:	0141                	addi	sp,sp,16
+ 3000c8e:	8082                	ret
+
+03000c90 <BASE_FUNC_DelayUs>:
+  * @brief Delay number of us.
+  * @param us The number of us to delay.
+  * @retval None.
+  */
+void BASE_FUNC_DelayUs(unsigned int us)
+{
+ 3000c90:	8048                	push	{ra,s0-s2},-16
+ 3000c92:	84aa                	mv	s1,a0
+    unsigned int preTick = DCL_SYSTICK_GetTick();
+ 3000c94:	3da5                	jal	ra,3000b0c <DCL_SYSTICK_GetTick>
+ 3000c96:	892a                	mv	s2,a0
+    unsigned int tickInUs = (SYSTICK_GetCRGHZ() / CRG_FREQ_1MHz) * us;
+ 3000c98:	000f 4240 041f      	l.li	s0,0xf4240
+ 3000c9e:	3595                	jal	ra,3000b02 <SYSTICK_GetCRGHZ>
+ 3000ca0:	02855433          	divu	s0,a0,s0
+ 3000ca4:	02940433          	mul	s0,s0,s1
+    unsigned int curTick;
+    unsigned int delta;
+
+	/* Wait until the delta is greater than tickInUs */
+    do {
+        curTick = DCL_SYSTICK_GetTick();
+ 3000ca8:	3595                	jal	ra,3000b0c <DCL_SYSTICK_GetTick>
+        delta = (curTick >= preTick) ? curTick - preTick : SYSTICK_MAX_VALUE - preTick + curTick + 1;
+ 3000caa:	41250533          	sub	a0,a0,s2
+    } while (delta < tickInUs);
+ 3000cae:	fe856de3          	bltu	a0,s0,3000ca8 <BASE_FUNC_DelayUs+0x18>
+}
+ 3000cb2:	8044                	popret	{ra,s0-s2},16
+
+03000cb4 <BASE_FUNC_DelayMs>:
+  * @brief Delay number of ms.
+  * @param ms The number of ms to delay.
+  * @retval None.
+  */
+void BASE_FUNC_DelayMs(unsigned int ms)
+{
+ 3000cb4:	8038                	push	{ra,s0-s1},-16
+ 3000cb6:	84aa                	mv	s1,a0
+    for (unsigned int i = 0; i < ms; ++i) {
+ 3000cb8:	4401                	li	s0,0
+ 3000cba:	00941363          	bne	s0,s1,3000cc0 <BASE_FUNC_DelayMs+0xc>
+        BASE_FUNC_DelayUs(BASE_DEFINE_DELAY_US_IN_MS);
+    }
+}
+ 3000cbe:	8034                	popret	{ra,s0-s1},16
+        BASE_FUNC_DelayUs(BASE_DEFINE_DELAY_US_IN_MS);
+ 3000cc0:	3e800513          	li	a0,1000
+ 3000cc4:	37f1                	jal	ra,3000c90 <BASE_FUNC_DelayUs>
+    for (unsigned int i = 0; i < ms; ++i) {
+ 3000cc6:	0405                	addi	s0,s0,1
+ 3000cc8:	bfcd                	j	3000cba <BASE_FUNC_DelayMs+0x6>
+
+03000cca <BASE_FUNC_DelaySeconds>:
+  * @brief Delay number of seconds.
+  * @param seconds The number of seconds to delay.
+  * @retval None.
+  */
+void BASE_FUNC_DelaySeconds(unsigned int seconds)
+{
+ 3000cca:	8038                	push	{ra,s0-s1},-16
+ 3000ccc:	84aa                	mv	s1,a0
+    for (unsigned int i = 0; i < seconds; ++i) {
+ 3000cce:	4401                	li	s0,0
+ 3000cd0:	00941363          	bne	s0,s1,3000cd6 <BASE_FUNC_DelaySeconds+0xc>
+        BASE_FUNC_DelayMs(BASE_DEFINE_DELAY_MS_IN_SEC);
+    }
+}
+ 3000cd4:	8034                	popret	{ra,s0-s1},16
+        BASE_FUNC_DelayMs(BASE_DEFINE_DELAY_MS_IN_SEC);
+ 3000cd6:	3e800513          	li	a0,1000
+ 3000cda:	3fe9                	jal	ra,3000cb4 <BASE_FUNC_DelayMs>
+    for (unsigned int i = 0; i < seconds; ++i) {
+ 3000cdc:	0405                	addi	s0,s0,1
+ 3000cde:	bfcd                	j	3000cd0 <BASE_FUNC_DelaySeconds+0x6>
+
+03000ce0 <BASE_FUNC_Delay>:
+  * @param units Specifies the delay unit.
+  * @retval None.
+  */
+void BASE_FUNC_Delay(unsigned int delay, BASE_DelayUnit units)
+{
+    switch (units) {
+ 3000ce0:	3e800793          	li	a5,1000
+ 3000ce4:	00f58a63          	beq	a1,a5,3000cf8 <BASE_FUNC_Delay+0x18>
+ 3000ce8:	000f 4240 079f      	l.li	a5,0xf4240
+ 3000cee:	00f58663          	beq	a1,a5,3000cfa <BASE_FUNC_Delay+0x1a>
+ 3000cf2:	010592bb          	bnei	a1,1,3000cfc <BASE_FUNC_Delay+0x1c>
+        case BASE_DEFINE_DELAY_SECS:
+            BASE_FUNC_DelaySeconds(delay);
+ 3000cf6:	bfd1                	j	3000cca <BASE_FUNC_DelaySeconds>
+            break;
+        case BASE_DEFINE_DELAY_MILLISECS:
+            BASE_FUNC_DelayMs(delay);
+ 3000cf8:	bf75                	j	3000cb4 <BASE_FUNC_DelayMs>
+            break;
+        case BASE_DEFINE_DELAY_MICROSECS:
+            BASE_FUNC_DelayUs(delay);
+ 3000cfa:	bf59                	j	3000c90 <BASE_FUNC_DelayUs>
+            break;
+        default:
+            break;
+    }
+    return;
+ 3000cfc:	8082                	ret
+
+03000cfe <IRQ_DummyHandler>:
+  * @retval None.
+  */
+static void IRQ_DummyHandler(void *arg)
+{
+    BASE_FUNC_UNUSED(arg);
+}
+ 3000cfe:	8082                	ret
+
+03000d00 <InterruptEntry>:
+    g_irqCallbackFunc[irqNum].pfnHandler(g_irqCallbackFunc[irqNum].param);
+ 3000d00:	e6a18793          	addi	a5,gp,-406 # 4000130 <g_irqCallbackFunc>
+ 3000d04:	06a7851b          	addshf	a0,a5,a0,sll,3
+ 3000d08:	411c                	lw	a5,0(a0)
+ 3000d0a:	4148                	lw	a0,4(a0)
+ 3000d0c:	8782                	jr	a5
+
+03000d0e <IRQ_Init>:
+{
+ 3000d0e:	e6a18713          	addi	a4,gp,-406 # 4000130 <g_irqCallbackFunc>
+    for (index = 0; index < IRQ_MAX; index++) {
+ 3000d12:	4681                	li	a3,0
+        g_irqCallbackFunc[index].pfnHandler = IRQ_DummyHandler;
+ 3000d14:	0300 0cfe 079f      	l.li	a5,0x3000cfe
+ 3000d1a:	c31c                	sw	a5,0(a4)
+        g_irqCallbackFunc[index].param = NULL;
+ 3000d1c:	00072223          	sw	zero,4(a4) # 100004 <FLASH_SIZE+0xd8008>
+    for (index = 0; index < IRQ_MAX; index++) {
+ 3000d20:	0685                	addi	a3,a3,1
+ 3000d22:	0721                	addi	a4,a4,8
+ 3000d24:	75f69c3b          	bnei	a3,117,3000d14 <IRQ_Init+0x6>
+}
+ 3000d28:	8082                	ret
+
+03000d2a <SysErrPrint>:
+}
+ 3000d2a:	8082                	ret
+
+03000d2c <SysErrExcEntry>:
+    SysErrPrint(context);
+ 3000d2c:	bffd                	j	3000d2a <SysErrPrint>
+
+03000d2e <SysErrNmiEntry>:
+    INTERRUPT_ASSERT_PARAM(context != NULL);
+ 3000d2e:	e111                	bnez	a0,3000d32 <SysErrNmiEntry+0x4>
+ 3000d30:	a001                	j	3000d30 <SysErrNmiEntry+0x2>
+    SysErrPrint(context);
+ 3000d32:	bfe5                	j	3000d2a <SysErrPrint>
+
+03000d34 <DCL_SYSCTRL_CrgWriteProtectionDisable>:
+  * @retval None.
+  */
+static inline void DCL_SYSCTRL_CrgWriteProtectionDisable(void)
+{
+    /* Set the corresponding bit without affecting the other bits and set the high 16 bits to EA51 to write to */
+    SYSCTRL0->SC_LOCKEN.reg = (SYSCTRL0->SC_LOCKEN.reg & SC_LOCKEN_CRG_DISABLE_MASK) + SC_LOCKEN_VALID_HIGH_BIT;
+ 3000d34:	10100737          	lui	a4,0x10100
+ 3000d38:	437c                	lw	a5,68(a4)
+ 3000d3a:	66c1                	lui	a3,0x10
+ 3000d3c:	16f9                	addi	a3,a3,-2
+ 3000d3e:	8ff5                	and	a5,a5,a3
+ 3000d40:	ea5106b7          	lui	a3,0xea510
+ 3000d44:	97b6                	add	a5,a5,a3
+ 3000d46:	c37c                	sw	a5,68(a4)
+}
+ 3000d48:	8082                	ret
+
+03000d4a <DCL_SYSCTRL_CrgWriteProtectionEnable>:
+  * @retval None.
+  */
+static inline void DCL_SYSCTRL_CrgWriteProtectionEnable(void)
+{
+    /* Set the corresponding bit without affecting the other bits and set the high 16 bits to EA51 to write to */
+    SYSCTRL0->SC_LOCKEN.reg = ((SYSCTRL0->SC_LOCKEN.reg & SC_LOW_BIT_MASK) | SC_LOCKEN_CRG_ENABLE_MASK) +
+ 3000d4a:	10100737          	lui	a4,0x10100
+ 3000d4e:	437c                	lw	a5,68(a4)
+ 3000d50:	ea5106b7          	lui	a3,0xea510
+ 3000d54:	9fa1                	uxth	a5
+ 3000d56:	0017e793          	ori	a5,a5,1
+ 3000d5a:	97b6                	add	a5,a5,a3
+ 3000d5c:	c37c                	sw	a5,68(a4)
+                              SC_LOCKEN_VALID_HIGH_BIT;
+}
+ 3000d5e:	8082                	ret
+
+03000d60 <CRG_IpWithClkSelEnableSet>:
+ * @param enable  BASE_CFG_SET or BASE_CFG_UNSET
+ * @retval None
+ */
+static void CRG_IpWithClkSelEnableSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int enable)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000d60:	21218713          	addi	a4,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000d64:	251e                	lhu	a5,8(a0)
+ 3000d66:	4318                	lw	a4,0(a4)
+    if ((enable & IP_CLK_ENABLE) == IP_CLK_ENABLE) {
+ 3000d68:	8985                	andi	a1,a1,1
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000d6a:	973e                	add	a4,a4,a5
+        p->BIT.cken = BASE_CFG_SET;
+ 3000d6c:	431c                	lw	a5,0(a4)
+    if ((enable & IP_CLK_ENABLE) == IP_CLK_ENABLE) {
+ 3000d6e:	c991                	beqz	a1,3000d82 <CRG_IpWithClkSelEnableSet+0x22>
+        p->BIT.cken = BASE_CFG_SET;
+ 3000d70:	0017e793          	ori	a5,a5,1
+ 3000d74:	c31c                	sw	a5,0(a4)
+        p->BIT.srst_req = BASE_CFG_UNSET;   /* Enable with soft reset disable */
+ 3000d76:	431c                	lw	a5,0(a4)
+ 3000d78:	76c1                	lui	a3,0xffff0
+ 3000d7a:	16fd                	addi	a3,a3,-1
+ 3000d7c:	8ff5                	and	a5,a5,a3
+    } else {
+        p->BIT.cken = BASE_CFG_UNSET;
+ 3000d7e:	c31c                	sw	a5,0(a4)
+    }
+}
+ 3000d80:	8082                	ret
+        p->BIT.cken = BASE_CFG_UNSET;
+ 3000d82:	9bf9                	andi	a5,a5,-2
+ 3000d84:	bfed                	j	3000d7e <CRG_IpWithClkSelEnableSet+0x1e>
+
+03000d86 <CRG_IpWithClkSelEnableGet>:
+ * @param unsigned int 0: disable, 1: enable
+ * @retval Clock enable status
+ */
+static unsigned int CRG_IpWithClkSelEnableGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000d86:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000d8a:	251a                	lhu	a4,8(a0)
+ 3000d8c:	439c                	lw	a5,0(a5)
+ 3000d8e:	97ba                	add	a5,a5,a4
+    return p->BIT.cken;
+ 3000d90:	4388                	lw	a0,0(a5)
+}
+ 3000d92:	8905                	andi	a0,a0,1
+ 3000d94:	8082                	ret
+
+03000d96 <CRG_IpWithClkSelResetSet>:
+ * @param reset  BASE_CFG_SET or BASE_CFG_UNSET
+ * @retval None
+ */
+static void CRG_IpWithClkSelResetSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int reset)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000d96:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000d9a:	439c                	lw	a5,0(a5)
+ 3000d9c:	251a                	lhu	a4,8(a0)
+    p->BIT.srst_req = (reset & BASE_CFG_SET) ? BASE_CFG_SET : BASE_CFG_UNSET;
+ 3000d9e:	76c1                	lui	a3,0xffff0
+ 3000da0:	16fd                	addi	a3,a3,-1
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000da2:	973e                	add	a4,a4,a5
+    p->BIT.srst_req = (reset & BASE_CFG_SET) ? BASE_CFG_SET : BASE_CFG_UNSET;
+ 3000da4:	431c                	lw	a5,0(a4)
+ 3000da6:	8985                	andi	a1,a1,1
+ 3000da8:	8ff5                	and	a5,a5,a3
+ 3000daa:	20b7a59b          	orshf	a1,a5,a1,sll,16
+ 3000dae:	c30c                	sw	a1,0(a4)
+}
+ 3000db0:	8082                	ret
+
+03000db2 <CRG_IpWithClkSelResetGet>:
+ * @param unsigned int 0: disable, 1: enable
+ * @retval Clock reset status
+ */
+static unsigned int CRG_IpWithClkSelResetGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000db2:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000db6:	251a                	lhu	a4,8(a0)
+ 3000db8:	439c                	lw	a5,0(a5)
+ 3000dba:	97ba                	add	a5,a5,a4
+    return p->BIT.srst_req;
+ 3000dbc:	4388                	lw	a0,0(a5)
+ 3000dbe:	8141                	srli	a0,a0,0x10
+}
+ 3000dc0:	8905                	andi	a0,a0,1
+ 3000dc2:	8082                	ret
+
+03000dc4 <CRG_IpWithClkSelClkSelSet>:
+ * @param unsigned int BASE_CFG_SET or BASE_CFG_UNSET
+ * @retval None
+ */
+static void CRG_IpWithClkSelClkSelSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int clkSelect)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000dc4:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000dc8:	439c                	lw	a5,0(a5)
+ 3000dca:	251a                	lhu	a4,8(a0)
+    p->BIT.cksel = clkSelect;
+ 3000dcc:	898d                	andi	a1,a1,3
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000dce:	973e                	add	a4,a4,a5
+    p->BIT.cksel = clkSelect;
+ 3000dd0:	431c                	lw	a5,0(a4)
+ 3000dd2:	cff7f793          	andi	a5,a5,-769
+ 3000dd6:	10b7a59b          	orshf	a1,a5,a1,sll,8
+ 3000dda:	c30c                	sw	a1,0(a4)
+}
+ 3000ddc:	8082                	ret
+
+03000dde <CRG_IpWithClkSelClkSelGet>:
+ * @param matchInfo IP with Clock select match info
+ * @retval Clock Select @see CRG_APBLsClkSelect
+ */
+static unsigned int CRG_IpWithClkSelClkSelGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000dde:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWithClkSelectCfg *p = (CRG_IpWithClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000de2:	251a                	lhu	a4,8(a0)
+ 3000de4:	439c                	lw	a5,0(a5)
+ 3000de6:	97ba                	add	a5,a5,a4
+    return p->BIT.cksel;
+ 3000de8:	4388                	lw	a0,0(a5)
+ 3000dea:	8121                	srli	a0,a0,0x8
+}
+ 3000dec:	890d                	andi	a0,a0,3
+ 3000dee:	8082                	ret
+
+03000df0 <CRG_IpWoClkSelEnableSet>:
+ * @param enable BASE_CFG_SET or BASE_CFG_UNSET
+ * @retval None
+ */
+static void CRG_IpWoClkSelEnableSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int enable)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000df0:	21218713          	addi	a4,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWoClkSelectCfg *p = (CRG_IpWoClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000df4:	251e                	lhu	a5,8(a0)
+ 3000df6:	4318                	lw	a4,0(a4)
+{
+ 3000df8:	1141                	addi	sp,sp,-16
+    CRG_IpWoClkSelectCfg cfg;
+    cfg.value = p->value;
+    if (enable & IP_CLK_ENABLE) {
+ 3000dfa:	8985                	andi	a1,a1,1
+    CRG_IpWoClkSelectCfg *p = (CRG_IpWoClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000dfc:	00f70633          	add	a2,a4,a5
+    cfg.value = p->value;
+ 3000e00:	421c                	lw	a5,0(a2)
+ 3000e02:	2538                	lbu	a4,10(a0)
+ 3000e04:	c63e                	sw	a5,12(sp)
+ 3000e06:	4785                	li	a5,1
+ 3000e08:	00e797b3          	sll	a5,a5,a4
+ 3000e0c:	07c2                	slli	a5,a5,0x10
+ 3000e0e:	87c1                	srai	a5,a5,0x10
+ 3000e10:	fff7c693          	not	a3,a5
+    if (enable & IP_CLK_ENABLE) {
+ 3000e14:	c58d                	beqz	a1,3000e3e <CRG_IpWoClkSelEnableSet+0x4e>
+        cfg.BIT.clkEnMask |= 1 << matchInfo->bitOffset;
+ 3000e16:	4732                	lw	a4,12(sp)
+ 3000e18:	75c1                	lui	a1,0xffff0
+ 3000e1a:	8fd9                	or	a5,a5,a4
+ 3000e1c:	4732                	lw	a4,12(sp)
+ 3000e1e:	9fa1                	uxth	a5
+ 3000e20:	8f6d                	and	a4,a4,a1
+ 3000e22:	8fd9                	or	a5,a5,a4
+ 3000e24:	c63e                	sw	a5,12(sp)
+        cfg.BIT.softResetReq &= ~(1 << matchInfo->bitOffset);
+ 3000e26:	47b2                	lw	a5,12(sp)
+ 3000e28:	60f6c69b          	andshf	a3,a3,a5,srl,16
+ 3000e2c:	47b2                	lw	a5,12(sp)
+ 3000e2e:	9fa1                	uxth	a5
+ 3000e30:	20d7a69b          	orshf	a3,a5,a3,sll,16
+ 3000e34:	c636                	sw	a3,12(sp)
+    } else {
+        cfg.BIT.clkEnMask &= ~(1 << matchInfo->bitOffset);
+    }
+    p->value = cfg.value;
+ 3000e36:	47b2                	lw	a5,12(sp)
+ 3000e38:	c21c                	sw	a5,0(a2)
+}
+ 3000e3a:	0141                	addi	sp,sp,16
+ 3000e3c:	8082                	ret
+        cfg.BIT.clkEnMask &= ~(1 << matchInfo->bitOffset);
+ 3000e3e:	47b2                	lw	a5,12(sp)
+ 3000e40:	4732                	lw	a4,12(sp)
+ 3000e42:	9fa1                	uxth	a5
+ 3000e44:	8efd                	and	a3,a3,a5
+ 3000e46:	77c1                	lui	a5,0xffff0
+ 3000e48:	8ff9                	and	a5,a5,a4
+ 3000e4a:	8fd5                	or	a5,a5,a3
+ 3000e4c:	c63e                	sw	a5,12(sp)
+ 3000e4e:	b7e5                	j	3000e36 <CRG_IpWoClkSelEnableSet+0x46>
+
+03000e50 <CRG_IpWoClkSelEnableGet>:
+ * @param matchInfo IP without Clock select match info
+ * @retval Clock Enable status
+ */
+static unsigned int CRG_IpWoClkSelEnableGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000e50:	21218713          	addi	a4,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWoClkSelectCfg *p = (CRG_IpWoClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000e54:	251e                	lhu	a5,8(a0)
+ 3000e56:	4318                	lw	a4,0(a4)
+{
+ 3000e58:	1141                	addi	sp,sp,-16
+    CRG_IpWoClkSelectCfg cfg;
+
+    cfg.value = p->value;
+    return (cfg.BIT.clkEnMask & (1 << matchInfo->bitOffset)) == 0 ? false : true;
+ 3000e5a:	2528                	lbu	a0,10(a0)
+    CRG_IpWoClkSelectCfg *p = (CRG_IpWoClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000e5c:	97ba                	add	a5,a5,a4
+    cfg.value = p->value;
+ 3000e5e:	439c                	lw	a5,0(a5)
+ 3000e60:	c63e                	sw	a5,12(sp)
+    return (cfg.BIT.clkEnMask & (1 << matchInfo->bitOffset)) == 0 ? false : true;
+ 3000e62:	47b2                	lw	a5,12(sp)
+}
+ 3000e64:	0141                	addi	sp,sp,16
+    return (cfg.BIT.clkEnMask & (1 << matchInfo->bitOffset)) == 0 ? false : true;
+ 3000e66:	9fa1                	uxth	a5
+ 3000e68:	40a7d533          	sra	a0,a5,a0
+}
+ 3000e6c:	8905                	andi	a0,a0,1
+ 3000e6e:	8082                	ret
+
+03000e70 <CRG_IpWoClkSelResetSet>:
+ * @param reset BASE_CFG_SET or BASE_CFG_UNSET
+ * @retval None
+ */
+static void CRG_IpWoClkSelResetSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int reset)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000e70:	21218713          	addi	a4,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWoClkSelectCfg *p = (CRG_IpWoClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000e74:	251e                	lhu	a5,8(a0)
+ 3000e76:	4318                	lw	a4,0(a4)
+{
+ 3000e78:	1141                	addi	sp,sp,-16
+    CRG_IpWoClkSelectCfg cfg;
+    cfg.value = p->value;
+    if (reset & BASE_CFG_SET) {
+ 3000e7a:	8985                	andi	a1,a1,1
+    CRG_IpWoClkSelectCfg *p = (CRG_IpWoClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000e7c:	00f706b3          	add	a3,a4,a5
+    cfg.value = p->value;
+ 3000e80:	429c                	lw	a5,0(a3)
+ 3000e82:	2538                	lbu	a4,10(a0)
+ 3000e84:	c63e                	sw	a5,12(sp)
+ 3000e86:	4785                	li	a5,1
+ 3000e88:	00e797b3          	sll	a5,a5,a4
+        cfg.BIT.softResetReq |= 1 << matchInfo->bitOffset;
+ 3000e8c:	4732                	lw	a4,12(sp)
+ 3000e8e:	07c2                	slli	a5,a5,0x10
+ 3000e90:	87c1                	srai	a5,a5,0x10
+    if (reset & BASE_CFG_SET) {
+ 3000e92:	cd81                	beqz	a1,3000eaa <CRG_IpWoClkSelResetSet+0x3a>
+        cfg.BIT.softResetReq |= 1 << matchInfo->bitOffset;
+ 3000e94:	60e7a79b          	orshf	a5,a5,a4,srl,16
+    } else {
+        cfg.BIT.softResetReq &= ~(1 << matchInfo->bitOffset);
+ 3000e98:	4732                	lw	a4,12(sp)
+ 3000e9a:	9f21                	uxth	a4
+ 3000e9c:	20f7279b          	orshf	a5,a4,a5,sll,16
+ 3000ea0:	c63e                	sw	a5,12(sp)
+    }
+    p->value = cfg.value;
+ 3000ea2:	47b2                	lw	a5,12(sp)
+ 3000ea4:	c29c                	sw	a5,0(a3)
+}
+ 3000ea6:	0141                	addi	sp,sp,16
+ 3000ea8:	8082                	ret
+        cfg.BIT.softResetReq &= ~(1 << matchInfo->bitOffset);
+ 3000eaa:	fff7c793          	not	a5,a5
+ 3000eae:	60e7c79b          	andshf	a5,a5,a4,srl,16
+ 3000eb2:	b7dd                	j	3000e98 <CRG_IpWoClkSelResetSet+0x28>
+
+03000eb4 <CRG_IpWoClkSelResetGet>:
+ * @param matchInfo IP without Clock select match info
+ * @retval Clock select reset status
+ */
+static unsigned int CRG_IpWoClkSelResetGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000eb4:	21218713          	addi	a4,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_IpWoClkSelectCfg *p = (CRG_IpWoClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000eb8:	251e                	lhu	a5,8(a0)
+ 3000eba:	4318                	lw	a4,0(a4)
+{
+ 3000ebc:	1141                	addi	sp,sp,-16
+    CRG_IpWoClkSelectCfg cfg;
+    cfg.value = p->value;
+    return (cfg.BIT.softResetReq & (1 << matchInfo->bitOffset)) ? BASE_CFG_SET : BASE_CFG_UNSET;
+ 3000ebe:	2528                	lbu	a0,10(a0)
+    CRG_IpWoClkSelectCfg *p = (CRG_IpWoClkSelectCfg *)(void *)(base + matchInfo->regOffset);
+ 3000ec0:	97ba                	add	a5,a5,a4
+    cfg.value = p->value;
+ 3000ec2:	439c                	lw	a5,0(a5)
+ 3000ec4:	c63e                	sw	a5,12(sp)
+    return (cfg.BIT.softResetReq & (1 << matchInfo->bitOffset)) ? BASE_CFG_SET : BASE_CFG_UNSET;
+ 3000ec6:	47b2                	lw	a5,12(sp)
+}
+ 3000ec8:	0141                	addi	sp,sp,16
+    return (cfg.BIT.softResetReq & (1 << matchInfo->bitOffset)) ? BASE_CFG_SET : BASE_CFG_UNSET;
+ 3000eca:	83c1                	srli	a5,a5,0x10
+ 3000ecc:	40a7d533          	sra	a0,a5,a0
+}
+ 3000ed0:	8905                	andi	a0,a0,1
+ 3000ed2:	8082                	ret
+
+03000ed4 <CRG_AdcEnableSet>:
+ * @param enable IP_CLK_ENABLE
+ * @retval None
+ */
+static void CRG_AdcEnableSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int enable)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000ed4:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000ed8:	439c                	lw	a5,0(a5)
+ 3000eda:	251a                	lhu	a4,8(a0)
+{
+ 3000edc:	1141                	addi	sp,sp,-16
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000ede:	973e                	add	a4,a4,a5
+    CRG_AdcIpCfg cfg;
+    cfg.value = p->value;
+ 3000ee0:	431c                	lw	a5,0(a4)
+ 3000ee2:	c63e                	sw	a5,12(sp)
+    if (enable) {
+        cfg.BIT.cken = BASE_CFG_SET;
+ 3000ee4:	47b2                	lw	a5,12(sp)
+    if (enable) {
+ 3000ee6:	c99d                	beqz	a1,3000f1c <CRG_AdcEnableSet+0x48>
+        cfg.BIT.cken = BASE_CFG_SET;
+ 3000ee8:	0017e793          	ori	a5,a5,1
+ 3000eec:	c63e                	sw	a5,12(sp)
+        cfg.BIT.sys_cken = BASE_CFG_SET;
+ 3000eee:	47b2                	lw	a5,12(sp)
+        cfg.BIT.srst_req = BASE_CFG_UNSET;
+ 3000ef0:	76c1                	lui	a3,0xffff0
+ 3000ef2:	16fd                	addi	a3,a3,-1
+        cfg.BIT.sys_cken = BASE_CFG_SET;
+ 3000ef4:	0027e793          	ori	a5,a5,2
+ 3000ef8:	c63e                	sw	a5,12(sp)
+ 3000efa:	47b2                	lw	a5,12(sp)
+        cfg.BIT.srst_req = BASE_CFG_UNSET;
+ 3000efc:	8ff5                	and	a5,a5,a3
+ 3000efe:	c63e                	sw	a5,12(sp)
+ 3000f00:	47b2                	lw	a5,12(sp)
+        cfg.BIT.sys_srst_req = BASE_CFG_UNSET;
+ 3000f02:	7681                	lui	a3,0xfffe0
+ 3000f04:	16fd                	addi	a3,a3,-1
+ 3000f06:	8ff5                	and	a5,a5,a3
+ 3000f08:	c63e                	sw	a5,12(sp)
+        cfg.BIT.ana_srst_req = BASE_CFG_UNSET;
+ 3000f0a:	47b2                	lw	a5,12(sp)
+ 3000f0c:	56bd                	li	a3,-17
+ 3000f0e:	e4d7c79b          	andshf	a5,a5,a3,ror,18
+    } else {
+        cfg.BIT.cken = BASE_CFG_UNSET;
+        cfg.BIT.sys_cken = BASE_CFG_UNSET;
+ 3000f12:	c63e                	sw	a5,12(sp)
+    }
+    p->value = cfg.value;
+ 3000f14:	47b2                	lw	a5,12(sp)
+ 3000f16:	c31c                	sw	a5,0(a4)
+}
+ 3000f18:	0141                	addi	sp,sp,16
+ 3000f1a:	8082                	ret
+        cfg.BIT.cken = BASE_CFG_UNSET;
+ 3000f1c:	9bf9                	andi	a5,a5,-2
+ 3000f1e:	c63e                	sw	a5,12(sp)
+        cfg.BIT.sys_cken = BASE_CFG_UNSET;
+ 3000f20:	47b2                	lw	a5,12(sp)
+ 3000f22:	9bf5                	andi	a5,a5,-3
+ 3000f24:	b7fd                	j	3000f12 <CRG_AdcEnableSet+0x3e>
+
+03000f26 <CRG_AdcEnableGet>:
+ * @retval Cken of ADC
+ */
+static unsigned int CRG_AdcEnableGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    unsigned int enable;
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000f26:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000f2a:	439c                	lw	a5,0(a5)
+ 3000f2c:	251a                	lhu	a4,8(a0)
+ 3000f2e:	973e                	add	a4,a4,a5
+    enable = ((p->BIT.cken != 0) && (p->BIT.sys_cken != 0)) ? IP_CLK_ENABLE : IP_CLK_DISABLE;
+ 3000f30:	431c                	lw	a5,0(a4)
+ 3000f32:	8b85                	andi	a5,a5,1
+ 3000f34:	c789                	beqz	a5,3000f3e <CRG_AdcEnableGet+0x18>
+ 3000f36:	4308                	lw	a0,0(a4)
+ 3000f38:	8105                	srli	a0,a0,0x1
+ 3000f3a:	8905                	andi	a0,a0,1
+ 3000f3c:	8082                	ret
+ 3000f3e:	4501                	li	a0,0
+    return enable;
+}
+ 3000f40:	8082                	ret
+
+03000f42 <CRG_AdcClkSelectSet>:
+ * @param clkSelect @see CRG_AdcClkSelect
+ * @retval None
+ */
+static void CRG_AdcClkSelectSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int clkSelect)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000f42:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000f46:	439c                	lw	a5,0(a5)
+ 3000f48:	251a                	lhu	a4,8(a0)
+    p->BIT.cksel = (unsigned int)clkSelect;
+ 3000f4a:	76f5                	lui	a3,0xffffd
+ 3000f4c:	16fd                	addi	a3,a3,-1
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000f4e:	973e                	add	a4,a4,a5
+    p->BIT.cksel = (unsigned int)clkSelect;
+ 3000f50:	431c                	lw	a5,0(a4)
+ 3000f52:	898d                	andi	a1,a1,3
+ 3000f54:	8ff5                	and	a5,a5,a3
+ 3000f56:	18b7a59b          	orshf	a1,a5,a1,sll,12
+ 3000f5a:	c30c                	sw	a1,0(a4)
+}
+ 3000f5c:	8082                	ret
+
+03000f5e <CRG_AdcClkSelectGet>:
+ * @param matchInfo ADC match info
+ * @retval Adc Clock select @see CRG_AdcClkSelect
+ */
+static unsigned int CRG_AdcClkSelectGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000f5e:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000f62:	251a                	lhu	a4,8(a0)
+ 3000f64:	439c                	lw	a5,0(a5)
+ 3000f66:	97ba                	add	a5,a5,a4
+    return p->BIT.cksel;
+ 3000f68:	4388                	lw	a0,0(a5)
+ 3000f6a:	8131                	srli	a0,a0,0xc
+}
+ 3000f6c:	890d                	andi	a0,a0,3
+ 3000f6e:	8082                	ret
+
+03000f70 <CRG_AdcDivSet>:
+ * @param div Adc clock division
+ * @retval None
+ */
+static void CRG_AdcDivSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int div)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000f70:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000f74:	439c                	lw	a5,0(a5)
+ 3000f76:	251a                	lhu	a4,8(a0)
+    p->BIT.div = div;
+ 3000f78:	89fd                	andi	a1,a1,31
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000f7a:	973e                	add	a4,a4,a5
+    p->BIT.div = div;
+ 3000f7c:	431c                	lw	a5,0(a4)
+ 3000f7e:	e0f7f793          	andi	a5,a5,-497
+ 3000f82:	08b7a59b          	orshf	a1,a5,a1,sll,4
+ 3000f86:	c30c                	sw	a1,0(a4)
+}
+ 3000f88:	8082                	ret
+
+03000f8a <CRG_AdcDivGet>:
+ * @param matchInfo  ADC match info
+ * @retval Adc clock division
+ */
+static unsigned int CRG_AdcDivGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000f8a:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000f8e:	251a                	lhu	a4,8(a0)
+ 3000f90:	439c                	lw	a5,0(a5)
+ 3000f92:	97ba                	add	a5,a5,a4
+    return p->BIT.div;
+ 3000f94:	4388                	lw	a0,0(a5)
+ 3000f96:	8111                	srli	a0,a0,0x4
+}
+ 3000f98:	897d                	andi	a0,a0,31
+ 3000f9a:	8082                	ret
+
+03000f9c <CRG_AdcResetSet>:
+ * @param reset BASE_CFG_SET or BASE_CFG_UNSET
+ * @retval None
+ */
+static void CRG_AdcResetSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int reset)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000f9c:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000fa0:	439c                	lw	a5,0(a5)
+ 3000fa2:	251a                	lhu	a4,8(a0)
+{
+ 3000fa4:	1141                	addi	sp,sp,-16
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000fa6:	973e                	add	a4,a4,a5
+    CRG_AdcIpCfg cfg;
+
+    cfg.value = p->value;
+ 3000fa8:	431c                	lw	a5,0(a4)
+ 3000faa:	c63e                	sw	a5,12(sp)
+    if (reset) {
+        cfg.BIT.srst_req     = BASE_CFG_SET;
+ 3000fac:	47b2                	lw	a5,12(sp)
+    if (reset) {
+ 3000fae:	c195                	beqz	a1,3000fd2 <CRG_AdcResetSet+0x36>
+        cfg.BIT.srst_req     = BASE_CFG_SET;
+ 3000fb0:	66c1                	lui	a3,0x10
+ 3000fb2:	8fd5                	or	a5,a5,a3
+ 3000fb4:	c63e                	sw	a5,12(sp)
+ 3000fb6:	47b2                	lw	a5,12(sp)
+        cfg.BIT.sys_srst_req = BASE_CFG_SET;
+ 3000fb8:	000206b7          	lui	a3,0x20
+ 3000fbc:	8fd5                	or	a5,a5,a3
+ 3000fbe:	c63e                	sw	a5,12(sp)
+ 3000fc0:	47b2                	lw	a5,12(sp)
+        cfg.BIT.ana_srst_req = BASE_CFG_SET;
+ 3000fc2:	000406b7          	lui	a3,0x40
+ 3000fc6:	8fd5                	or	a5,a5,a3
+    } else {
+        cfg.BIT.srst_req     = BASE_CFG_UNSET;
+        cfg.BIT.sys_srst_req = BASE_CFG_UNSET;
+        cfg.BIT.ana_srst_req = BASE_CFG_UNSET;
+ 3000fc8:	c63e                	sw	a5,12(sp)
+    }
+    p->value = cfg.value;
+ 3000fca:	47b2                	lw	a5,12(sp)
+ 3000fcc:	c31c                	sw	a5,0(a4)
+}
+ 3000fce:	0141                	addi	sp,sp,16
+ 3000fd0:	8082                	ret
+        cfg.BIT.srst_req     = BASE_CFG_UNSET;
+ 3000fd2:	76c1                	lui	a3,0xffff0
+ 3000fd4:	16fd                	addi	a3,a3,-1
+ 3000fd6:	8ff5                	and	a5,a5,a3
+ 3000fd8:	c63e                	sw	a5,12(sp)
+        cfg.BIT.sys_srst_req = BASE_CFG_UNSET;
+ 3000fda:	47b2                	lw	a5,12(sp)
+ 3000fdc:	7681                	lui	a3,0xfffe0
+ 3000fde:	16fd                	addi	a3,a3,-1
+ 3000fe0:	8ff5                	and	a5,a5,a3
+ 3000fe2:	c63e                	sw	a5,12(sp)
+        cfg.BIT.ana_srst_req = BASE_CFG_UNSET;
+ 3000fe4:	47b2                	lw	a5,12(sp)
+ 3000fe6:	56bd                	li	a3,-17
+ 3000fe8:	e4d7c79b          	andshf	a5,a5,a3,ror,18
+ 3000fec:	bff1                	j	3000fc8 <CRG_AdcResetSet+0x2c>
+
+03000fee <CRG_AdcResetGet>:
+ * @retval reset BASE_CFG_SET or BASE_CFG_UNSET
+ */
+static unsigned int CRG_AdcResetGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    unsigned int reset;
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3000fee:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_AdcIpCfg *p = (CRG_AdcIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3000ff2:	251a                	lhu	a4,8(a0)
+ 3000ff4:	439c                	lw	a5,0(a5)
+ 3000ff6:	973e                	add	a4,a4,a5
+    reset  = p->BIT.srst_req;
+ 3000ff8:	4308                	lw	a0,0(a4)
+    reset |= p->BIT.sys_srst_req;
+ 3000ffa:	431c                	lw	a5,0(a4)
+ 3000ffc:	83c5                	srli	a5,a5,0x11
+ 3000ffe:	60a7a79b          	orshf	a5,a5,a0,srl,16
+    reset |= p->BIT.ana_srst_req;
+ 3001002:	4308                	lw	a0,0(a4)
+ 3001004:	64a7a51b          	orshf	a0,a5,a0,srl,18
+    return reset;
+}
+ 3001008:	8905                	andi	a0,a0,1
+ 300100a:	8082                	ret
+
+0300100c <CRG_DacEnableSet>:
+ * @param enable IP_CLK_ENABLE
+ * @retval None
+ */
+static void CRG_DacEnableSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int enable)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 300100c:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3001010:	439c                	lw	a5,0(a5)
+ 3001012:	00855803          	lhu	a6,8(a0)
+ 3001016:	2538                	lbu	a4,10(a0)
+{
+ 3001018:	1141                	addi	sp,sp,-16
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 300101a:	983e                	add	a6,a6,a5
+    CRG_DacIpCfg cfg;
+    cfg.value = p->value;
+ 300101c:	00082783          	lw	a5,0(a6)
+ 3001020:	c63e                	sw	a5,12(sp)
+ 3001022:	4785                	li	a5,1
+ 3001024:	00e797b3          	sll	a5,a5,a4
+ 3001028:	07e2                	slli	a5,a5,0x18
+ 300102a:	87e1                	srai	a5,a5,0x18
+ 300102c:	fff7c693          	not	a3,a5
+    if (enable) {
+ 3001030:	c985                	beqz	a1,3001060 <CRG_DacEnableSet+0x54>
+        cfg.BIT.softResetReq &= ~(BASE_CFG_SET << matchInfo->bitOffset);
+ 3001032:	4732                	lw	a4,12(sp)
+ 3001034:	4632                	lw	a2,12(sp)
+ 3001036:	8341                	srli	a4,a4,0x10
+ 3001038:	8b1d                	andi	a4,a4,7
+ 300103a:	8f75                	and	a4,a4,a3
+ 300103c:	568d                	li	a3,-29
+ 300103e:	e4d6461b          	andshf	a2,a2,a3,ror,18
+ 3001042:	20e6271b          	orshf	a4,a2,a4,sll,16
+ 3001046:	c63a                	sw	a4,12(sp)
+        cfg.BIT.clkEnMask |= BASE_CFG_SET << matchInfo->bitOffset;
+ 3001048:	4732                	lw	a4,12(sp)
+ 300104a:	8fd9                	or	a5,a5,a4
+ 300104c:	4732                	lw	a4,12(sp)
+ 300104e:	8b9d                	andi	a5,a5,7
+ 3001050:	9b61                	andi	a4,a4,-8
+ 3001052:	8fd9                	or	a5,a5,a4
+ 3001054:	c63e                	sw	a5,12(sp)
+    } else {
+        cfg.BIT.clkEnMask &= ~(BASE_CFG_SET << matchInfo->bitOffset);
+    }
+    p->value = cfg.value;
+ 3001056:	47b2                	lw	a5,12(sp)
+ 3001058:	00f82023          	sw	a5,0(a6)
+}
+ 300105c:	0141                	addi	sp,sp,16
+ 300105e:	8082                	ret
+        cfg.BIT.clkEnMask &= ~(BASE_CFG_SET << matchInfo->bitOffset);
+ 3001060:	47b2                	lw	a5,12(sp)
+ 3001062:	4732                	lw	a4,12(sp)
+ 3001064:	8b9d                	andi	a5,a5,7
+ 3001066:	8efd                	and	a3,a3,a5
+ 3001068:	9b61                	andi	a4,a4,-8
+ 300106a:	8ed9                	or	a3,a3,a4
+ 300106c:	c636                	sw	a3,12(sp)
+ 300106e:	b7e5                	j	3001056 <CRG_DacEnableSet+0x4a>
+
+03001070 <CRG_DacEnableGet>:
+ * @retval Cken and Sys_cken of ADC
+ */
+static unsigned int CRG_DacEnableGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    unsigned int enable;
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3001070:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3001074:	251a                	lhu	a4,8(a0)
+ 3001076:	439c                	lw	a5,0(a5)
+    if ((p->BIT.clkEnMask & (1 << matchInfo->bitOffset)) != 0) {
+ 3001078:	2528                	lbu	a0,10(a0)
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 300107a:	97ba                	add	a5,a5,a4
+    if ((p->BIT.clkEnMask & (1 << matchInfo->bitOffset)) != 0) {
+ 300107c:	439c                	lw	a5,0(a5)
+ 300107e:	8b9d                	andi	a5,a5,7
+ 3001080:	40a7d533          	sra	a0,a5,a0
+        enable = BASE_CFG_SET;
+    } else {
+        enable = BASE_CFG_UNSET;
+    }
+    return enable;
+}
+ 3001084:	8905                	andi	a0,a0,1
+ 3001086:	8082                	ret
+
+03001088 <CRG_DacDivSet>:
+ * @brief Set DAC Div
+ * @param matchInfo DAC Match info
+ * @param div dac div parameter
+ */
+static void CRG_DacDivSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int div)
+{
+ 3001088:	8128                	push	{ra,s0},-32
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 300108a:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 300108e:	439c                	lw	a5,0(a5)
+ 3001090:	00855803          	lhu	a6,8(a0)
+    CRG_DacIpCfg cfg;
+    cfg.value = p->value;
+    cfg.BIT.div &= ~(DAC_DIV_MASK << (matchInfo->bitOffset * DAC_DIV_BITLEN));
+ 3001094:	2534                	lbu	a3,10(a0)
+    cfg.BIT.div |= (div & DAC_DIV_MASK) << (matchInfo->bitOffset * DAC_DIV_BITLEN);
+ 3001096:	89bd                	andi	a1,a1,15
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3001098:	983e                	add	a6,a6,a5
+    cfg.value = p->value;
+ 300109a:	00082783          	lw	a5,0(a6)
+    cfg.BIT.div &= ~(DAC_DIV_MASK << (matchInfo->bitOffset * DAC_DIV_BITLEN));
+ 300109e:	068a                	slli	a3,a3,0x2
+    cfg.value = p->value;
+ 30010a0:	c63e                	sw	a5,12(sp)
+    cfg.BIT.div &= ~(DAC_DIV_MASK << (matchInfo->bitOffset * DAC_DIV_BITLEN));
+ 30010a2:	4732                	lw	a4,12(sp)
+ 30010a4:	6785                	lui	a5,0x1
+ 30010a6:	fff78413          	addi	s0,a5,-1 # fff <prithd+0x401>
+ 30010aa:	48e4471b          	andshf	a4,s0,a4,srl,4
+ 30010ae:	01071613          	slli	a2,a4,0x10
+ 30010b2:	473d                	li	a4,15
+ 30010b4:	00d71733          	sll	a4,a4,a3
+ 30010b8:	47b2                	lw	a5,12(sp)
+ 30010ba:	8241                	srli	a2,a2,0x10
+ 30010bc:	fff74713          	not	a4,a4
+ 30010c0:	8f71                	and	a4,a4,a2
+ 30010c2:	7641                	lui	a2,0xffff0
+ 30010c4:	063d                	addi	a2,a2,15
+ 30010c6:	8ff1                	and	a5,a5,a2
+ 30010c8:	8f61                	and	a4,a4,s0
+ 30010ca:	08e7a71b          	orshf	a4,a5,a4,sll,4
+ 30010ce:	c63a                	sw	a4,12(sp)
+    cfg.BIT.div |= (div & DAC_DIV_MASK) << (matchInfo->bitOffset * DAC_DIV_BITLEN);
+ 30010d0:	47b2                	lw	a5,12(sp)
+ 30010d2:	00d596b3          	sll	a3,a1,a3
+ 30010d6:	4732                	lw	a4,12(sp)
+ 30010d8:	48f4479b          	andshf	a5,s0,a5,srl,4
+ 30010dc:	9fa1                	uxth	a5
+ 30010de:	8fd5                	or	a5,a5,a3
+ 30010e0:	8fe1                	and	a5,a5,s0
+ 30010e2:	8f71                	and	a4,a4,a2
+ 30010e4:	9fa1                	uxth	a5
+ 30010e6:	08f7279b          	orshf	a5,a4,a5,sll,4
+ 30010ea:	c63e                	sw	a5,12(sp)
+    p->value = cfg.value;
+ 30010ec:	47b2                	lw	a5,12(sp)
+ 30010ee:	00f82023          	sw	a5,0(a6)
+}
+ 30010f2:	8124                	popret	{ra,s0},32
+
+030010f4 <CRG_DacDivGet>:
+ * @return div dac div parameter
+ */
+static unsigned int CRG_DacDivGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    unsigned int div;
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 30010f4:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 30010f8:	251a                	lhu	a4,8(a0)
+ 30010fa:	439c                	lw	a5,0(a5)
+    div = p->BIT.div;
+    div >>= (matchInfo->bitOffset * DAC_DIV_BITLEN);
+ 30010fc:	2528                	lbu	a0,10(a0)
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 30010fe:	97ba                	add	a5,a5,a4
+    div = p->BIT.div;
+ 3001100:	439c                	lw	a5,0(a5)
+    div >>= (matchInfo->bitOffset * DAC_DIV_BITLEN);
+ 3001102:	050a                	slli	a0,a0,0x2
+    div = p->BIT.div;
+ 3001104:	07c2                	slli	a5,a5,0x10
+ 3001106:	83d1                	srli	a5,a5,0x14
+    div >>= (matchInfo->bitOffset * DAC_DIV_BITLEN);
+ 3001108:	00a7d533          	srl	a0,a5,a0
+    return (div & DAC_DIV_MASK);
+}
+ 300110c:	893d                	andi	a0,a0,15
+ 300110e:	8082                	ret
+
+03001110 <CRG_DacResetSet>:
+ * @param matchInfo DAC match Info
+ * @param reset DAC_SOFTRESET
+ */
+static void CRG_DacResetSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int reset)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3001110:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3001114:	439c                	lw	a5,0(a5)
+ 3001116:	2512                	lhu	a2,8(a0)
+ 3001118:	2538                	lbu	a4,10(a0)
+{
+ 300111a:	1141                	addi	sp,sp,-16
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 300111c:	963e                	add	a2,a2,a5
+    CRG_DacIpCfg cfg;
+
+    cfg.value = p->value;
+ 300111e:	421c                	lw	a5,0(a2)
+ 3001120:	c63e                	sw	a5,12(sp)
+ 3001122:	4785                	li	a5,1
+ 3001124:	00e797b3          	sll	a5,a5,a4
+    if (reset != 0) {
+        cfg.BIT.softResetReq |= BASE_CFG_SET << matchInfo->bitOffset;
+ 3001128:	4732                	lw	a4,12(sp)
+ 300112a:	07e2                	slli	a5,a5,0x18
+ 300112c:	87e1                	srai	a5,a5,0x18
+    if (reset != 0) {
+ 300112e:	c185                	beqz	a1,300114e <CRG_DacResetSet+0x3e>
+        cfg.BIT.softResetReq |= BASE_CFG_SET << matchInfo->bitOffset;
+ 3001130:	60e7a79b          	orshf	a5,a5,a4,srl,16
+ 3001134:	4732                	lw	a4,12(sp)
+ 3001136:	8b9d                	andi	a5,a5,7
+ 3001138:	fff8 ffff 069f      	l.li	a3,0xfff8ffff
+    } else {
+        cfg.BIT.softResetReq &= ~(BASE_CFG_SET << matchInfo->bitOffset);
+ 300113e:	8f75                	and	a4,a4,a3
+ 3001140:	20f7279b          	orshf	a5,a4,a5,sll,16
+ 3001144:	c63e                	sw	a5,12(sp)
+    }
+    p->value = cfg.value;
+ 3001146:	47b2                	lw	a5,12(sp)
+ 3001148:	c21c                	sw	a5,0(a2)
+}
+ 300114a:	0141                	addi	sp,sp,16
+ 300114c:	8082                	ret
+        cfg.BIT.softResetReq &= ~(BASE_CFG_SET << matchInfo->bitOffset);
+ 300114e:	8341                	srli	a4,a4,0x10
+ 3001150:	8b1d                	andi	a4,a4,7
+ 3001152:	fff7c793          	not	a5,a5
+ 3001156:	8ff9                	and	a5,a5,a4
+ 3001158:	46b2                	lw	a3,12(sp)
+ 300115a:	fff8 ffff 071f      	l.li	a4,0xfff8ffff
+ 3001160:	bff9                	j	300113e <CRG_DacResetSet+0x2e>
+
+03001162 <CRG_DacResetGet>:
+ * @param matchInfo DAC match Info
+ * @return unsigned int  DAC_SOFTRESET
+ */
+static unsigned int CRG_DacResetGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3001162:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 3001166:	251a                	lhu	a4,8(a0)
+ 3001168:	439c                	lw	a5,0(a5)
+    return ((p->BIT.softResetReq >> matchInfo->bitOffset) & BASE_CFG_SET);
+ 300116a:	2528                	lbu	a0,10(a0)
+    CRG_DacIpCfg *p = (CRG_DacIpCfg *)(void *)(base + matchInfo->regOffset);
+ 300116c:	97ba                	add	a5,a5,a4
+    return ((p->BIT.softResetReq >> matchInfo->bitOffset) & BASE_CFG_SET);
+ 300116e:	439c                	lw	a5,0(a5)
+ 3001170:	83c1                	srli	a5,a5,0x10
+ 3001172:	8b9d                	andi	a5,a5,7
+ 3001174:	40a7d533          	sra	a0,a5,a0
+}
+ 3001178:	8905                	andi	a0,a0,1
+ 300117a:	8082                	ret
+
+0300117c <CRG_EfcEnableSet>:
+ * @param matchInfo EFC match Info
+ * @param enable IP_CLK_ENABLE or IP_CRG_DISABLE
+ */
+static void CRG_EfcEnableSet(const CHIP_CrgIpMatchInfo *matchInfo, unsigned int enable)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 300117c:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    PERI_CRG32_Reg *p = (PERI_CRG32_Reg *)(void *)(base + matchInfo->regOffset);
+    p->eflash_cken = (enable & IP_CLK_ENABLE) ? BASE_CFG_SET : BASE_CFG_UNSET;
+ 3001180:	439c                	lw	a5,0(a5)
+    PERI_CRG32_Reg *p = (PERI_CRG32_Reg *)(void *)(base + matchInfo->regOffset);
+ 3001182:	251a                	lhu	a4,8(a0)
+    p->eflash_cken = (enable & IP_CLK_ENABLE) ? BASE_CFG_SET : BASE_CFG_UNSET;
+ 3001184:	8985                	andi	a1,a1,1
+ 3001186:	973e                	add	a4,a4,a5
+ 3001188:	431c                	lw	a5,0(a4)
+ 300118a:	9bf9                	andi	a5,a5,-2
+ 300118c:	8ddd                	or	a1,a1,a5
+ 300118e:	c30c                	sw	a1,0(a4)
+}
+ 3001190:	8082                	ret
+
+03001192 <CRG_EfcEnableGet>:
+ * @param matchInfo EFC match Info
+ * @return unsigned int IP_CLK_ENABLE or IP_CRG_DISABLE
+ */
+static unsigned int CRG_EfcEnableGet(const CHIP_CrgIpMatchInfo *matchInfo)
+{
+    uintptr_t base = (uintptr_t)(void *)g_crgBaseAddr;
+ 3001192:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+    PERI_CRG32_Reg *p = (PERI_CRG32_Reg *)(void *)(base + matchInfo->regOffset);
+ 3001196:	251a                	lhu	a4,8(a0)
+    return p->eflash_cken;
+ 3001198:	439c                	lw	a5,0(a5)
+ 300119a:	97ba                	add	a5,a5,a4
+ 300119c:	4388                	lw	a0,0(a5)
+}
+ 300119e:	8905                	andi	a0,a0,1
+ 30011a0:	8082                	ret
+
+030011a2 <CRG_GetVcoFreq>:
+    CRG_RegStruct *crg = g_crgBaseAddr;
+ 30011a2:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+ 30011a6:	4398                	lw	a4,0(a5)
+    freq = CRG_GetPllRefIni(crg->PERI_CRG0.pll_ref_cksel);
+ 30011a8:	431c                	lw	a5,0(a4)
+ 30011aa:	8b85                	andi	a5,a5,1
+    return (pllRefClkSelect == (unsigned int)CRG_PLL_REF_CLK_SELECT_HOSC) ? HOSC_FREQ : XTRAIL_FREQ;
+ 30011ac:	cb85                	beqz	a5,30011dc <CRG_GetVcoFreq+0x3a>
+ 30011ae:	01c9 c380 051f      	l.li	a0,0x1c9c380
+    freq /= CRG_GetPreDivValue(crg->PERI_CRG1.pll_prediv);
+ 30011b4:	435c                	lw	a5,4(a4)
+        return PLL_PREDIV_OUT_1;
+ 30011b6:	4685                	li	a3,1
+    freq /= CRG_GetPreDivValue(crg->PERI_CRG1.pll_prediv);
+ 30011b8:	8bbd                	andi	a5,a5,15
+    if (pllPredDiv <= CRG_PLL_PREDIV_1) {
+ 30011ba:	0207e33b          	bltui	a5,2,30011c6 <CRG_GetVcoFreq+0x24>
+        return PLL_PREDIV_OUT_2;
+ 30011be:	86be                	mv	a3,a5
+    } else if (pllPredDiv == CRG_PLL_PREDIV_2) {
+ 30011c0:	020781bb          	beqi	a5,2,30011c6 <CRG_GetVcoFreq+0x24>
+        return PLL_PREDIV_OUT_4;
+ 30011c4:	4691                	li	a3,4
+    freq *= CRG_GetPllFbDivValue(crg->PERI_CRG2.pll_fbdiv);
+ 30011c6:	471c                	lw	a5,8(a4)
+    freq /= CRG_GetPreDivValue(crg->PERI_CRG1.pll_prediv);
+ 30011c8:	02d55533          	divu	a0,a0,a3
+    freq *= CRG_GetPllFbDivValue(crg->PERI_CRG2.pll_fbdiv);
+ 30011cc:	9f81                	uxtb	a5
+ 30011ce:	4007e5bb          	bltui	a5,64,30011e4 <CRG_GetVcoFreq+0x42>
+ 30011d2:	03f00793          	li	a5,63
+}
+ 30011d6:	02a78533          	mul	a0,a5,a0
+ 30011da:	8082                	ret
+    return (pllRefClkSelect == (unsigned int)CRG_PLL_REF_CLK_SELECT_HOSC) ? HOSC_FREQ : XTRAIL_FREQ;
+ 30011dc:	017d 7840 051f      	l.li	a0,0x17d7840
+ 30011e2:	bfc9                	j	30011b4 <CRG_GetVcoFreq+0x12>
+    freq *= CRG_GetPllFbDivValue(crg->PERI_CRG2.pll_fbdiv);
+ 30011e4:	06f7fcbb          	bgeui	a5,6,30011d6 <CRG_GetVcoFreq+0x34>
+ 30011e8:	4799                	li	a5,6
+ 30011ea:	b7f5                	j	30011d6 <CRG_GetVcoFreq+0x34>
+
+030011ec <HAL_CRG_Init>:
+{
+ 30011ec:	8038                	push	{ra,s0-s1},-16
+    CRG_RegStruct *reg = handle->baseAddress;
+ 30011ee:	4100                	lw	s0,0(a0)
+    g_crgBaseAddr = (void *)reg;
+ 30011f0:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+{
+ 30011f4:	84aa                	mv	s1,a0
+    g_crgBaseAddr = (void *)reg;
+ 30011f6:	c380                	sw	s0,0(a5)
+    return (pllRefClkSelect == (unsigned int)CRG_PLL_REF_CLK_SELECT_HOSC) ? HOSC_FREQ : XTRAIL_FREQ;
+ 30011f8:	415c                	lw	a5,4(a0)
+ 30011fa:	cfc9                	beqz	a5,3001294 <HAL_CRG_Init+0xa8>
+ 30011fc:	01c9 c380 071f      	l.li	a4,0x1c9c380
+    preDiv = CRG_GetPreDivValue(handle->pllPreDiv);
+ 3001202:	449c                	lw	a5,8(s1)
+        return PLL_PREDIV_OUT_1;
+ 3001204:	4685                	li	a3,1
+    if (pllPredDiv <= CRG_PLL_PREDIV_1) {
+ 3001206:	0207e33b          	bltui	a5,2,3001212 <HAL_CRG_Init+0x26>
+        return PLL_PREDIV_OUT_4;
+ 300120a:	4691                	li	a3,4
+    } else if (pllPredDiv == CRG_PLL_PREDIV_2) {
+ 300120c:	020791bb          	bnei	a5,2,3001212 <HAL_CRG_Init+0x26>
+        return PLL_PREDIV_OUT_2;
+ 3001210:	86be                	mv	a3,a5
+  */
+static inline bool IsCrgValidPreDiv(unsigned int pllRefFreq, unsigned int preDiv)
+{
+    unsigned int freq = pllRefFreq;
+    if (preDiv != 0) {
+        freq /= preDiv;
+ 3001212:	02d75733          	divu	a4,a4,a3
+    }
+    return (freq >= CRG_CLK_PFD_MIN_FREQ) && (freq <= CRG_CLK_PFD_MAX_FREQ);
+ 3001216:	ffc2 f700 079f      	l.li	a5,0xffc2f700
+    if (!IsCrgValidPreDiv(freq, preDiv)) {
+ 300121c:	0035 67e0 069f      	l.li	a3,0x3567e0
+        return BASE_STATUS_ERROR;
+ 3001222:	4505                	li	a0,1
+ 3001224:	97ba                	add	a5,a5,a4
+    if (!IsCrgValidPreDiv(freq, preDiv)) {
+ 3001226:	06f6e663          	bltu	a3,a5,3001292 <HAL_CRG_Init+0xa6>
+  * @retval true
+  * @retval false
+  */
+static inline bool IsCrgValidFdDiv(unsigned int clkPfdFreq, unsigned int fdDiv)
+{
+    unsigned int freq = clkPfdFreq * fdDiv;
+ 300122a:	44dc                	lw	a5,12(s1)
+ 300122c:	02f707b3          	mul	a5,a4,a5
+    return (freq >= CRG_CLK_VCO_MIN_FREQ) && (freq <= CRG_CLK_VCO_MAX_FREQ);
+ 3001230:	fa0a 1f00 071f      	l.li	a4,0xfa0a1f00
+ 3001236:	97ba                	add	a5,a5,a4
+    if (!IsCrgValidFdDiv(freq, handle->pllFbDiv)) {
+ 3001238:	05f5 e100 071f      	l.li	a4,0x5f5e100
+ 300123e:	04f76a63          	bltu	a4,a5,3001292 <HAL_CRG_Init+0xa6>
+    DCL_SYSCTRL_CrgWriteProtectionDisable();
+ 3001242:	3ccd                	jal	ra,3000d34 <DCL_SYSCTRL_CrgWriteProtectionDisable>
+    reg->PERI_CRG0.pll_ref_cksel   = handle->pllRefClkSelect;
+ 3001244:	40dc                	lw	a5,4(s1)
+ 3001246:	4018                	lw	a4,0(s0)
+ 3001248:	0017f693          	andi	a3,a5,1
+ 300124c:	ffe77793          	andi	a5,a4,-2
+ 3001250:	8fd5                	or	a5,a5,a3
+ 3001252:	c01c                	sw	a5,0(s0)
+    reg->PERI_CRG1.pll_prediv      = handle->pllPreDiv;
+ 3001254:	4058                	lw	a4,4(s0)
+ 3001256:	449c                	lw	a5,8(s1)
+ 3001258:	2091                	jal	ra,300129c <HAL_CRG_Init+0xb0>
+ 300125a:	c05c                	sw	a5,4(s0)
+    reg->PERI_CRG2.pll_fbdiv       = handle->pllFbDiv;
+ 300125c:	441c                	lw	a5,8(s0)
+ 300125e:	24d8                	lbu	a4,12(s1)
+ 3001260:	f007f793          	andi	a5,a5,-256
+ 3001264:	8fd9                	or	a5,a5,a4
+ 3001266:	c41c                	sw	a5,8(s0)
+    reg->PERI_CRG3.pll_postdiv     = handle->pllPostDiv;
+ 3001268:	4458                	lw	a4,12(s0)
+ 300126a:	489c                	lw	a5,16(s1)
+ 300126c:	2805                	jal	ra,300129c <HAL_CRG_Init+0xb0>
+ 300126e:	c45c                	sw	a5,12(s0)
+    reg->PERI_CRG4.pll_pd          = BASE_CFG_UNSET;
+ 3001270:	481c                	lw	a5,16(s0)
+    reg->PERI_CRG5.BIT.pll_dig_eb_lockdet = BASE_CFG_UNSET; /* PLL lock detection enable, 0 : enable, 1: disable */
+ 3001272:	7779                	lui	a4,0xffffe
+ 3001274:	177d                	addi	a4,a4,-1
+    reg->PERI_CRG4.pll_pd          = BASE_CFG_UNSET;
+ 3001276:	9bf9                	andi	a5,a5,-2
+ 3001278:	c81c                	sw	a5,16(s0)
+    reg->PERI_CRG5.BIT.pll_dig_eb_lockdet = BASE_CFG_UNSET; /* PLL lock detection enable, 0 : enable, 1: disable */
+ 300127a:	485c                	lw	a5,20(s0)
+ 300127c:	8ff9                	and	a5,a5,a4
+ 300127e:	c85c                	sw	a5,20(s0)
+    while (reg->PERI_CRG8.pll_lock != BASE_CFG_SET) {
+ 3001280:	501c                	lw	a5,32(s0)
+ 3001282:	8b85                	andi	a5,a5,1
+ 3001284:	dff5                	beqz	a5,3001280 <HAL_CRG_Init+0x94>
+    reg->PERI_CRG7.BIT.ck_switchen = BASE_CFG_SET;
+ 3001286:	4c5c                	lw	a5,28(s0)
+ 3001288:	0087e793          	ori	a5,a5,8
+ 300128c:	cc5c                	sw	a5,28(s0)
+    DCL_SYSCTRL_CrgWriteProtectionEnable();
+ 300128e:	3c75                	jal	ra,3000d4a <DCL_SYSCTRL_CrgWriteProtectionEnable>
+    return BASE_STATUS_OK;
+ 3001290:	4501                	li	a0,0
+}
+ 3001292:	8034                	popret	{ra,s0-s1},16
+    return (pllRefClkSelect == (unsigned int)CRG_PLL_REF_CLK_SELECT_HOSC) ? HOSC_FREQ : XTRAIL_FREQ;
+ 3001294:	017d 7840 071f      	l.li	a4,0x17d7840
+ 300129a:	b7a5                	j	3001202 <HAL_CRG_Init+0x16>
+    reg->PERI_CRG3.pll_postdiv     = handle->pllPostDiv;
+ 300129c:	00f7f693          	andi	a3,a5,15
+ 30012a0:	ff077793          	andi	a5,a4,-16
+ 30012a4:	8fd5                	or	a5,a5,a3
+ 30012a6:	8082                	ret
+
+030012a8 <HAL_CRG_SetCoreClockSelect>:
+{
+ 30012a8:	8038                	push	{ra,s0-s1},-16
+    CRG_RegStruct *reg = handle->baseAddress;
+ 30012aa:	4100                	lw	s0,0(a0)
+{
+ 30012ac:	84aa                	mv	s1,a0
+    DCL_SYSCTRL_CrgWriteProtectionDisable();
+ 30012ae:	3459                	jal	ra,3000d34 <DCL_SYSCTRL_CrgWriteProtectionDisable>
+  */
+static inline void DCL_CRG_SetCoreClkSel(CRG_RegStruct *clk, CRG_CoreClkSelect select)
+{
+    CRG_ASSERT_PARAM(IsCRGInstance(clk));
+    CRG_PARAM_CHECK_NO_RET(IsCrgCoreCkSel(select));
+    clk->PERI_CRG7.BIT.core_cksel = select;
+ 30012b0:	4c9c                	lw	a5,24(s1)
+ 30012b2:	4c58                	lw	a4,28(s0)
+ 30012b4:	0037f693          	andi	a3,a5,3
+ 30012b8:	ffc77793          	andi	a5,a4,-4
+ 30012bc:	8fd5                	or	a5,a5,a3
+ 30012be:	cc5c                	sw	a5,28(s0)
+    DCL_SYSCTRL_CrgWriteProtectionEnable();
+ 30012c0:	3469                	jal	ra,3000d4a <DCL_SYSCTRL_CrgWriteProtectionEnable>
+}
+ 30012c2:	4501                	li	a0,0
+ 30012c4:	8034                	popret	{ra,s0-s1},16
+
+030012c6 <HAL_CRG_GetPllFreq>:
+{
+ 30012c6:	8028                	push	{ra,s0},-16
+    CRG_RegStruct *crg = g_crgBaseAddr;
+ 30012c8:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+ 30012cc:	4380                	lw	s0,0(a5)
+    freq = CRG_GetVcoFreq();
+ 30012ce:	3dd1                	jal	ra,30011a2 <CRG_GetVcoFreq>
+    freq /= CRG_GetPllPostDivValue((CRG_PllPostDiv)crg->PERI_CRG3.pll_postdiv);
+ 30012d0:	445c                	lw	a5,12(s0)
+ 30012d2:	8bbd                	andi	a5,a5,15
+    return (1 << div);
+ 30012d4:	0607e1bb          	bltui	a5,6,30012da <HAL_CRG_GetPllFreq+0x14>
+ 30012d8:	4795                	li	a5,5
+ 30012da:	4705                	li	a4,1
+ 30012dc:	00f717b3          	sll	a5,a4,a5
+}
+ 30012e0:	02f55533          	divu	a0,a0,a5
+ 30012e4:	8024                	popret	{ra,s0},16
+
+030012e6 <HAL_CRG_GetCoreClkFreq>:
+    CRG_RegStruct *crg = g_crgBaseAddr;
+ 30012e6:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+ 30012ea:	439c                	lw	a5,0(a5)
+    coreClkSelect = crg->PERI_CRG7.BIT.core_cksel;
+ 30012ec:	4fdc                	lw	a5,28(a5)
+ 30012ee:	8b8d                	andi	a5,a5,3
+    switch (coreClkSelect) {
+ 30012f0:	010784bb          	beqi	a5,1,3001302 <HAL_CRG_GetCoreClkFreq+0x1c>
+ 30012f4:	cf81                	beqz	a5,300130c <HAL_CRG_GetCoreClkFreq+0x26>
+ 30012f6:	0207853b          	beqi	a5,2,300130a <HAL_CRG_GetCoreClkFreq+0x24>
+            freq = LOSC_FREQ;
+ 30012fa:	0000 7d00 051f      	l.li	a0,0x7d00
+            break;
+ 3001300:	8082                	ret
+            freq = XTRAIL_FREQ;
+ 3001302:	01c9 c380 051f      	l.li	a0,0x1c9c380
+ 3001308:	8082                	ret
+            freq = HAL_CRG_GetPllFreq();
+ 300130a:	bf75                	j	30012c6 <HAL_CRG_GetPllFreq>
+            freq = HOSC_FREQ;
+ 300130c:	017d 7840 051f      	l.li	a0,0x17d7840
+}
+ 3001312:	8082                	ret
+
+03001314 <HAL_CRG_GetIpFreq>:
+{
+ 3001314:	8048                	push	{ra,s0-s2},-16
+ 3001316:	84aa                	mv	s1,a0
+    unsigned int hclk = HAL_CRG_GetCoreClkFreq();
+ 3001318:	37f9                	jal	ra,30012e6 <HAL_CRG_GetCoreClkFreq>
+ 300131a:	842a                	mv	s0,a0
+    CHIP_CrgIpMatchInfo *p = GetCrgIpMatchInfo(baseAddress);
+ 300131c:	8526                	mv	a0,s1
+ 300131e:	3a3d                	jal	ra,3000c5c <GetCrgIpMatchInfo>
+ 3001320:	84aa                	mv	s1,a0
+    if (p == NULL) {
+ 3001322:	cd11                	beqz	a0,300133e <HAL_CRG_GetIpFreq+0x2a>
+    switch (p->type) {
+ 3001324:	4148                	lw	a0,4(a0)
+ 3001326:	0605763b          	bgeui	a0,6,300133e <HAL_CRG_GetIpFreq+0x2a>
+ 300132a:	3a91                	jal	ra,3000c7e <__riscv_case_uqi>
+ 300132c:	1006                	c.slli	zero,0x21
+ 300132e:	5a1a                	lw	s4,164(sp)
+ 3001330:	1030                	addi	a2,sp,40
+    clkSel = proc->clkSelGet(matchInfo);
+ 3001332:	8526                	mv	a0,s1
+ 3001334:	346d                	jal	ra,3000dde <CRG_IpWithClkSelClkSelGet>
+            freq = CRG_GetLsIpFreq(p, hclk / 0x2);  /* pclk is 1/2 of hclk */
+ 3001336:	8005                	srli	s0,s0,0x1
+    return (baseClkRate >> clkSel);
+ 3001338:	00a45433          	srl	s0,s0,a0
+    if (freq == 0) {
+ 300133c:	e811                	bnez	s0,3001350 <HAL_CRG_GetIpFreq+0x3c>
+    unsigned int freq = LOSC_FREQ;
+ 300133e:	0000 7d00 041f      	l.li	s0,0x7d00
+ 3001344:	a031                	j	3001350 <HAL_CRG_GetIpFreq+0x3c>
+ 3001346:	2035                	jal	ra,3001372 <HAL_CRG_GetIpFreq+0x5e>
+    return (pllRefClkSelect == (unsigned int)CRG_PLL_REF_CLK_SELECT_HOSC) ? HOSC_FREQ : XTRAIL_FREQ;
+ 3001348:	c791                	beqz	a5,3001354 <HAL_CRG_GetIpFreq+0x40>
+ 300134a:	01c9 c380 041f      	l.li	s0,0x1c9c380
+}
+ 3001350:	8522                	mv	a0,s0
+ 3001352:	8044                	popret	{ra,s0-s2},16
+    return (pllRefClkSelect == (unsigned int)CRG_PLL_REF_CLK_SELECT_HOSC) ? HOSC_FREQ : XTRAIL_FREQ;
+ 3001354:	017d 7840 041f      	l.li	s0,0x17d7840
+ 300135a:	bfdd                	j	3001350 <HAL_CRG_GetIpFreq+0x3c>
+ 300135c:	2819                	jal	ra,3001372 <HAL_CRG_GetIpFreq+0x5e>
+ 300135e:	c385                	beqz	a5,300137e <HAL_CRG_GetIpFreq+0x6a>
+ 3001360:	01c9 c380 041f      	l.li	s0,0x1c9c380
+    clkDiv = proc->clkDivGet(matchInfo); /* get clock division value */
+ 3001366:	8526                	mv	a0,s1
+ 3001368:	3371                	jal	ra,30010f4 <CRG_DacDivGet>
+    return baseClkRate / (clkDiv + 1); /* return frequency value */
+ 300136a:	0505                	addi	a0,a0,1
+    return (baseClkRate * ADC_DIV_FACTOR) / (clkDiv + ADC_DIV_FACTOR);
+ 300136c:	02a45433          	divu	s0,s0,a0
+ 3001370:	b7f1                	j	300133c <HAL_CRG_GetIpFreq+0x28>
+            freq = CRG_GetPllRefIni(g_crgBaseAddr->PERI_CRG0.pll_ref_cksel);
+ 3001372:	21218793          	addi	a5,gp,530 # 40004d8 <g_crgBaseAddr>
+ 3001376:	439c                	lw	a5,0(a5)
+ 3001378:	439c                	lw	a5,0(a5)
+ 300137a:	8b85                	andi	a5,a5,1
+ 300137c:	8082                	ret
+    return (pllRefClkSelect == (unsigned int)CRG_PLL_REF_CLK_SELECT_HOSC) ? HOSC_FREQ : XTRAIL_FREQ;
+ 300137e:	017d 7840 041f      	l.li	s0,0x17d7840
+ 3001384:	b7cd                	j	3001366 <HAL_CRG_GetIpFreq+0x52>
+            freq = CRG_GetAdcIpFreq(p, CRG_GetVcoFreq());
+ 3001386:	3d31                	jal	ra,30011a2 <CRG_GetVcoFreq>
+    const CRG_IpProc *proc = &g_ipClkProc[matchInfo->type];
+ 3001388:	0044a903          	lw	s2,4(s1) # 2004 <STACK_SIZE+0xc04>
+    if (proc->clkSelGet == NULL) {
+ 300138c:	0300 1984 079f      	l.li	a5,0x3001984
+            freq = CRG_GetAdcIpFreq(p, CRG_GetVcoFreq());
+ 3001392:	842a                	mv	s0,a0
+    if (proc->clkSelGet == NULL) {
+ 3001394:	2527995b          	muliadd	s2,a5,s2,36
+ 3001398:	01c92783          	lw	a5,28(s2) # 401c <RAM_SIZE+0x181c>
+ 300139c:	d3cd                	beqz	a5,300133e <HAL_CRG_GetIpFreq+0x2a>
+ 300139e:	2819                	jal	ra,30013b4 <HAL_CRG_GetIpFreq+0xa0>
+    if (clkSel == CRG_ADC_CLK_SELECT_HOSC) {
+ 30013a0:	d955                	beqz	a0,3001354 <HAL_CRG_GetIpFreq+0x40>
+    if (clkSel == CRG_ADC_CLK_SELECT_TCXO) {
+ 30013a2:	01e50a3b          	beqi	a0,1,300134a <HAL_CRG_GetIpFreq+0x36>
+    if (proc->clkDivGet == NULL) {
+ 30013a6:	02092783          	lw	a5,32(s2)
+ 30013aa:	dbd1                	beqz	a5,300133e <HAL_CRG_GetIpFreq+0x2a>
+ 30013ac:	2021                	jal	ra,30013b4 <HAL_CRG_GetIpFreq+0xa0>
+    return (baseClkRate * ADC_DIV_FACTOR) / (clkDiv + ADC_DIV_FACTOR);
+ 30013ae:	0406                	slli	s0,s0,0x1
+ 30013b0:	0509                	addi	a0,a0,2
+ 30013b2:	bf6d                	j	300136c <HAL_CRG_GetIpFreq+0x58>
+    clkDiv = proc->clkDivGet(matchInfo);
+ 30013b4:	8526                	mv	a0,s1
+ 30013b6:	8782                	jr	a5
+
+030013b8 <HAL_CRG_IpEnableSet>:
+{
+ 30013b8:	8028                	push	{ra,s0},-16
+ 30013ba:	842e                	mv	s0,a1
+    CHIP_CrgIpMatchInfo *p = GetCrgIpMatchInfo(baseAddress);
+ 30013bc:	3045                	jal	ra,3000c5c <GetCrgIpMatchInfo>
+        return BASE_STATUS_ERROR;
+ 30013be:	4705                	li	a4,1
+    if ((p == NULL) || (p->type >= CRG_IP_MAX_TYPE)) {
+ 30013c0:	cd19                	beqz	a0,30013de <HAL_CRG_IpEnableSet+0x26>
+ 30013c2:	415c                	lw	a5,4(a0)
+        return BASE_STATUS_ERROR;
+ 30013c4:	4705                	li	a4,1
+    if ((p == NULL) || (p->type >= CRG_IP_MAX_TYPE)) {
+ 30013c6:	0707f63b          	bgeui	a5,7,30013de <HAL_CRG_IpEnableSet+0x26>
+    if (g_ipClkProc[p->type].enableSet == NULL) {
+ 30013ca:	0300 1984 069f      	l.li	a3,0x3001984
+ 30013d0:	24f697db          	muliadd	a5,a3,a5,36
+ 30013d4:	479c                	lw	a5,8(a5)
+ 30013d6:	c781                	beqz	a5,30013de <HAL_CRG_IpEnableSet+0x26>
+    g_ipClkProc[p->type].enableSet(p, enable);
+ 30013d8:	85a2                	mv	a1,s0
+ 30013da:	9782                	jalr	a5
+    return BASE_STATUS_OK;
+ 30013dc:	4701                	li	a4,0
+}
+ 30013de:	853a                	mv	a0,a4
+ 30013e0:	8024                	popret	{ra,s0},16
+
+030013e2 <GPIO_RspInit>:
+__weak void GPIO_RspInit(GPIO_Handle *handle)
+{
+    GPIO_ASSERT_PARAM(handle != NULL);
+    GPIO_ASSERT_PARAM(IsGPIOInstance(handle->baseAddress));
+    BASE_FUNC_UNUSED(handle);
+}
+ 30013e2:	8082                	ret
+
+030013e4 <HAL_GPIO_SetValue>:
+{
+    GPIO_ASSERT_PARAM(handle != NULL);
+    GPIO_ASSERT_PARAM(IsGPIOInstance(handle->baseAddress));
+    GPIO_PARAM_CHECK_NO_RET(IsGpioPins(pins));
+    GPIO_PARAM_CHECK_NO_RET(IsGpioValue(value));
+    DCL_GPIO_SetValue(handle->baseAddress, pins, value);
+ 30013e4:	4118                	lw	a4,0(a0)
+static inline void DCL_GPIO_SetValue(GPIO_RegStruct *gpiox, unsigned int pins, GPIO_Value value)
+{
+    GPIO_ASSERT_PARAM(gpiox != NULL);
+    GPIO_PARAM_CHECK_NO_RET(IsGpioPins(pins));
+    GPIO_PARAM_CHECK_NO_RET(IsGpioValue(value));
+    gpiox->GPIO_DATA[pins].reg = (value == GPIO_HIGH_LEVEL ? pins : BASE_CFG_UNSET); /* Set GPIO pin level */
+ 30013e6:	87ae                	mv	a5,a1
+ 30013e8:	010601bb          	beqi	a2,1,30013ee <HAL_GPIO_SetValue+0xa>
+ 30013ec:	4781                	li	a5,0
+ 30013ee:	04b7071b          	addshf	a4,a4,a1,sll,2
+ 30013f2:	c31c                	sw	a5,0(a4)
+}
+ 30013f4:	8082                	ret
+
+030013f6 <HAL_GPIO_GetPinValue>:
+GPIO_Value HAL_GPIO_GetPinValue(GPIO_Handle *handle, GPIO_PIN pin)
+{
+    GPIO_ASSERT_PARAM(handle != NULL);
+    GPIO_ASSERT_PARAM(IsGPIOInstance(handle->baseAddress));
+    GPIO_ASSERT_PARAM(IsGpioPin(pin));
+    return (handle->baseAddress->GPIO_DATA[GPIO_PIN_MASK].reg & pin) == BASE_CFG_UNSET ? \
+ 30013f6:	411c                	lw	a5,0(a0)
+ 30013f8:	3fc7a503          	lw	a0,1020(a5)
+ 30013fc:	8d6d                	and	a0,a0,a1
+                                                                        GPIO_LOW_LEVEL : GPIO_HIGH_LEVEL;
+}
+ 30013fe:	00a03533          	snez	a0,a0
+ 3001402:	8082                	ret
+
+03001404 <HAL_GPIO_SetIrqType>:
+    GPIO_ASSERT_PARAM(IsGPIOInstance(handle->baseAddress));
+    GPIO_PARAM_CHECK_WITH_RET(IsGpioPins(pins), BASE_STATUS_ERROR);
+    GPIO_PARAM_CHECK_WITH_RET(IsGpioITMode(mode), BASE_STATUS_ERROR);
+
+    /* It must be disabled to avoid triggering interrupts during configuration. */
+    DCL_GPIO_DisableIrq(handle->baseAddress, pins);
+ 3001404:	4118                	lw	a4,0(a0)
+  */
+static inline void DCL_GPIO_DisableIrq(GPIO_RegStruct *gpiox, unsigned int pins)
+{
+    GPIO_ASSERT_PARAM(gpiox != NULL);
+    GPIO_PARAM_CHECK_NO_RET(IsGpioPins(pins));
+    gpiox->GPIO_IE.reg &= ~pins;
+ 3001406:	fff5c793          	not	a5,a1
+ 300140a:	41072683          	lw	a3,1040(a4) # ffffe410 <RAM_END+0xfbffa410>
+ 300140e:	8efd                	and	a3,a3,a5
+ 3001410:	40d72823          	sw	a3,1040(a4)
+
+    if ((mode == GPIO_INT_TYPE_HIGH_LEVEL) || (mode == GPIO_INT_TYPE_LOW_LEVEL)) {
+ 3001414:	ffe60693          	addi	a3,a2,-2 # fffefffe <RAM_END+0xfbfebffe>
+ 3001418:	0206f93b          	bgeui	a3,2,300143c <HAL_GPIO_SetIrqType+0x38>
+    handle->baseAddress->GPIO_IBE.reg &= ~pins; /* Disable edge detection */
+ 300141c:	40872683          	lw	a3,1032(a4)
+ 3001420:	8efd                	and	a3,a3,a5
+ 3001422:	40d72423          	sw	a3,1032(a4)
+ 3001426:	0940036f          	jal	t1,30014ba <HAL_GPIO_SetIrqType+0xb6>
+    handle->baseAddress->GPIO_IS.reg |= pins; /* Enable level detection */
+ 300142a:	8ecd                	or	a3,a3,a1
+ 300142c:	40d72223          	sw	a3,1028(a4)
+    if (mode == GPIO_INT_TYPE_HIGH_LEVEL) {
+ 3001430:	031610bb          	bnei	a2,3,3001472 <HAL_GPIO_SetIrqType+0x6e>
+        handle->baseAddress->GPIO_IEV.reg |= pins;
+ 3001434:	40c72783          	lw	a5,1036(a4)
+ 3001438:	8fcd                	or	a5,a5,a1
+ 300143a:	a83d                	j	3001478 <HAL_GPIO_SetIrqType+0x74>
+        GPIO_SetLevelIrqType(handle, pins, mode);
+    } else if (mode == GPIO_INT_TYPE_BOTH_EDGE) {
+ 300143c:	040616bb          	bnei	a2,4,3001456 <HAL_GPIO_SetIrqType+0x52>
+ 3001440:	0700036f          	jal	t1,30014b0 <HAL_GPIO_SetIrqType+0xac>
+        handle->baseAddress->GPIO_IEV.reg &= ~pins;
+        handle->baseAddress->GPIO_IS.reg &= ~pins;
+ 3001444:	8ff5                	and	a5,a5,a3
+ 3001446:	40f72223          	sw	a5,1028(a4)
+        handle->baseAddress->GPIO_IBE.reg |= pins;
+ 300144a:	40872783          	lw	a5,1032(a4)
+ 300144e:	8fcd                	or	a5,a5,a1
+ 3001450:	40f72423          	sw	a5,1032(a4)
+ 3001454:	a025                	j	300147c <HAL_GPIO_SetIrqType+0x78>
+    } else if ((mode == GPIO_INT_TYPE_RISE_EDGE) || (mode == GPIO_INT_TYPE_FALL_EDGE)) {
+ 3001456:	02067fbb          	bgeui	a2,2,3001494 <HAL_GPIO_SetIrqType+0x90>
+ 300145a:	0600036f          	jal	t1,30014ba <HAL_GPIO_SetIrqType+0xb6>
+    handle->baseAddress->GPIO_IS.reg &= ~pins; /* Disable level detection. */
+ 300145e:	8efd                	and	a3,a3,a5
+ 3001460:	40d72223          	sw	a3,1028(a4)
+    handle->baseAddress->GPIO_IBE.reg &= ~pins; /* Clear detection on both edges. */
+ 3001464:	40872683          	lw	a3,1032(a4)
+ 3001468:	8efd                	and	a3,a3,a5
+ 300146a:	40d72423          	sw	a3,1032(a4)
+    if (mode == GPIO_INT_TYPE_RISE_EDGE) {
+ 300146e:	01f601bb          	beqi	a2,1,3001434 <HAL_GPIO_SetIrqType+0x30>
+        handle->baseAddress->GPIO_IEV.reg &= ~pins;
+ 3001472:	40c72683          	lw	a3,1036(a4)
+ 3001476:	8ff5                	and	a5,a5,a3
+ 3001478:	40f72623          	sw	a5,1036(a4)
+    gpiox->GPIO_IC.reg |= pins;
+ 300147c:	41c72783          	lw	a5,1052(a4)
+        handle->baseAddress->GPIO_IBE.reg &= ~pins;
+        return BASE_STATUS_ERROR;
+    }
+
+    DCL_GPIO_EnableIrq(handle->baseAddress, pins);
+    return BASE_STATUS_OK;
+ 3001480:	4501                	li	a0,0
+ 3001482:	8fcd                	or	a5,a5,a1
+ 3001484:	40f72e23          	sw	a5,1052(a4)
+    gpiox->GPIO_IE.reg |= pins;
+ 3001488:	41072783          	lw	a5,1040(a4)
+ 300148c:	8ddd                	or	a1,a1,a5
+ 300148e:	40b72823          	sw	a1,1040(a4)
+}
+ 3001492:	8082                	ret
+    } else if (mode == GPIO_INT_TYPE_NONE) {
+ 3001494:	05f61a3b          	bnei	a2,5,300147c <HAL_GPIO_SetIrqType+0x78>
+ 3001498:	0180036f          	jal	t1,30014b0 <HAL_GPIO_SetIrqType+0xac>
+        handle->baseAddress->GPIO_IS.reg &= ~pins;
+ 300149c:	8efd                	and	a3,a3,a5
+ 300149e:	40d72223          	sw	a3,1028(a4)
+        handle->baseAddress->GPIO_IBE.reg &= ~pins;
+ 30014a2:	40872683          	lw	a3,1032(a4)
+        return BASE_STATUS_ERROR;
+ 30014a6:	4505                	li	a0,1
+        handle->baseAddress->GPIO_IBE.reg &= ~pins;
+ 30014a8:	8ff5                	and	a5,a5,a3
+ 30014aa:	40f72423          	sw	a5,1032(a4)
+        return BASE_STATUS_ERROR;
+ 30014ae:	8082                	ret
+        handle->baseAddress->GPIO_IEV.reg &= ~pins;
+ 30014b0:	40c72683          	lw	a3,1036(a4)
+ 30014b4:	8efd                	and	a3,a3,a5
+ 30014b6:	40d72623          	sw	a3,1036(a4)
+        handle->baseAddress->GPIO_IS.reg &= ~pins;
+ 30014ba:	40472683          	lw	a3,1028(a4)
+ 30014be:	8302                	jr	t1
+
+030014c0 <HAL_GPIO_Init>:
+{
+ 30014c0:	8028                	push	{ra,s0},-16
+    DCL_GPIO_SetDirection(handle->baseAddress, handle->pins, handle->dir);
+ 30014c2:	4518                	lw	a4,8(a0)
+{
+ 30014c4:	842a                	mv	s0,a0
+    DCL_GPIO_SetDirection(handle->baseAddress, handle->pins, handle->dir);
+ 30014c6:	4114                	lw	a3,0(a0)
+ 30014c8:	415c                	lw	a5,4(a0)
+    if (dir == GPIO_INPUT_MODE) { /* Set GPIO pin direction */
+ 30014ca:	eb39                	bnez	a4,3001520 <HAL_GPIO_Init+0x60>
+        gpiox->GPIO_DIR.reg &= ~pins;
+ 30014cc:	4006a703          	lw	a4,1024(a3) # fffe0400 <RAM_END+0xfbfdc400>
+ 30014d0:	fff7c793          	not	a5,a5
+ 30014d4:	8ff9                	and	a5,a5,a4
+        gpiox->GPIO_DIR.reg |= pins;
+ 30014d6:	40f6a023          	sw	a5,1024(a3)
+    DCL_GPIO_SetValue(handle->baseAddress, handle->pins, handle->value);
+ 30014da:	4058                	lw	a4,4(s0)
+    gpiox->GPIO_DATA[pins].reg = (value == GPIO_HIGH_LEVEL ? pins : BASE_CFG_UNSET); /* Set GPIO pin level */
+ 30014dc:	4810                	lw	a2,16(s0)
+ 30014de:	87ba                	mv	a5,a4
+ 30014e0:	010601bb          	beqi	a2,1,30014e6 <HAL_GPIO_Init+0x26>
+ 30014e4:	4781                	li	a5,0
+ 30014e6:	04e6869b          	addshf	a3,a3,a4,sll,2
+ 30014ea:	c29c                	sw	a5,0(a3)
+    HAL_GPIO_SetIrqType(handle, handle->pins, handle->interruptMode);
+ 30014ec:	4450                	lw	a2,12(s0)
+ 30014ee:	404c                	lw	a1,4(s0)
+ 30014f0:	8522                	mv	a0,s0
+ 30014f2:	3f09                	jal	ra,3001404 <HAL_GPIO_SetIrqType>
+        handle->GPIO_CallbackFuncs[i].pin = (1 << i);
+ 30014f4:	4785                	li	a5,1
+ 30014f6:	cc1c                	sw	a5,24(s0)
+ 30014f8:	4789                	li	a5,2
+ 30014fa:	d01c                	sw	a5,32(s0)
+ 30014fc:	4791                	li	a5,4
+ 30014fe:	d41c                	sw	a5,40(s0)
+ 3001500:	47a1                	li	a5,8
+ 3001502:	d81c                	sw	a5,48(s0)
+ 3001504:	47c1                	li	a5,16
+ 3001506:	dc1c                	sw	a5,56(s0)
+ 3001508:	02000793          	li	a5,32
+ 300150c:	c03c                	sw	a5,64(s0)
+ 300150e:	04000793          	li	a5,64
+ 3001512:	c43c                	sw	a5,72(s0)
+ 3001514:	08000793          	li	a5,128
+ 3001518:	c83c                	sw	a5,80(s0)
+    GPIO_RspInit(handle);
+ 300151a:	8522                	mv	a0,s0
+}
+ 300151c:	8020                	pop	{ra,s0},16
+    GPIO_RspInit(handle);
+ 300151e:	b5d1                	j	30013e2 <GPIO_RspInit>
+    } else if (dir == GPIO_OUTPUT_MODE) {
+ 3001520:	01e71ebb          	bnei	a4,1,30014da <HAL_GPIO_Init+0x1a>
+        gpiox->GPIO_DIR.reg |= pins;
+ 3001524:	4006a703          	lw	a4,1024(a3)
+ 3001528:	8fd9                	or	a5,a5,a4
+ 300152a:	b775                	j	30014d6 <HAL_GPIO_Init+0x16>
+
+0300152c <HAL_TIMER_RspInit>:
+  * @retval  None
+  */
+__weak void HAL_TIMER_RspInit(TIMER_Handle *handle)
+{
+    BASE_FUNC_UNUSED(handle);
+}
+ 300152c:	8082                	ret
+
+0300152e <HAL_TIMER_Init>:
+  * @param   handle  Timer Handle
+  * @retval  BASE_STATUS_OK    Success
+  * @retval  BASE_STATUS_ERROR parameter check fail
+  */
+BASE_StatusType HAL_TIMER_Init(TIMER_Handle *handle)
+{
+ 300152e:	8018                	push	{ra},-16
+    TIMER_PARAM_CHECK_WITH_RET(IsTimerMode(handle->mode), BASE_STATUS_ERROR);
+    TIMER_PARAM_CHECK_WITH_RET(IsTimerSize(handle->size), BASE_STATUS_ERROR);
+    TIMER_PARAM_CHECK_WITH_RET(IsTimerDiv(handle->prescaler), BASE_STATUS_ERROR);
+    TIMER_PARAM_CHECK_WITH_RET(IsTimerInterrupt(handle->interruptEn), BASE_STATUS_ERROR);
+
+    handle->baseAddress->timer_intclr = BASE_CFG_SET;
+ 3001530:	411c                	lw	a5,0(a0)
+ 3001532:	4705                	li	a4,1
+ 3001534:	c7d8                	sw	a4,12(a5)
+    handle->baseAddress->timer_load = handle->load;
+ 3001536:	4158                	lw	a4,4(a0)
+ 3001538:	c398                	sw	a4,0(a5)
+    handle->baseAddress->timerbgload = handle->bgLoad;
+ 300153a:	4d18                	lw	a4,24(a0)
+ 300153c:	cf98                	sw	a4,24(a5)
+    handle->baseAddress->TIMERx_CONTROL.BIT.timeren = BASE_CFG_DISABLE;
+ 300153e:	4798                	lw	a4,8(a5)
+ 3001540:	f7f77713          	andi	a4,a4,-129
+ 3001544:	c798                	sw	a4,8(a5)
+    handle->baseAddress->TIMERx_CONTROL.BIT.intenable = handle->interruptEn;
+ 3001546:	4794                	lw	a3,8(a5)
+ 3001548:	4558                	lw	a4,12(a0)
+ 300154a:	00177613          	andi	a2,a4,1
+ 300154e:	fdf6f713          	andi	a4,a3,-33
+ 3001552:	0ac7271b          	orshf	a4,a4,a2,sll,5
+ 3001556:	c798                	sw	a4,8(a5)
+    handle->baseAddress->TIMERx_CONTROL.BIT.timerpre = handle->prescaler;
+ 3001558:	4798                	lw	a4,8(a5)
+ 300155a:	4914                	lw	a3,16(a0)
+ 300155c:	9b4d                	andi	a4,a4,-13
+ 300155e:	8a8d                	andi	a3,a3,3
+ 3001560:	04d7271b          	orshf	a4,a4,a3,sll,2
+ 3001564:	c798                	sw	a4,8(a5)
+    handle->baseAddress->TIMERx_CONTROL.BIT.timersize = handle->size;
+ 3001566:	4798                	lw	a4,8(a5)
+ 3001568:	4954                	lw	a3,20(a0)
+ 300156a:	20b9                	jal	ra,30015b8 <HAL_TIMER_Init+0x8a>
+ 300156c:	c798                	sw	a4,8(a5)
+    if (handle->mode == TIMER_MODE_RUN_ONTSHOT) {
+ 300156e:	4518                	lw	a4,8(a0)
+ 3001570:	02071c3b          	bnei	a4,2,30015a0 <HAL_TIMER_Init+0x72>
+        handle->baseAddress->TIMERx_CONTROL.BIT.oneshot = BASE_CFG_SET;
+ 3001574:	4798                	lw	a4,8(a5)
+ 3001576:	00176713          	ori	a4,a4,1
+    } else {
+        handle->baseAddress->TIMERx_CONTROL.BIT.oneshot = BASE_CFG_UNSET;
+        handle->baseAddress->TIMERx_CONTROL.BIT.timermode =
+ 300157a:	c798                	sw	a4,8(a5)
+            (handle->mode == TIMER_MODE_RUN_FREE) ? BASE_CFG_UNSET : BASE_CFG_SET;
+    }
+    handle->baseAddress->TIMERx_CONTROLB.BIT.dmasreqen = handle->dmaAdcSingleReqEnable;
+ 300157c:	411c                	lw	a5,0(a0)
+ 300157e:	02454683          	lbu	a3,36(a0)
+ 3001582:	4fd8                	lw	a4,28(a5)
+ 3001584:	2815                	jal	ra,30015b8 <HAL_TIMER_Init+0x8a>
+ 3001586:	cfd8                	sw	a4,28(a5)
+    handle->baseAddress->TIMERx_CONTROLB.BIT.dmabreqen = handle->dmaBurstReqEnable;
+ 3001588:	02554703          	lbu	a4,37(a0)
+ 300158c:	4fd4                	lw	a3,28(a5)
+ 300158e:	00177613          	andi	a2,a4,1
+ 3001592:	ffe6f713          	andi	a4,a3,-2
+ 3001596:	8f51                	or	a4,a4,a2
+ 3001598:	cfd8                	sw	a4,28(a5)
+    HAL_TIMER_RspInit(handle);
+ 300159a:	3f49                	jal	ra,300152c <HAL_TIMER_RspInit>
+    return BASE_STATUS_OK;
+}
+ 300159c:	4501                	li	a0,0
+ 300159e:	8014                	popret	{ra},16
+        handle->baseAddress->TIMERx_CONTROL.BIT.oneshot = BASE_CFG_UNSET;
+ 30015a0:	4798                	lw	a4,8(a5)
+ 30015a2:	9b79                	andi	a4,a4,-2
+ 30015a4:	c798                	sw	a4,8(a5)
+            (handle->mode == TIMER_MODE_RUN_FREE) ? BASE_CFG_UNSET : BASE_CFG_SET;
+ 30015a6:	4518                	lw	a4,8(a0)
+        handle->baseAddress->TIMERx_CONTROL.BIT.timermode =
+ 30015a8:	4794                	lw	a3,8(a5)
+ 30015aa:	00e03633          	snez	a2,a4
+ 30015ae:	fbf6f713          	andi	a4,a3,-65
+ 30015b2:	0cc7271b          	orshf	a4,a4,a2,sll,6
+ 30015b6:	b7d1                	j	300157a <HAL_TIMER_Init+0x4c>
+    handle->baseAddress->TIMERx_CONTROLB.BIT.dmasreqen = handle->dmaAdcSingleReqEnable;
+ 30015b8:	8a85                	andi	a3,a3,1
+ 30015ba:	9b75                	andi	a4,a4,-3
+ 30015bc:	02d7271b          	orshf	a4,a4,a3,sll,1
+ 30015c0:	8082                	ret
+
+030015c2 <HAL_TIMER_Start>:
+void HAL_TIMER_Start(TIMER_Handle *handle)
+{
+    TIMER_ASSERT_PARAM(handle != NULL);
+    TIMER_ASSERT_PARAM(IsTIMERInstance(handle->baseAddress));
+
+    handle->baseAddress->TIMERx_CONTROL.BIT.timeren = BASE_CFG_SET;
+ 30015c2:	411c                	lw	a5,0(a0)
+ 30015c4:	4798                	lw	a4,8(a5)
+ 30015c6:	08076713          	ori	a4,a4,128
+ 30015ca:	c798                	sw	a4,8(a5)
+}
+ 30015cc:	8082                	ret
+
+030015ce <main>:
+/* USER CODE BEGIN 1 */
+/* USER CODE END 1 */
+
+
+int main(void)
+{
+ 30015ce:	8118                	push	{ra},-32
+    /* USER CODE BEGIN 2 */
+    /* USER CODE END 2 */
+    SystemInit();
+ 30015d0:	2051                	jal	ra,3001654 <SystemInit>
+    /* USER CODE BEGIN 3 */
+    volatile bool LED_Flag = 1;
+ 30015d2:	4785                	li	a5,1
+ 30015d4:	00f107a3          	sb	a5,15(sp)
+        /* USER CODE BEGIN 4 */
+        // if(Key_Num(&g_gpio2,GPIO_PIN_2)==KEY_DOWN)
+        // {
+        //    //LED_Turn(&g_gpio0,GPIO_PIN_7);
+        // }
+        if(Key_Num(&g_gpio2,GPIO_PIN_2)==KEY_DOWN)
+ 30015d8:	4591                	li	a1,4
+ 30015da:	26e18513          	addi	a0,gp,622 # 4000534 <g_gpio2>
+ 30015de:	2005                	jal	ra,30015fe <Key_Num>
+ 30015e0:	fd65                	bnez	a0,30015d8 <main+0xa>
+        {
+            LED_Flag = !LED_Flag;
+ 30015e2:	00f14783          	lbu	a5,15(sp)
+            HAL_GPIO_SetValue(&g_gpio0,GPIO_PIN_7,LED_Flag);
+ 30015e6:	08000593          	li	a1,128
+ 30015ea:	21618513          	addi	a0,gp,534 # 40004dc <g_gpio0>
+            LED_Flag = !LED_Flag;
+ 30015ee:	0017c793          	xori	a5,a5,1
+ 30015f2:	00f107a3          	sb	a5,15(sp)
+            HAL_GPIO_SetValue(&g_gpio0,GPIO_PIN_7,LED_Flag);
+ 30015f6:	00f14603          	lbu	a2,15(sp)
+ 30015fa:	33ed                	jal	ra,30013e4 <HAL_GPIO_SetValue>
+ 30015fc:	bff1                	j	30015d8 <main+0xa>
+
+030015fe <Key_Num>:
+#include "main.h"    //相当于stm32中的#include "stm32f10x.h"
+#include "key.h"
+
+KEY_State Key_Num(GPIO_Handle *handle,GPIO_PIN pin)
+{
+ 30015fe:	8038                	push	{ra,s0-s1},-16
+ 3001600:	842a                	mv	s0,a0
+ 3001602:	84ae                	mv	s1,a1
+ 3001604:	200d                	jal	ra,3001626 <Key_Num+0x28>
+    if(HAL_GPIO_GetPinValue(handle,pin) == GPIO_LOW_LEVEL)    //由硬件结构知,按键按下时GPIO输入低电平
+ 3001606:	ed01                	bnez	a0,300161e <Key_Num+0x20>
+    {
+        BASE_FUNC_DELAY_MS(30);  //消抖
+ 3001608:	3e800593          	li	a1,1000
+ 300160c:	4579                	li	a0,30
+ 300160e:	ed2ff0ef          	jal	ra,3000ce0 <BASE_FUNC_Delay>
+ 3001612:	2801                	jal	ra,3001622 <Key_Num+0x24>
+        if(HAL_GPIO_GetPinValue(handle,pin) == GPIO_LOW_LEVEL) //如果仍然按下
+        {
+            while(!HAL_GPIO_GetPinValue(handle,pin));
+            return KEY_DOWN;
+        }
+        return KEY_UP;
+ 3001614:	4785                	li	a5,1
+        if(HAL_GPIO_GetPinValue(handle,pin) == GPIO_LOW_LEVEL) //如果仍然按下
+ 3001616:	e501                	bnez	a0,300161e <Key_Num+0x20>
+ 3001618:	2029                	jal	ra,3001622 <Key_Num+0x24>
+            while(!HAL_GPIO_GetPinValue(handle,pin));
+ 300161a:	dd7d                	beqz	a0,3001618 <Key_Num+0x1a>
+            return KEY_DOWN;
+ 300161c:	4781                	li	a5,0
+    }
+}
+ 300161e:	853e                	mv	a0,a5
+ 3001620:	8034                	popret	{ra,s0-s1},16
+            while(!HAL_GPIO_GetPinValue(handle,pin));
+ 3001622:	85a6                	mv	a1,s1
+ 3001624:	8522                	mv	a0,s0
+ 3001626:	bbc1                	j	30013f6 <HAL_GPIO_GetPinValue>
+
+03001628 <CRG_Config>:
+
+#include "main.h"
+#include "ioconfig.h"
+
+BASE_StatusType CRG_Config(CRG_CoreClkSelect *coreClkSelect)
+{
+ 3001628:	8228                	push	{ra,s0},-48
+    CRG_Handle crg;
+    crg.baseAddress     = CRG;
+ 300162a:	100007b7          	lui	a5,0x10000
+ 300162e:	c23e                	sw	a5,4(sp)
+    crg.pllRefClkSelect = CRG_PLL_REF_CLK_SELECT_HOSC;
+    crg.pllPreDiv       = CRG_PLL_PREDIV_4;
+ 3001630:	478d                	li	a5,3
+ 3001632:	c63e                	sw	a5,12(sp)
+    crg.pllFbDiv        = 32; /* PLL Multiplier 32 */
+ 3001634:	02000793          	li	a5,32
+{
+ 3001638:	842a                	mv	s0,a0
+    crg.pllFbDiv        = 32; /* PLL Multiplier 32 */
+ 300163a:	c83e                	sw	a5,16(sp)
+    crg.pllPostDiv      = CRG_PLL_POSTDIV_1;
+    crg.coreClkSelect   = CRG_CORE_CLK_SELECT_PLL;
+
+    if (HAL_CRG_Init(&crg) != BASE_STATUS_OK) {
+ 300163c:	0048                	addi	a0,sp,4
+    crg.coreClkSelect   = CRG_CORE_CLK_SELECT_PLL;
+ 300163e:	4789                	li	a5,2
+    crg.pllRefClkSelect = CRG_PLL_REF_CLK_SELECT_HOSC;
+ 3001640:	c402                	sw	zero,8(sp)
+    crg.pllPostDiv      = CRG_PLL_POSTDIV_1;
+ 3001642:	ca02                	sw	zero,20(sp)
+    crg.coreClkSelect   = CRG_CORE_CLK_SELECT_PLL;
+ 3001644:	ce3e                	sw	a5,28(sp)
+    if (HAL_CRG_Init(&crg) != BASE_STATUS_OK) {
+ 3001646:	365d                	jal	ra,30011ec <HAL_CRG_Init>
+ 3001648:	e501                	bnez	a0,3001650 <CRG_Config+0x28>
+        return BASE_STATUS_ERROR;
+    }
+    *coreClkSelect = crg.coreClkSelect;
+ 300164a:	47f2                	lw	a5,28(sp)
+ 300164c:	c01c                	sw	a5,0(s0)
+    return BASE_STATUS_OK;
+}
+ 300164e:	8224                	popret	{ra,s0},48
+        return BASE_STATUS_ERROR;
+ 3001650:	4505                	li	a0,1
+ 3001652:	bff5                	j	300164e <CRG_Config+0x26>
+
+03001654 <SystemInit>:
+    iconfig->iocmg_21.BIT.sr = IO_SPEED_SLOW;
+    iconfig->iocmg_21.BIT.se = BASE_CFG_DISABLE;
+}
+
+void SystemInit(void)
+{
+ 3001654:	8048                	push	{ra,s0-s2},-16
+    iconfig->iocmg_10.BIT.func = 0x0; /* 0x0 is GPIO0_7 */
+ 3001656:	147f07b7          	lui	a5,0x147f0
+ 300165a:	4bd8                	lw	a4,20(a5)
+ 300165c:	9b41                	andi	a4,a4,-16
+ 300165e:	2895                	jal	ra,30016d2 <SystemInit+0x7e>
+    iconfig->iocmg_10.BIT.ds = IO_DRV_LEVEL2;
+ 3001660:	fcf77713          	andi	a4,a4,-49
+ 3001664:	02076713          	ori	a4,a4,32
+ 3001668:	20ad                	jal	ra,30016d2 <SystemInit+0x7e>
+    iconfig->iocmg_10.BIT.pd = BASE_CFG_DISABLE;
+ 300166a:	f7f77713          	andi	a4,a4,-129
+ 300166e:	2095                	jal	ra,30016d2 <SystemInit+0x7e>
+    iconfig->iocmg_10.BIT.pu = BASE_CFG_DISABLE;
+ 3001670:	eff77713          	andi	a4,a4,-257
+ 3001674:	28b9                	jal	ra,30016d2 <SystemInit+0x7e>
+    iconfig->iocmg_10.BIT.sr = IO_SPEED_SLOW;
+ 3001676:	20076713          	ori	a4,a4,512
+ 300167a:	28a1                	jal	ra,30016d2 <SystemInit+0x7e>
+    iconfig->iocmg_10.BIT.se = BASE_CFG_DISABLE;
+ 300167c:	bff77713          	andi	a4,a4,-1025
+ 3001680:	cbd8                	sw	a4,20(a5)
+ 3001682:	2899                	jal	ra,30016d8 <SystemInit+0x84>
+    iconfig->iocmg_21.BIT.func = 0x0; /* 0x0 is GPIO2_2 */
+ 3001684:	149f07b7          	lui	a5,0x149f0
+ 3001688:	2881                	jal	ra,30016d8 <SystemInit+0x84>
+    HAL_CRG_IpEnableSet(GPIO0_BASE, IP_CLK_ENABLE);
+ 300168a:	4585                	li	a1,1
+ 300168c:	14500537          	lui	a0,0x14500
+ 3001690:	3325                	jal	ra,30013b8 <HAL_CRG_IpEnableSet>
+    g_gpio0.baseAddress = GPIO0;
+ 3001692:	21618513          	addi	a0,gp,534 # 40004dc <g_gpio0>
+ 3001696:	145007b7          	lui	a5,0x14500
+    g_gpio0.value = GPIO_LOW_LEVEL;
+ 300169a:	4401                	li	s0,0
+    g_gpio0.baseAddress = GPIO0;
+ 300169c:	c11c                	sw	a5,0(a0)
+    g_gpio0.dir = GPIO_OUTPUT_MODE;
+ 300169e:	4905                	li	s2,1
+    g_gpio0.pins = GPIO_PIN_7 | GPIO_PIN_6;
+ 30016a0:	0c000793          	li	a5,192
+    g_gpio0.interruptMode = GPIO_INT_TYPE_NONE;
+ 30016a4:	4495                	li	s1,5
+    g_gpio0.pins = GPIO_PIN_7 | GPIO_PIN_6;
+ 30016a6:	c15c                	sw	a5,4(a0)
+    g_gpio0.dir = GPIO_OUTPUT_MODE;
+ 30016a8:	01252423          	sw	s2,8(a0) # 14500008 <RAM_END+0x104fc008>
+    g_gpio0.value = GPIO_LOW_LEVEL;
+ 30016ac:	c900                	sw	s0,16(a0)
+ 30016ae:	c544                	sw	s1,12(a0)
+    HAL_GPIO_Init(&g_gpio0);
+ 30016b0:	3d01                	jal	ra,30014c0 <HAL_GPIO_Init>
+    HAL_CRG_IpEnableSet(GPIO2_BASE, IP_CLK_ENABLE);
+ 30016b2:	85ca                	mv	a1,s2
+ 30016b4:	14502537          	lui	a0,0x14502
+ 30016b8:	3301                	jal	ra,30013b8 <HAL_CRG_IpEnableSet>
+    g_gpio2.baseAddress = GPIO2;
+ 30016ba:	26e18513          	addi	a0,gp,622 # 4000534 <g_gpio2>
+ 30016be:	145027b7          	lui	a5,0x14502
+ 30016c2:	c11c                	sw	a5,0(a0)
+    g_gpio2.pins = GPIO_PIN_2;
+ 30016c4:	4791                	li	a5,4
+    g_gpio2.dir = GPIO_INPUT_MODE;
+ 30016c6:	c500                	sw	s0,8(a0)
+    g_gpio2.value = GPIO_LOW_LEVEL;
+ 30016c8:	c900                	sw	s0,16(a0)
+ 30016ca:	c544                	sw	s1,12(a0)
+    g_gpio2.pins = GPIO_PIN_2;
+ 30016cc:	c15c                	sw	a5,4(a0)
+    IOConfig();
+    GPIO_Init();
+
+    /* USER CODE BEGIN system_init */
+    /* USER CODE END system_init */
+ 30016ce:	8040                	pop	{ra,s0-s2},16
+    HAL_GPIO_Init(&g_gpio2);
+ 30016d0:	bbc5                	j	30014c0 <HAL_GPIO_Init>
+    iconfig->iocmg_10.BIT.sr = IO_SPEED_SLOW;
+ 30016d2:	cbd8                	sw	a4,20(a5)
+    iconfig->iocmg_10.BIT.se = BASE_CFG_DISABLE;
+ 30016d4:	4bd8                	lw	a4,20(a5)
+ 30016d6:	8082                	ret
+    iconfig->iocmg_21.BIT.func = 0x0; /* 0x0 is GPIO2_2 */
+ 30016d8:	4b98                	lw	a4,16(a5)
+ 30016da:	9b41                	andi	a4,a4,-16
+ 30016dc:	cb98                	sw	a4,16(a5)
+    iconfig->iocmg_21.BIT.ds = IO_DRV_LEVEL2;
+ 30016de:	4b98                	lw	a4,16(a5)
+ 30016e0:	fcf77713          	andi	a4,a4,-49
+ 30016e4:	02076713          	ori	a4,a4,32
+ 30016e8:	cb98                	sw	a4,16(a5)
+    iconfig->iocmg_21.BIT.pd = BASE_CFG_DISABLE;
+ 30016ea:	4b98                	lw	a4,16(a5)
+ 30016ec:	f7f77713          	andi	a4,a4,-129
+ 30016f0:	cb98                	sw	a4,16(a5)
+    iconfig->iocmg_21.BIT.pu = BASE_CFG_DISABLE;
+ 30016f2:	4b98                	lw	a4,16(a5)
+ 30016f4:	eff77713          	andi	a4,a4,-257
+ 30016f8:	cb98                	sw	a4,16(a5)
+    iconfig->iocmg_21.BIT.sr = IO_SPEED_SLOW;
+ 30016fa:	4b98                	lw	a4,16(a5)
+ 30016fc:	20076713          	ori	a4,a4,512
+ 3001700:	cb98                	sw	a4,16(a5)
+    iconfig->iocmg_21.BIT.se = BASE_CFG_DISABLE;
+ 3001702:	4b98                	lw	a4,16(a5)
+ 3001704:	bff77713          	andi	a4,a4,-1025
+ 3001708:	cb98                	sw	a4,16(a5)
+ 300170a:	8082                	ret
+
+0300170c <__rodata_start>:
+ 300170c:	6666 3b4b 295f      	0x66663b4b295f
+ 3001712:	3f26                	lhu	s1,58(a4)
+ 3001714:	0000                	unimp
+ 3001716:	3980                	lbu	s0,17(a1)
+ 3001718:	0000                	unimp
+ 300171a:	3f00                	lbu	s0,25(a4)
+ 300171c:	0000                	unimp
+ 300171e:	4500                	lw	s0,8(a0)
+
+03001720 <g_crgIpMatch>:
+ 3001720:	0000 1400 0000 0000 0030 0000 1000 1400     ........0.......
+ 3001730:	0000 0000 0034 0000 2000 1400 0000 0000     ....4.... ......
+ 3001740:	0038 0000 0000 1430 0000 0000 003c 0000     8.....0.....<...
+ 3001750:	0020 1430 0000 0000 003c 0000 1000 1430      .0.....<.....0.
+ 3001760:	0000 0000 0040 0000 1020 1430 0000 0000     ....@... .0.....
+ 3001770:	0040 0000 0000 1470 0000 0000 0044 0000     @.....p.....D...
+ 3001780:	1000 1470 0000 0000 0048 0000 0000 1440     ..p.....H.....@.
+ 3001790:	0000 0000 004c 0000 0000 1420 0000 0000     ....L..... .....
+ 30017a0:	0050 0000 0000 1460 0002 0000 0054 0000     P.....`.....T...
+ 30017b0:	0000 14b0 0001 0000 0058 0000 1000 14b0     ........X.......
+ 30017c0:	0001 0000 0058 0001 2000 14b0 0001 0000     ....X.... ......
+ 30017d0:	0058 0002 0000 1c00 0001 0000 005c 0000     X...........\...
+ 30017e0:	0000 1450 0001 0000 0064 0000 1000 1450     ..P.....d.....P.
+ 30017f0:	0001 0000 0064 0001 2000 1450 0001 0000     ....d.... P.....
+ 3001800:	0064 0002 3000 1450 0001 0000 0064 0003     d....0P.....d...
+ 3001810:	4000 1450 0001 0000 0064 0004 5000 1450     .@P.....d....PP.
+ 3001820:	0001 0000 0064 0005 6000 1450 0001 0000     ....d....`P.....
+ 3001830:	0064 0006 7000 1450 0001 0000 0064 0007     d....pP.....d...
+ 3001840:	0000 1410 0001 0000 0068 0000 1000 1440     ........h.....@.
+ 3001850:	0006 0000 006c 0000 0000 14c0 0001 0000     ....l...........
+ 3001860:	0070 0000 0000 147d 0001 0000 0074 0000     p.....}.....t...
+ 3001870:	0000 1480 0001 0000 007c 0000 0000 14a0     ........|.......
+ 3001880:	0001 0000 0080 0000 1000 14a0 0001 0000     ................
+ 3001890:	0080 0001 2000 14a0 0001 0000 0080 0002     ..... ..........
+ 30018a0:	3000 14a0 0001 0000 0080 0003 4000 14a0     .0...........@..
+ 30018b0:	0001 0000 0080 0004 5000 14a0 0001 0000     .........P......
+ 30018c0:	0080 0005 6000 14a0 0001 0000 0080 0006     .....`..........
+ 30018d0:	7000 14a0 0001 0000 0080 0007 8000 14a0     .p..............
+ 30018e0:	0001 0000 0080 0008 0008 1830 0001 0000     ..........0.....
+ 30018f0:	0090 0000 1008 1830 0001 0000 0090 0001     ......0.........
+ 3001900:	2008 1830 0001 0000 0090 0002 0000 1820     . 0........... .
+ 3001910:	0001 0000 0098 0000 1000 1820 0001 0000     .......... .....
+ 3001920:	0098 0001 2000 1820 0001 0000 0098 0002     .....  .........
+ 3001930:	0000 1800 0003 0000 0084 0000 1000 1800     ................
+ 3001940:	0003 0000 0088 0000 2000 1800 0003 0000     ......... ......
+ 3001950:	008c 0000 0000 1830 0004 0000 0094 0000     ......0.........
+ 3001960:	1000 1830 0004 0000 0094 0001 2000 1830     ..0.......... 0.
+ 3001970:	0004 0000 0094 0002 0000 1471 0005 0000     ..........q.....
+ 3001980:	0060 0000                                   `...
+
+03001984 <g_ipClkProc>:
+ 3001984:	0000 0000 0d96 0300 0d60 0300 0dc4 0300     ........`.......
+ 3001994:	0000 0000 0db2 0300 0d86 0300 0dde 0300     ................
+ 30019a4:	0000 0000 0001 0000 0e70 0300 0df0 0300     ........p.......
+	...
+ 30019bc:	0eb4 0300 0e50 0300 0000 0000 0000 0000     ....P...........
+ 30019cc:	0002 0000 0e70 0300 0df0 0300 0000 0000     ....p...........
+ 30019dc:	0000 0000 0eb4 0300 0e50 0300 0000 0000     ........P.......
+ 30019ec:	0000 0000 0003 0000 0f9c 0300 0ed4 0300     ................
+ 30019fc:	0f42 0300 0f70 0300 0fee 0300 0f26 0300     B...p.......&...
+ 3001a0c:	0f5e 0300 0f8a 0300 0004 0000 1110 0300     ^...............
+ 3001a1c:	100c 0300 0000 0000 1088 0300 1162 0300     ............b...
+ 3001a2c:	1070 0300 0000 0000 10f4 0300 0005 0000     p...............
+ 3001a3c:	0000 0000 117c 0300 0000 0000 0000 0000     ....|...........
+ 3001a4c:	0000 0000 1192 0300 0000 0000 0000 0000     ................
+ 3001a5c:	0006 0000 0e70 0300 0df0 0300 0000 0000     ....p...........
+ 3001a6c:	0000 0000 0eb4 0300 0e50 0300 0000 0000     ........P.......
+ 3001a7c:	0000 0000                                   ....

@@ -1,0 +1,97 @@
+ninja: Entering directory `out'
+[1/2] cross compiler obj/user/sample_timer_interrupt/src/sample_timer_interrupt.o
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c: In function 'Set_Time':
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:125:9: warning: implicit declaration of function 'sscanf' [-Wimplicit-function-declaration]
+         sscanf(RxDataPkg, "@%hhu-%hhu-%hhu!", &h, &m, &s);
+         ^~~~~~
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:150:5: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+     memset(RxDataPkg,0,20);  //清空数组
+     ^~~~~~
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c: In function 'TIMER_SampleMain':
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:154:18: warning: unused variable 'timerHandle' [-Wunused-variable]
+     TIMER_Handle timerHandle;
+                  ^~~~~~~~~~~
+[2/2] LINK ./bin/target.elf
+空数组
+     ^~~~~~
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c: In function 'TIMER_SampleMain':
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:154:18: warning: unused variable 'timerHandle' [-Wunused-variable]
+     TIMER_Handle timerHandle;
+                  ^~~~~~~~~~~
+[2/2] LINK ./bin/target.elf
+64] cross compiler obj/drivers/capm/src/capm.o
+[23/64] cross compiler obj/drivers/dac/src/dac.o
+[24/64] cross compiler obj/drivers/dma/src/dma.o
+[25/64] cross compiler obj/drivers/adc/src/adc.o
+[26/64] cross compiler obj/drivers/can/src/can.o
+[27/64] cross compiler obj/drivers/crc/src/crc.o
+[28/64] cross compiler obj/drivers/crg/src/crg.o
+[29/64] cross compiler obj/drivers/apt/src/apt.o
+[30/64] cross compiler obj/drivers/gpt/src/gpt.o
+[31/64] cross compiler obj/drivers/gpio/src/gpio.o
+[32/64] cross compiler obj/drivers/debug/src/debug.o
+[33/64] cross compiler obj/middleware/control_library/mcs_fw_ctrl.o
+[34/64] cross compiler obj/drivers/pmc/src/pmc.o
+[35/64] cross compiler obj/drivers/flash/src/flash.o
+[36/64] cross compiler obj/drivers/qdm/src/qdm.o
+[37/64] cross compiler obj/middleware/control_library/mcs_pll.o
+[38/64] cross compiler obj/middleware/control_library/mcs_filter.o
+[39/64] cross compiler obj/drivers/iocmg/src/iocmg.o
+[40/64] cross compiler obj/drivers/pga/src/pga.o
+[41/64] cross compiler obj/middleware/control_library/mcs_if_ctrl.o
+[42/64] cross compiler obj/drivers/spi/src/spi.o
+[43/64] cross compiler obj/middleware/control_library/mcs_pid_ctrl.o
+[44/64] cross compiler obj/middleware/control_library/mcs_fosmo.o
+[45/64] cross compiler obj/drivers/tsensor/src/tsensor.o
+[46/64] cross compiler obj/drivers/timer/src/timer.o
+[47/64] cross compiler obj/middleware/control_library/mcs_curr_ctrl.o
+[48/64] cross compiler obj/drivers/i2c/src/i2c.o
+[49/64] cross compiler obj/middleware/control_library/mcs_math.o
+[50/64] cross compiler obj/middleware/control_library/mcs_svpwm.o
+[51/64] cross compiler obj/middleware/control_library/mcs_r1_svpwm.o
+[52/64] cross compiler obj/drivers/wdg/src/wdg.o
+[53/64] cross compiler obj/drivers/tsensor/src/tsensor_ex.o
+[54/64] cross compiler obj/middleware/control_library/pfc_volt_ctrl.o
+[55/64] cross compiler obj/middleware/control_library/mcs_startup.o
+[56/64] cross compiler obj/middleware/control_library/mcs_smo_4th.o
+[57/64] cross compiler obj/middleware/control_library/mcs_ramp_mgmt.o
+[58/64] cross compiler obj/middleware/control_library/mcs_spd_ctrl.o
+[59/64] cross compiler obj/middleware/control_library/pfc_curr_ctrl.o
+[60/64] cross compiler obj/user/generatecode/system_init.o
+[61/64] cross compiler obj/drivers/uart/src/uart.o
+[62/64] cross compiler obj/user/main.o
+[63/64] cross compiler obj/user/sample_timer_interrupt/src/sample_timer_interrupt.o
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c: In function 'TIMER_SampleMain':
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:56:18: warning: unused variable 'timerHandle' [-Wunused-variable]
+     TIMER_Handle timerHandle;
+                  ^~~~~~~~~~~
+[64/64] LINK ./bin/target.elf
+e_timer_interrupt.c: In function 'TIMER0_InterruptProcess':
+../chip/3065h/baseaddr.h:115:17: error: 'GPIO_RegStruct' undeclared (first use in this function); did you mean 'CRG_RegStruct'?
+ #define GPIO0 ((GPIO_RegStruct *)GPIO0_BASE)
+                 ^
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:68:71: note: in expansion of macro 'GPIO0'
+     DBG_PRINTF("In interrupt,freq:%dHz\r\n",HAL_CRG_GetIpFreq((void *)GPIO0));
+                                                                       ^~~~~
+../chip/3065h/baseaddr.h:115:17: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIO0 ((GPIO_RegStruct *)GPIO0_BASE)
+                 ^
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:68:71: note: in expansion of macro 'GPIO0'
+     DBG_PRINTF("In interrupt,freq:%dHz\r\n",HAL_CRG_GetIpFreq((void *)GPIO0));
+                                                                       ^~~~~
+../chip/3065h/baseaddr.h:115:33: error: expected expression before ')' token
+ #define GPIO0 ((GPIO_RegStruct *)GPIO0_BASE)
+                                 ^
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:68:71: note: in expansion of macro 'GPIO0'
+     DBG_PRINTF("In interrupt,freq:%dHz\r\n",HAL_CRG_GetIpFreq((void *)GPIO0));
+                                                                       ^~~~~
+../chip/3065h/baseaddr.h:43:35: error: expected ')' before numeric constant
+ #define GPIO0_BASE        (void *)0x14500000
+                                   ^
+../chip/3065h/baseaddr.h:115:34: note: in expansion of macro 'GPIO0_BASE'
+ #define GPIO0 ((GPIO_RegStruct *)GPIO0_BASE)
+                                  ^~~~~~~~~~
+../user/sample_timer_interrupt/src/sample_timer_interrupt.c:68:71: note: in expansion of macro 'GPIO0'
+     DBG_PRINTF("In interrupt,freq:%dHz\r\n",HAL_CRG_GetIpFreq((void *)GPIO0));
+                                                                       ^~~~~
+ninja: build stopped: subcommand failed.
